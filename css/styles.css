@@ -1,0 +1,15 @@
+body {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #343a40; /* Dark background for navbar */
+}
+
+.nav-link {
+  color: #fff !important; /* White color for navbar links */
+}
+
+.nav-link:hover {
+  color: #ddd !important; /* Light grey color on hover */
+}
