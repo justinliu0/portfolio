@@ -23,3 +23,7 @@ body {
 .content {
     padding-top: 56px;
 }
+
+h2 {
+  text-align: center;
+}
