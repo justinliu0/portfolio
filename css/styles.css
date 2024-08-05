@@ -1,15 +1,25 @@
 body {
   scroll-behavior: smooth;
+  margin-top: 56px;
 }
 
 .navbar {
-  background-color: #343a40; /* Dark background for navbar */
+  background-color: #343a40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
 }
 
 .nav-link {
-  color: #fff !important; /* White color for navbar links */
+  color: #fff !important;
 }
 
 .nav-link:hover {
-  color: #ddd !important; /* Light grey color on hover */
+  color: #9a9797 !important;
+}
+
+.content {
+    padding-top: 56px;
 }
