@@ -1,6 +1,7 @@
+/* Basic body and navbar styles */
 body {
   scroll-behavior: smooth;
-  margin-top: 56px;
+  margin-top: 56px; /* Adjust if necessary */
 }
 
 .navbar {
@@ -9,29 +10,42 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1030;
+  z-index: 1030; /* Ensure it’s above other content */
 }
 
+/* Section styles */
 section {
   position: relative;
-  padding-top: 56px;
-  background-color: #ffffff;
-  z-index: 1; 
+  padding-top: 56px; /* Space for fixed navbar */
+  background-color: #ffffff; /* Default background color */
+  z-index: 1; /* Ensure content is above background image */
+  text-align: center; /* Center align text */
+  padding: 40px 0; /* Optional: Adjust padding for more spacing */
 }
 
+/* Styles for the section with an image */
 .section-image {
-  padding: 100px 0;
-  background-color: #f8f9fa; 
+  padding: 100px 0; /* Space above and below */
+  background-color: #f8f9fa; /* Background color for the image section */
+  text-align: center; /* Center align text */
 }
 
+/* Background image styles */
 .bg-image {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background-image: url('./imgs/bg.jpg'); 
-  background-size: cover;
+  height: 100vh; /* Full viewport height */
+  background-image: url('./imgs/bg.jpg');
+  background-size: cover; /* Cover the entire viewport */
   background-position: center;
-  z-index: -1; 
+  z-index: -1; /* Behind all other content */
+}
+
+/* Optional: Add responsive styles if needed */
+@media (max-width: 767px) {
+  .section-image {
+    padding: 50px 0; /* Adjust for smaller screens */
+  }
 }
