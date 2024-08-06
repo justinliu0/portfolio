@@ -19,6 +19,7 @@ section {
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .section-image {
@@ -27,6 +28,7 @@ section {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .bg-image {
