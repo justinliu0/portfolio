@@ -1,6 +1,11 @@
 body {
   scroll-behavior: smooth;
-  margin-top: 56px; /* Account for fixed navbar */
+  margin: 0; /* Reset margin to ensure background image covers entire body */
+  background-image: url('../imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-color: #ffffff; /* Fallback color */
 }
 
 .navbar {
@@ -9,7 +14,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1030; 
+  z-index: 1030;
 }
 
 #header {
@@ -19,12 +24,8 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff; /* Ensure text stands out on the background */
-  background: transparent; /* Make the background invisible */
-}
-
-header {
-  position: relative;
-  z-index: 1;
+  background: transparent; /* Make the header background transparent */
+  z-index: 1; /* Ensure header content is on top */
 }
 
 section {
@@ -51,18 +52,6 @@ section {
   display: flex; /* Add Flexbox for centering */
   flex-direction: column; /* Align items vertically */
   justify-content: center; /* Center content vertically */
-}
-
-.bg-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url('../imgs/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* Ensure it’s behind other content */
 }
 
 @media (max-width: 767px) {
