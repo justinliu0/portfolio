@@ -12,14 +12,12 @@ body {
   z-index: 1030; 
 }
 
-/* Section styles */
 section {
   position: relative;
   padding-top: 56px; 
   background-color: #ffffff; 
   z-index: 1;
   text-align: center; 
-  padding: 40px 0; 
 }
 
 .section-image {
