@@ -19,27 +19,26 @@ body {
   flex-direction: column; 
   justify-content: flex-start; 
   align-items: flex-start; 
-  text-align: left;
-  color: #fff;
-  font-weight: bold;
   background-image: url('../imgs/bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
   margin: 0;
-  padding: 100px 200px 0 200px; /* Top padding: 100px, left padding: 50px */
-  box-sizing: border-box; /* Ensure padding is included in height */
 }
+
+#header-content {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 100px 200px 0 200px;
 
 #header h1 {
   font-size: 112px;
-  margin: 0; 
 }
 
 #header h2 {
   font-size: 70px;
   font-style: italic;
-  margin: 0; 
   margin-top: 20px;
 }
 
