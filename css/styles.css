@@ -21,6 +21,9 @@ section {
   box-sizing: border-box;
   margin: 0;
   text-align: center;
+  display: flex; /* Add Flexbox for centering */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center content vertically */
 }
 
 .section-image {
@@ -30,6 +33,9 @@ section {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
+  display: flex; /* Add Flexbox for centering */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center content vertically */
 }
 
 .bg-image {
