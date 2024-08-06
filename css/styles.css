@@ -12,22 +12,19 @@ body {
   z-index: 1030; 
 }
 
-header {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 1;
-}
-
 #header {
   height: 100vh; /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff; /* Ensure text stands out on background image */
-  background-image: url('../imgs/bg.jpg');
-  background-size: cover;
-  background-position: center;
+  color: #fff; /* Ensure text stands out on the background */
+  background: transparent; /* Make the background invisible */
+}
+
+header {
+  position: relative;
+  z-index: 1;
 }
 
 section {
