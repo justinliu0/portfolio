@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  margin-top: 56px;
+  margin-top: 56px; /* Account for fixed navbar */
 }
 
 .navbar {
@@ -12,9 +12,27 @@ body {
   z-index: 1030; 
 }
 
+header {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+#header {
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* Ensure text stands out on background image */
+  background-image: url('../imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 section {
   position: relative;
-  padding: 40px 0; 
+  padding: 40px 0;
   background-color: #ffffff;
   z-index: 1;
   width: 100%;
@@ -27,8 +45,8 @@ section {
 }
 
 .section-image {
-  padding: 100px 0; 
-  background-color: #f8f9fa; 
+  padding: 100px 0;
+  background-color: #f8f9fa;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -45,9 +63,9 @@ section {
   width: 100%;
   height: 100vh;
   background-image: url('../imgs/bg.jpg');
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  z-index: -1; 
+  z-index: -1; /* Ensure it’s behind other content */
 }
 
 @media (max-width: 767px) {
@@ -56,6 +74,6 @@ section {
   }
 
   #about {
-    padding-top: 150px; 
+    padding-top: 150px;
   }
 }
