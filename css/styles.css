@@ -29,7 +29,8 @@ body {
 }
 
 .header-content {
-  transform: translateY(-200px);
+  transform: translateY(-230px);
+  transform: translateX(-40px);
 }
 
 #header h1 {
