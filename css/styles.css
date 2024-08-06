@@ -14,10 +14,11 @@ body {
 
 section {
   position: relative;
-  padding-top: 56px; 
-  background-color: #ffffff; 
+  padding: 40px 0; 
+  background-color: #ffffff;
   z-index: 1;
-  text-align: center; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-image {
