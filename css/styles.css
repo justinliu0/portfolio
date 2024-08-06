@@ -29,8 +29,8 @@ body {
 }
 
 .header-content {
-  transform: translateY(230px);
-  transform: translateX(-60px);
+  transform: translateY(460px);
+  transform: translateX(-120px);
 }
 
 #header h1 {
