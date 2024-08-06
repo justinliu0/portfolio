@@ -15,33 +15,31 @@ body {
 
 #header {
   height: 100vh;
-  position: relative; /* Ensure the header is the reference point for absolute positioning */
+  position: relative; 
   background-image: url('../imgs/bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; 
   margin: 0;
-  padding: 0; /* Reset padding */
+  padding: 0; 
   box-sizing: border-box;
 }
 
 .header-content {
   position: absolute;
-  top: 100px; /* 100px from the top */
-  left: 50px; /* 50px from the left */
-  text-align: left; /* Align text to the left */
+  top: 100px; 
+  left: 50px; 
+  text-align: center; 
   color: #fff;
 }
 
 #header h1 {
   font-size: 112px;
-  margin: 0; /* Remove default margins */
 }
 
 #header h2 {
   font-size: 70px;
   font-style: italic;
-  margin: 0; /* Remove default margins */
 }
 
 
