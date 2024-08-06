@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  margin-top: 56px;
+  margin-top: 56px; /* Adjusted to account for the fixed navbar */
 }
 
 .navbar {
@@ -12,30 +12,14 @@ body {
   z-index: 1030; 
 }
 
-section {
+section, .section-image {
   position: relative;
-  padding: 40px 0; 
-  background-color: #ffffff;
-  z-index: 1;
+  padding: 0; /* No padding for sections */
+  margin: 0; /* No margin for sections */
+  background-color: #ffffff; /* Adjust to your section background color */
   width: 100%;
   box-sizing: border-box;
-  margin: 0; /* Ensure no margin */
-  text-align: center;
-  display: flex; /* Add Flexbox for centering */
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Center content vertically */
-}
-
-.section-image {
-  padding: 100px 0; 
-  background-color: #f8f9fa; 
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0; /* Ensure no margin */
-  display: flex; /* Add Flexbox for centering */
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text */
 }
 
 .bg-image {
@@ -50,16 +34,17 @@ section {
   z-index: -1; 
 }
 
+/* Specific padding for the #about section */
 #about {
-  padding-top: 500px;
+  padding-top: 500px; /* 500 pixels of padding above the About section */
 }
 
 @media (max-width: 767px) {
   .section-image {
-    padding: 50px 0;
+    padding: 50px 0; /* Adjust padding for smaller screens if needed */
   }
 
   #about {
-    padding-top: 150px; 
+    padding-top: 500px; /* Retain padding for smaller screens */
   }
 }
