@@ -27,7 +27,7 @@ body {
   background-position: center;
   background-attachment: fixed; 
   margin: 0;
-  padding: 100px 50px 0 50px; /* Top padding: 100px, left padding: 50px */
+  padding: 100px 200px 0 50px; /* Top padding: 100px, left padding: 50px */
   box-sizing: border-box; /* Ensure padding is included in height */
 }
 
