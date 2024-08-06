@@ -37,11 +37,13 @@ body {
 
 #header h1 {
   font-size: 112px;
+  margin-bottom: 5px;
 }
 
 #header h2 {
-  font-size: 70px;
+  font-size: 50px;
   font-style: italic;
+  nargin-top: 0;
 }
 
 #about h2 {
