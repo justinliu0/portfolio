@@ -1,5 +1,4 @@
 body {
-  font-family: 'Oxygen', sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0; 
@@ -24,6 +23,7 @@ body {
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header-content {
@@ -45,6 +45,7 @@ body {
 
 
 section {
+  font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
   background-color: #ffffff; 
