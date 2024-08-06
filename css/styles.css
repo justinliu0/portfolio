@@ -23,6 +23,7 @@ body {
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
+  font-weight: bold;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -43,6 +44,9 @@ body {
   font-style: italic;
 }
 
+#about h2 {
+  font-weight: bold;
+}
 
 section {
   font-family: 'Oxygen', sans-serif;
