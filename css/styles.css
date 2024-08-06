@@ -20,6 +20,12 @@ body {
   color: #9a9797 !important;
 }
 
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background-color: #007bff; 
+    border-radius: 5px;
+}
+
 .content {
     padding-top: 56px;
 }
