@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  margin: 0;
+  margin: 0; /* Remove default margin */
 }
 
 .navbar {
@@ -9,44 +9,55 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 56px; 
   z-index: 1030;
+}
+
+#header {
+  height: 100vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* Ensure text stands out on the background */
+  background-image: url('../imgs/bg.jpg'); /* Apply background image to header */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keep background fixed while scrolling */
+  margin: 0; /* Ensure no margin around header */
 }
 
 section {
   position: relative;
   padding: 40px 0;
-  background-color: #ffffff;
+  background-color: #ffffff; /* Solid background color for sections */
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0; /* Ensure no margin */
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex; /* Add Flexbox for centering */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center content vertically */
 }
 
-section {
-  padding-top: 56px; 
+.section-image {
+  padding: 100px 0;
+  background-color: #f8f9fa; /* Solid background color for sections */
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0; /* Ensure no margin */
+  display: flex; /* Add Flexbox for centering */
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center content vertically */
 }
 
-#about {
-  padding-top: calc(56px + 40px); 
-}
+@media (max-width: 767px) {
+  .section-image {
+    padding: 50px 0;
+  }
 
-#skills {
-  padding-top: calc(56px + 40px);
-}
-
-#projects {
-  padding-top: calc(56px + 40px);
-}
-
-#timeline {
-  padding-top: calc(56px + 40px);
-}
-
-#contact {
-  padding-top: calc(56px + 40px);
+  #about {
+    padding-top: 150px;
+  }
 }
