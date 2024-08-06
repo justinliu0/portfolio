@@ -27,6 +27,14 @@ body {
   margin: 0;
 }
 
+#header h1 {
+  font-size: 112px;
+}
+
+#header h2 {
+  font-size: 80px;
+}
+
 section {
   position: relative;
   padding: 40px 0;
