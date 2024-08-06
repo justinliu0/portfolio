@@ -1,6 +1,7 @@
 body {
   scroll-behavior: smooth;
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  padding: 0; 
 }
 
 .navbar {
@@ -13,43 +14,43 @@ body {
 }
 
 #header {
-  height: 100vh; /* Adjust height as needed */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff; /* Ensure text stands out on the background */
-  background-image: url('../imgs/bg.jpg'); /* Apply background image to header */
+  color: #fff;
+  background-image: url('../imgs/bg.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Keep background fixed while scrolling */
-  margin: 0; /* Ensure no margin around header */
+  background-attachment: fixed; 
+  margin: 0;
 }
 
 section {
   position: relative;
   padding: 40px 0;
-  background-color: #ffffff; /* Solid background color for sections */
+  background-color: #ffffff; 
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; /* Ensure no margin */
+  margin: 0; 
   text-align: center;
-  display: flex; /* Add Flexbox for centering */
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Center content vertically */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
 }
 
 .section-image {
   padding: 100px 0;
-  background-color: #f8f9fa; /* Solid background color for sections */
+  background-color: #ffffff; 
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; /* Ensure no margin */
-  display: flex; /* Add Flexbox for centering */
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Center content vertically */
+  margin: 0; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
 }
 
 @media (max-width: 767px) {
