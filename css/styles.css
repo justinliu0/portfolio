@@ -1,6 +1,11 @@
 body {
   scroll-behavior: smooth;
   margin: 0; /* Remove default margin */
+  background-image: url('../imgs/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-color: #ffffff; /* Fallback color */
 }
 
 .navbar {
@@ -19,17 +24,15 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff; /* Ensure text stands out on the background */
-  background-image: url('../imgs/bg.jpg'); /* Apply background image to header */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Keep background fixed while scrolling */
+  background: transparent; /* Make the header background transparent */
+  z-index: 1; /* Ensure header content is on top */
   margin: 0; /* Ensure no margin around header */
 }
 
 section {
   position: relative;
   padding: 40px 0;
-  background-color: #ffffff; /* Solid background color for sections */
+  background-color: transparent; /* Make section background transparent */
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
@@ -42,7 +45,7 @@ section {
 
 .section-image {
   padding: 100px 0;
-  background-color: #f8f9fa; /* Solid background color for sections */
+  background-color: transparent; /* Make section background transparent */
   text-align: center;
   width: 100%;
   box-sizing: border-box;
