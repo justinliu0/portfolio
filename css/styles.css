@@ -29,7 +29,7 @@ body {
 }
 
 .header-content {
-  transform: translateY(-400px);
+  transform: translateY(-200px);
 }
 
 #header h1 {
