@@ -106,17 +106,18 @@ section, .section-image {
   justify-content: flex-start;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
+  padding: 1rem; 
 }
 
 #about img {
-  position: absolute;
-  margin-left: 100px;
+  margin-right: 20px; 
+  max-width: 150px; 
+  height: auto; 
 }
 
 #about h1 {
   font-weight: bold;
 }
-
 #about-content {
 }
   
