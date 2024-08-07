@@ -120,7 +120,7 @@ section, .section-image {
 }
 
 .img-circle {
-  border: 8px solid gray;
+  border: 8px solid #343a40;
   width: 350px;
   height: 350px;
   border-radius: 50%;
