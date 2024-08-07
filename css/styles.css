@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: #343a40; /* Dark gray background */
   position: fixed;
   top: 0;
   left: 0;
@@ -13,14 +13,20 @@ body {
   z-index: 1030;
 }
 
-.navbar-nav .nav-item .nav-link.active {
-  background-color: #8EE4FF; 
-  color: #000; 
+.navbar-nav .nav-item .nav-link {
+  color: #fff; /* White text color */
 }
 
-/* Change the text color of the active link on hover */
-.navbar-nav .nav-item .nav-link.active:hover {
-  background-color: #7BC3F8; /* Slightly darker shade on hover, adjust if needed */
+/* Active link background color */
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #8EE4FF; /* Light blue background */
+  color: #000; /* Black text color */
+}
+
+/* Hover effect for all links */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #8EE4FF; /* Light blue background on hover */
+  color: #000; /* Black text color on hover */
 }
 
 .navbar-icon {
@@ -61,7 +67,7 @@ body {
 
 .btn-enter-portfolio {
   display: inline-block;
-  margin-top: 390px;
+  margin-top: 390px; /* Adjust as needed */
   padding: 15px 25px;
   font-size: 25px;
   color: #343a40;
@@ -70,6 +76,11 @@ body {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-enter-portfolio:hover {
+  background-color: #e0e0e0; /* Light gray background on hover */
 }
 
 #header h1 {
