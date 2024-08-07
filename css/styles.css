@@ -110,6 +110,7 @@ section, .section-image {
   justify-content: flex-start;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
+  margin: 100px;
 }
 
 #about img {
@@ -122,7 +123,6 @@ section, .section-image {
 }
 
 #about-content {
-  margin: 100px;
 }
   
 .img-circle {
