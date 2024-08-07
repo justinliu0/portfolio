@@ -62,10 +62,10 @@ body {
 .btn-enter-portfolio {
   display: inline-block;
   margin-top: 350px;
-  padding: 10px 20px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #343a40;
+  padding: 15px 25px;
+  font-size: 25px;
+  color: #343a40;
+  background-color: #fff;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -87,7 +87,7 @@ section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
-  background-color: #ffffff; 
+  background-color: #fff; 
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
