@@ -113,14 +113,18 @@ section, .section-image {
 }
 
 #about img {
-  left: 100px;
   position: absolute;
+  margin-left: 100px;
 }
 
 #about h1 {
   font-weight: bold;
 }
 
+#about-content {
+  margin: 100px;
+}
+  
 .img-circle {
   border: 8px solid #343a40;
   width: 350px;
