@@ -59,15 +59,15 @@ body {
 }
 
 #about {
-  text-align: left;
   display: flex;
   align-items: center;
   margin: 0;
   padding: 40px;
+  font-family: 'Oxygen', sans-serif;
 }
 
 #about img {
-  margin-right: 100px;
+  margin-right: 100px; 
 }
 
 #about .content {
@@ -81,6 +81,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
 
 section {
   font-family: 'Oxygen', sans-serif;
