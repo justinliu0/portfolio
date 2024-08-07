@@ -63,7 +63,7 @@ body {
 
 .btn-enter-portfolio {
   display: inline-block;
-  margin-top: 390px; /* Adjust as needed */
+  margin-top: 390px;
   padding: 15px 25px;
   font-size: 25px;
   color: #343a40;
@@ -105,10 +105,9 @@ section, .section-image {
 }
 
 #about {
-  display: flex !important;
+  display: flex;
   align-items: center !important;
   justify-content: flex-start !important;
-  padding: 100px !important;
   font-family: 'Oxygen', sans-serif;
 }
 
