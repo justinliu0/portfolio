@@ -119,6 +119,10 @@ section, .section-image {
   font-weight: bold;
 }
 
+#about-content {
+  align-text: left;
+}
+
 .img-circle {
   border: 8px solid #343a40;
   width: 350px;
