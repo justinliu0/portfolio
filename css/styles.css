@@ -99,11 +99,6 @@ section {
 }
 
 #about img {
-  border: 8px gray;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  object-fit: cover;
   margin-right: 100px; 
 }
 
@@ -112,7 +107,7 @@ section {
 }
 
 .img-circle {
-  border: 8px solid black;
+  border: 8px solid gray;
   width: 350px;
   height: 350px;
   border-radius: 50%;
