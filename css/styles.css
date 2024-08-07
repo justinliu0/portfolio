@@ -114,6 +114,7 @@ section, .section-image {
 
 #about img {
   left: 100px;
+  position: absolute;
 }
 
 #about h1 {
