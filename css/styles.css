@@ -66,6 +66,15 @@ body {
   font-weight: bold;
 }
 
+.img-circle {
+  border: 8px solid black;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+
 section {
   font-family: 'Oxygen', sans-serif;
   position: relative;
