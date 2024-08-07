@@ -6,10 +6,11 @@ body {
 
 .navbar {
   background-color: #343a40;
-  position: sticky;
+  position: fixed; 
   top: 0; 
   width: 100%;
   z-index: 1030;
+  transition: top 0.3s; 
 }
 
 .navbar-nav .nav-item .nav-link {
