@@ -106,13 +106,14 @@ section, .section-image {
 
 #about {
   display: flex;
-  align-items: center !important;
-  justify-content: flex-start !important;
+  align-items: center;
+  justify-content: flex-start;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
 }
 
 #about img {
+  left: 100px;
 }
 
 #about h1 {
