@@ -58,6 +58,10 @@ body {
   nargin-top: 0;
 }
 
+#about {
+  text-align: left;
+}
+
 #about h2 {
   font-weight: bold;
 }
