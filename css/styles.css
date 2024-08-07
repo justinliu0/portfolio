@@ -109,18 +109,14 @@ section, .section-image {
   align-items: center !important;
   justify-content: flex-start !important;
   font-family: 'Oxygen', sans-serif;
+  text-align: left;
 }
 
 #about img {
-  margin-right: 500px; 
 }
 
 #about h1 {
   font-weight: bold;
-}
-
-#about-content {
-  align-text: left;
 }
 
 .img-circle {
