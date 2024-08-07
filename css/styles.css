@@ -82,6 +82,7 @@ section, .section-image {
 #about {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 40px;
   font-family: 'Oxygen', sans-serif;
 }
@@ -90,8 +91,8 @@ section, .section-image {
   margin-right: 100px; 
 }
 
-#about .content {
-  max-width: calc(100% - 470px);
+#about h1 {
+  font-weight: bold;
 }
 
 .img-circle {
