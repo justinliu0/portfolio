@@ -53,7 +53,7 @@ body {
 .header-content {
   position: absolute;
   top: 145px; 
-  left: 220px; 
+  left: 240px; 
   text-align: center; 
   color: #fff;
   z-index: 2;
@@ -61,7 +61,7 @@ body {
 
 .btn-enter-portfolio {
   display: inline-block;
-  margin-top: 350px;
+  margin-top: 390px;
   padding: 15px 25px;
   font-size: 25px;
   color: #343a40;
@@ -73,7 +73,7 @@ body {
 }
 
 #header h1 {
-  font-size: 112px;
+  font-size: 130px;
   margin-bottom: 5px;
 }
 
