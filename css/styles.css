@@ -60,20 +60,31 @@ body {
 
 #about {
   text-align: left;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 40px;
 }
 
-#about h2 {
-  font-weight: bold;
+#about img {
+  margin-right: 100px;
 }
 
+#about .content {
+  max-width: calc(100% - 450px);
+}
 .img-circle {
   border: 8px solid black;
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover; 
+   margin-left: -100px;
 }
 
+#about h2 {
+  font-weight: bold;
+}
 
 section {
   font-family: 'Oxygen', sans-serif;
