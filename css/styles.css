@@ -49,6 +49,19 @@ body {
   z-index: 2;
 }
 
+.btn-enter-portfolio {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
 #header h1 {
   font-size: 112px;
   margin-bottom: 5px;
