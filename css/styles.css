@@ -55,7 +55,7 @@ body {
 #header h2 {
   font-size: 50px;
   font-style: italic;
-  nargin-top: 0;
+  margin-top: 0; /* Corrected typo */
 }
 
 #about {
@@ -79,12 +79,7 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  object-fit: cover; 
-   margin-left: -100px;
-}
-
-#about h2 {
-  font-weight: bold;
+  object-fit: cover;
 }
 
 section {
