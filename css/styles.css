@@ -14,15 +14,13 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #fff;
+  color: #fff; 
 }
 
-/* Active link text color */
 .navbar-nav .nav-item .nav-link.active {
-  color: #8EE4FF; 
+  color: #8EE4FF;
 }
 
-/* Text color change on hover for all links */
 .navbar-nav .nav-item .nav-link:hover {
   color: #8EE4FF; 
 }
