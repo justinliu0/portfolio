@@ -13,6 +13,16 @@ body {
   z-index: 1030;
 }
 
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #8EE4FF; 
+  color: #000; 
+}
+
+/* Change the text color of the active link on hover */
+.navbar-nav .nav-item .nav-link.active:hover {
+  background-color: #7BC3F8; /* Slightly darker shade on hover, adjust if needed */
+}
+
 .navbar-icon {
   margin-right: 5px; 
   margin-top: -3px; 
