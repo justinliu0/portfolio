@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-  background-color: #343a40; /* Dark gray background */
+  background-color: #343a40;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,19 +14,17 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #fff; /* White text color */
+  color: #fff;
 }
 
-/* Active link background color */
+/* Active link text color */
 .navbar-nav .nav-item .nav-link.active {
-  background-color: #8EE4FF; /* Light blue background */
-  color: #000; /* Black text color */
+  color: #8EE4FF; 
 }
 
-/* Hover effect for all links */
+/* Text color change on hover for all links */
 .navbar-nav .nav-item .nav-link:hover {
-  background-color: #8EE4FF; /* Light blue background on hover */
-  color: #000; /* Black text color on hover */
+  color: #8EE4FF; 
 }
 
 .navbar-icon {
