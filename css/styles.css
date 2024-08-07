@@ -99,7 +99,7 @@ section {
 }
 
 #about img {
-  margin-right: 100px; 
+  border: 8px gray;
   width: 350px;
   height: 350px;
   border-radius: 50%;
@@ -108,7 +108,7 @@ section {
 }
 
 #about .content {
-  max-width: calc(100% - 450px);
+  max-width: calc(100% - 470px);
 }
 
 .img-circle {
