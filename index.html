@@ -100,13 +100,18 @@
 
       window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if (currentScrollPos <= 56) {
-          navbar.style.top = "-56px"; // Hide the navbar
-        } else if (prevScrollPos > currentScrollPos) {
+        if (currentScrollPos > 56) {
           navbar.style.top = "0"; // Show the navbar
         } else {
-          navbar.style.top = "-56px"; // Hide the navbar
+          navbar.style.top = "-56px"; // Hide the navbar initially
         }
+
+        if (currentScrollPos > prevScrollPos) {
+          navbar.style.top = "-56px"; // Hide the navbar when scrolling down
+        } else {
+          navbar.style.top = "0"; // Show the navbar when scrolling up
+        }
+        
         prevScrollPos = currentScrollPos;
       };
     });
