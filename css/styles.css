@@ -21,10 +21,7 @@ body {
 #header {
   height: 100vh;
   position: relative; 
-  background-image: url('../imgs/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; 
+  background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
@@ -60,10 +57,10 @@ body {
 #header h2 {
   font-size: 50px;
   font-style: italic;
-  margin-top: 0; /* Corrected typo */
+  margin-top: 0;
 }
 
-section {
+section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
@@ -80,20 +77,11 @@ section {
 
 .section-image {
   padding: 100px 0;
-  background-color: #ffffff; 
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0; 
-  display: flex; 
-  flex-direction: column;
-  justify-content: center; 
 }
 
 #about {
   display: flex;
   align-items: center;
-  margin: 0;
   padding: 40px;
   font-family: 'Oxygen', sans-serif;
 }
@@ -112,22 +100,4 @@ section {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-@media (max-width: 767px) {
-  .section-image {
-    padding: 50px 0;
-  }
-
-  #about {
-    padding-top: 150px;
-  }
-
-  #header h1 {
-    font-size: 72px; 
-  }
-
-  #header h2 {
-    font-size: 40px; 
-  }
 }
