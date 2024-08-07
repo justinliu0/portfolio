@@ -51,11 +51,11 @@ body {
 
 .btn-enter-portfolio {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 300px;
   padding: 10px 20px;
   font-size: 18px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #343a40;
   border: none;
   border-radius: 5px;
   text-decoration: none;
