@@ -39,7 +39,6 @@ body {
   box-sizing: border-box;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 56px;
 }
 
 #header::before {
