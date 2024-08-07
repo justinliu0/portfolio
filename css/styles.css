@@ -111,11 +111,13 @@ section, .section-image {
 
 #about img {
   margin-right: 20px; 
+  flex-shrink: 0;
 }
 
 #about h1 {
   font-weight: bold;
 }
+
 #about-content {
 }
   
