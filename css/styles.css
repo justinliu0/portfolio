@@ -112,6 +112,7 @@ section, .section-image {
 #about img {
   margin-right: 20px; 
   flex-shrink: 0;
+  float: left;
 }
 
 #about h1 {
@@ -119,6 +120,7 @@ section, .section-image {
 }
 
 #about-content {
+  float: right;
 }
   
 .img-circle {
