@@ -113,7 +113,7 @@ section, .section-image {
   object-fit: cover;
 }
 
-#about-content {
+.about-content {
   max-width: 600px;
   font-weight: bold;
 }
