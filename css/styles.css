@@ -139,13 +139,6 @@ section p {
   margin-left: 515px;
 }
 
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
 .social-buttons {
   display: flex;
   gap: 20px; /* Adjust spacing between buttons */
