@@ -102,11 +102,12 @@ section, .section-image {
 
 #about {
   display: flex;
+  align-items: center; /* Vertically align the items */
+  justify-content: center; /* Center the items horizontally */
   margin-top: 100px;
   margin-bottom: 100px;
   width: 100%;
   position: relative;
-  justify-content: center;
 }
 
 #about img {
@@ -115,11 +116,13 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  left: 20%; 
+  margin-right: 50px; /* Space between the image and text */
+  flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
+  flex-shrink: 0; /* Prevent the text from shrinking */
 }
 
