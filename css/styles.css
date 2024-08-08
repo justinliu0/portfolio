@@ -100,6 +100,11 @@ section, .section-image {
   text-align: center;
 }
 
+#section h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
 #about {
   display: flex;
   align-items: center;
@@ -116,14 +121,14 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 500px;
+  margin-right: 515px;
 }
 
 .about-content {
   position: absolute;
   max-width: 600px;
   text-align: left;
-  margin-left: 500px;
+  margin-left: 515px;
 }
 
 
