@@ -152,8 +152,9 @@ section p {
   height: 50px;
   border-radius: 50%;
   background-color: #343a40;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   transition: background-color 0.3s ease;
 }
 
