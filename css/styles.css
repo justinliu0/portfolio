@@ -113,12 +113,13 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -800px; 
+  margin-left: -400px; 
   align-items: center;
 }
 
 #about-content {
   max-width: 600px;
+  padding: 1rem;
 }
 
 #about h2 {
