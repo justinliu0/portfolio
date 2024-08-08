@@ -166,7 +166,8 @@ section p {
 
 .linkedin-button {
   background-image: url('./imgs/linkedin-icon.png');
-  background-color: #0077b5; /* LinkedIn's primary color */
+    background-size: cover;
+  background-position: center;
 }
 
 .social-button:hover {
