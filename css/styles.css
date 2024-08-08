@@ -95,7 +95,7 @@ section, .section-image {
   box-sizing: border-box;
   margin: 0; 
   display: flex; 
-  flex-direction: center; 
+  flex-direction: column; 
   justify-content: center; 
   text-align: center;
 }
