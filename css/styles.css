@@ -101,9 +101,6 @@ section, .section-image {
 }
 
 #about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
   padding: 2rem;
@@ -112,10 +109,14 @@ section, .section-image {
 #about img {
   margin-right: 20px;
   flex-shrink: 0;
+  float: ;eft;
 }
 
 #about-content {
-  max-width: 600px; /* or any width you prefer */
+}
+
+#about h2 {
+  font-weight: bold;
 }
 
 .img-circle {
