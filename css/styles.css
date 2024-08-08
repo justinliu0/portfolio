@@ -117,14 +117,15 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -800px;
 }
 
 #about-content {
   max-width: 600px;
-  transform: translateX(1000px);
+  transform: translateX(400px); /* Move the content 400 pixels to the right */
+  margin-left: 0; /* Reset any margin-left to avoid conflicts */
+  position: relative; /* Ensure positioning is not affecting the transform */
 }
 
-#about h2 {
+#about h1 {
   font-weight: bold;
 }
