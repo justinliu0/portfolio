@@ -121,7 +121,8 @@ section, .section-image {
 }
 
 #about-content {
-  max-width: 600px; 
+  max-width: 600px;
+  margin-left: 500px;
 }
 
 #about h1 {
