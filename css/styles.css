@@ -101,12 +101,11 @@ section, .section-image {
 }
 
 #about {
-  position: relative; 
   display: flex;
   margin-top: 100px;
   margin-bottom: 100px;
   width: 100%;
-  margin-right: 50px;
+  positioning: absolute;
 }
 
 #about img {
@@ -115,12 +114,12 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  left: 20%;
+  left: 20%; 
+  margin-right: 50px;
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
-  flex-shrink: 0;
 }
 
