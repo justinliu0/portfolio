@@ -103,7 +103,6 @@ section, .section-image {
 #about {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
   padding: 2rem;
