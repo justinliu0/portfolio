@@ -102,6 +102,8 @@ section, .section-image {
 
 #about {
   display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: space-between; /* Distribute space between the image and the content */
   font-family: 'Oxygen', sans-serif;
   padding: 2rem;
 }
@@ -112,15 +114,13 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 1300px;
 }
 
 #about-content {
   max-width: 600px;
-  margin-left: auto;
-  margin-right: 0;
-  text-align: initial !important;
+  text-align: left; /* Align text to the left within this container */
 }
+
 
 #about h2 {
   font-weight: bold;
