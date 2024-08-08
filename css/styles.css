@@ -102,12 +102,9 @@ section, .section-image {
 
 #about {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
-  padding: 2rem;
-  position: relative;
 }
 
 #about img {
@@ -117,6 +114,7 @@ section, .section-image {
   border-radius: 50%;
   object-fit: cover;
   margin-left: -800px; 
+  align-items: center;
 }
 
 #about-content {
