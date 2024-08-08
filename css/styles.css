@@ -101,25 +101,29 @@ section, .section-image {
 }
 
 #about {
+  position: relative; 
   display: flex;
-  align-items: center; /* Align items vertically centered */
-  justify-content: space-between; /* Distribute space between the image and the content */
-  font-family: 'Oxygen', sans-serif;
+  align-items: center;
   padding: 2rem;
 }
 
 #about img {
+  position: absolute;
   border: 8px solid #343a40;
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  left: 100; 
 }
 
 #about-content {
+  position: relative; 
   max-width: 600px;
-  text-align: left; /* Align text to the left within this container */
+  margin-left: 400px; 
+  text-align: left;
 }
+
 
 
 #about h2 {
