@@ -123,7 +123,7 @@ section p {
   position: relative;
 }
 
-#about img {
+.profile-pic {
   border: 8px solid #343a40;
   width: 350px;
   height: 350px;
