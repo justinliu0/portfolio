@@ -139,8 +139,7 @@ section p {
   text-align: left;
   margin-left: 515px;
   margin-bottom: 50px;
-  top: -5px;
-
+  transform: translateY(-2px);
 }
 
 .social-buttons {
