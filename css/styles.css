@@ -97,34 +97,25 @@ section, .section-image {
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
-  text-align: center;
 }
 
 #about {
   position: relative; 
   display: flex;
-  align-items: center;
   padding: 2rem;
 }
 
 #about img {
-  position: absolute;
   border: 8px solid #343a40;
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  left: 100; 
 }
 
 #about-content {
-  position: relative; 
   max-width: 600px;
-  margin-left: 400px; 
-  text-align: left;
 }
-
-
 
 #about h2 {
   font-weight: bold;
