@@ -135,4 +135,33 @@ section p {
   margin-left: 515px;
 }
 
+.social-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #343a40;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.3s ease;
+}
+
+.github-button {
+  background-image: url('./imgs/github-icon.png');
+}
+
+.linkedin-button {
+  background-image: url('./imgs/linkedin-icon.png');
+}
+
+.social-button:hover {
+  background-color: #8EE4FF; 
+}
 
