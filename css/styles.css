@@ -103,29 +103,27 @@ section, .section-image {
 #about {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
-  padding: 2rem;
 }
 
 #about img {
-  margin-right: 20px;
+  margin: 20px;
   flex-shrink: 0;
   border: 8px solid #343a40;
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  margin-left: 600px;
 }
 
 #about-content {
   max-width: 600px;
-  transform: translateX(400px); /* Move the content 400 pixels to the right */
-  margin-left: 0; /* Reset any margin-left to avoid conflicts */
-  position: relative; /* Ensure positioning is not affecting the transform */
+  transform: translateX(1000px); 
 }
 
-#about h1 {
+#about h2 {
   font-weight: bold;
 }
