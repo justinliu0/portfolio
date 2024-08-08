@@ -103,8 +103,8 @@ section, .section-image {
 #about {
   display: flex;
   font-family: 'Oxygen', sans-serif;
-  padding: 1rem;
-  text-align: left;
+  padding: 2rem;
+  text-align: right;
 }
 
 #about img {
@@ -113,6 +113,7 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  margin-left: 800px;
 }
 
 #about-content {
