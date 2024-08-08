@@ -107,9 +107,9 @@ section, .section-image {
 }
 
 #about img {
-  margin-right: 20px;
+  margin: 20px;
   flex-shrink: 0;
-  float: ;eft;
+  float: left;
 }
 
 #about-content {
