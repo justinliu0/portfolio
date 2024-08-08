@@ -95,17 +95,19 @@ section, .section-image {
   box-sizing: border-box;
   margin: 0; 
   display: flex; 
-  flex-direction: column; 
+  flex-direction: center; 
   justify-content: center; 
   text-align: center;
+  font-weight: bold;
+  overflow: hidden;
 }
 
 #about {
   position: relative; 
   display: flex;
-  padding: 2rem;
   margin-top: 100px;
   margin-bottom: 100px;
+  width: 100%;
 }
 
 #about img {
@@ -114,17 +116,14 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute; \
-  left: -400px;
+  position: absolute; 
+  left: -20%;
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
   position: relative;
-  left: 500px;
+  left: 20%;
 }
 
-#about h2 {
-  font-weight: bold;
-}
