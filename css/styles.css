@@ -107,6 +107,7 @@ section, .section-image {
 section h2 {
   font-weight: bold;
   font-size: 35px;
+  margin-top: 25px;
 }
 
 section p {
