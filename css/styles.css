@@ -97,7 +97,6 @@ section, .section-image {
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
-  text-align: center;
 }
 
 #about {
@@ -117,9 +116,8 @@ section, .section-image {
 #about-content {
   max-width: 600px;
   text-align: left !important;
-  margin-left: auto !important;
-  
-  
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 #about h2 {
