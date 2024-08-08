@@ -147,11 +147,14 @@ section p {
 }
 
 .social-buttons {
-  margin-top: 20px;
   display: flex;
   gap: 10px;
-  justify-content: center;
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
 }
+
 
 .social-button {
   display: inline-block;
