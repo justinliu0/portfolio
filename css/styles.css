@@ -102,8 +102,8 @@ section, .section-image {
 
 #about {
   display: flex;
-  align-items: center; /* Vertically align the items */
-  justify-content: center; /* Center the items as a group */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center the items horizontally */
   margin-top: 100px;
   margin-bottom: 100px;
   width: 100%;
@@ -116,13 +116,13 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -600px;
+  margin-right: 50px; /* Add space between image and text */
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
-  margin-left: 500px;
+  margin: 0; /* Remove margin so it stays aligned with the image */
 }
 
 
