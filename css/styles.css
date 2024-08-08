@@ -116,12 +116,13 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 50px; /* Space between the image and text */
+  margin-left: -600px;
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
+  margng-left: 500px;
 }
 
 
