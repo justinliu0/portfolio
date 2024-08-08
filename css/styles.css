@@ -100,7 +100,7 @@ section, .section-image {
   text-align: center;
 }
 
-#section h2 {
+section h2 {
   font-weight: bold;
   font-size: 30px;
 }
