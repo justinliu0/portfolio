@@ -172,13 +172,6 @@ section p {
   background-color: #8EE4FF; 
 }
 
-#about h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  margin-top: 30px; /* 30px margin above the "Learn more about my:" */
-}
-
 .portfolio-buttons {
   display: flex;
   justify-content: center;
