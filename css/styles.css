@@ -109,10 +109,11 @@ section, .section-image {
 #about img {
   margin: 20px;
   flex-shrink: 0;
-  float: left;
+  float: right;
 }
 
 #about-content {
+  float
 }
 
 #about h2 {
