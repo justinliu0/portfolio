@@ -97,6 +97,7 @@ section, .section-image {
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
+  text-align: center;
 }
 
 #about {
@@ -111,11 +112,15 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  position: absolute; \
+  left: -400px;
 }
 
 .about-content {
   max-width: 600px;
-  font-weight: bold;
+  text-align: left;
+  position: relative;
+  left: 500px;
 }
 
 #about h2 {
