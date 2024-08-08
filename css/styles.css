@@ -106,6 +106,7 @@ section, .section-image {
   margin-top: 100px;
   margin-bottom: 100px;
   width: 100%;
+  margin-right: 50px;
 }
 
 #about img {
@@ -114,14 +115,12 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute; 
   left: 20%;
 }
 
 .about-content {
   max-width: 600px;
   text-align: left;
-  position: relative;
-  left: 40%;
+  flex-shrink: 0;
 }
 
