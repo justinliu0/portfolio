@@ -115,9 +115,7 @@ section, .section-image {
 
 #about-content {
   max-width: 600px;
-  text-align: left !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
+  font-weight: bold;
 }
 
 #about h2 {
