@@ -158,13 +158,6 @@ section p {
   transition: background-color 0.3s ease;
 }
 
-.github-button {
-  background-image: url('./imgs/github-icon.png');
-}
-
-.linkedin-button {
-  background-image: url('./imgs/linkedin-icon.png');
-}
 
 .social-button:hover {
   background-color: #8EE4FF; 
