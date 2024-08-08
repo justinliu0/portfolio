@@ -113,7 +113,6 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: -400px; 
 }
 
 #about-content {
