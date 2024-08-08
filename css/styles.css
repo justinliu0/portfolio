@@ -137,6 +137,7 @@ section p {
   max-width: 600px;
   text-align: left;
   margin-left: 515px;
+  margin-bottom: 50px;
 }
 
 .social-buttons {
@@ -167,8 +168,36 @@ section p {
   height: 24px;
 }
 
-
 .social-button:hover {
   background-color: #8EE4FF; 
 }
 
+#about h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px; /* 30px margin above the "Learn more about my:" */
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.portfolio-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #343a40;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-buttons a:hover {
+  background-color: #8EE4FF;
+  transform: scale(1.05);
+}
