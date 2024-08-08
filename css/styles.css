@@ -85,6 +85,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.btn-enter-portfolio:hover {
+  background-color: #f5f5f5;
+}
+
 section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
