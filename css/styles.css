@@ -111,21 +111,17 @@ section, .section-image {
 }
 
 #about img {
-  margin: 20px;
-  flex-shrink: 0;
   border: 8px solid #343a40;
   width: 350px;
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  position: absolute; 
-  left: 200; 
+  margin-right: 20px; /* Space between image and text */
 }
 
 #about-content {
-  margin-left: 400px;
   max-width: 600px;
-  position: relative;
+  /* Ensure the text is properly positioned and not overlapping */
 }
 
 #about h2 {
