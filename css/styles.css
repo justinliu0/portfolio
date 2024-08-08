@@ -139,11 +139,23 @@ section p {
   margin-left: 515px;
 }
 
-.social-buttons {
-  margin-right: 515px;
-  gap: 20px;
-  margin-top: 20px;
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
+
+.social-buttons {
+  display: flex;
+  gap: 20px; /* Adjust spacing between buttons */
+  margin-top: 20px; /* Adjust spacing between the profile image and buttons */
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the .profile-container */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+}
+
 
 .social-button {
   display: inline-block;
