@@ -98,8 +98,6 @@ section, .section-image {
   flex-direction: center; 
   justify-content: center; 
   text-align: center;
-  font-weight: bold;
-  overflow: hidden;
 }
 
 #about {
@@ -117,7 +115,7 @@ section, .section-image {
   border-radius: 50%;
   object-fit: cover;
   position: absolute; 
-  left: -20%;
+  left: 20%;
 }
 
 .about-content {
