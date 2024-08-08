@@ -139,11 +139,11 @@ section p {
   margin-left: 515px;
 }
 
-
 .social-buttons {
   margin-right: 515px;
+  gap: 20px;
+  margin-top: 20px;
 }
-
 
 .social-button {
   display: inline-block;
