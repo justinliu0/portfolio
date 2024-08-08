@@ -141,12 +141,9 @@ section p {
 
 .social-buttons {
   display: flex;
-  gap: 20px; /* Adjust spacing between buttons */
-  margin-top: 20px; /* Adjust spacing between the profile image and buttons */
+  gap: 20px; 
+  margin-top: 20px; 
   position: absolute;
-  bottom: 0; /* Position at the bottom of the .profile-container */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
 }
 
 
