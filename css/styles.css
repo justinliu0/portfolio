@@ -103,6 +103,7 @@ section, .section-image {
 #about {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
   padding: 2rem;
@@ -120,7 +121,6 @@ section, .section-image {
 
 #about-content {
   max-width: 600px;
-  margin-right: -800;
 }
 
 #about h2 {
