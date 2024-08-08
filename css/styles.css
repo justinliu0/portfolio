@@ -1,20 +1,20 @@
 body {
   scroll-behavior: smooth;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .navbar {
   background-color: #343a40;
-  position: fixed; 
-  top: 0; 
+  position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1030;
-  transition: top 0.3s; 
+  transition: top 0.3s;
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #fff; 
+  color: #fff;
 }
 
 .navbar-nav .nav-item .nav-link.active {
@@ -22,20 +22,20 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #8EE4FF; 
+  color: #8EE4FF;
 }
 
 .navbar-icon {
-  margin-right: 5px; 
-  margin-top: -3px; 
+  margin-right: 5px;
+  margin-top: -3px;
 }
 
 #header {
   height: 100vh;
-  position: relative; 
+  position: relative;
   background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   box-sizing: border-box;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
@@ -54,9 +54,9 @@ body {
 
 .header-content {
   position: absolute;
-  top: 145px; 
-  left: 240px; 
-  text-align: center; 
+  top: 145px;
+  left: 240px;
+  text-align: center;
   color: #fff;
   z-index: 2;
 }
@@ -89,35 +89,33 @@ section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
-  background-color: #fff; 
+  background-color: #fff;
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
-  margin: 0; 
+  margin: 0;
   text-align: center;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Oxygen', sans-serif;
   text-align: left;
   padding: 2rem;
 }
 
 #about img {
-  margin: 20px;
+  margin-right: 20px;
   flex-shrink: 0;
-  float: right;
 }
 
 #about-content {
-  float
-}
-
-#about h2 {
-  font-weight: bold;
+  max-width: 600px; /* or any width you prefer */
 }
 
 .img-circle {
@@ -126,7 +124,4 @@ section, .section-image {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 20px;
-  flex-shrink: 0;
-  float: right;
 }
