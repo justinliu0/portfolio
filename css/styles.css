@@ -13,7 +13,6 @@ body {
   z-index: 1020; 
 }
 
-
 .navbar {
   background-color: rgba(52, 58, 64, 0); 
   position: fixed; 
@@ -69,9 +68,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.15), 
+    rgba(0, 0, 0, 0.35) 
+  );
   z-index: 1;
 }
+
 
 .header-content {
   position: absolute;
