@@ -29,7 +29,6 @@ body {
   top: 0px;
 }
 
-/* Navbar Links */
 .navbar-nav .nav-item .nav-link {
   color: #fff;
 }
@@ -42,7 +41,6 @@ body {
   color: #8EE4FF;
 }
 
-/* Navbar Icon */
 .navbar-icon {
   width: 32px;
   height: 32px;
@@ -51,7 +49,6 @@ body {
   margin-top: -3px;
 }
 
-/* Header Section */
 #header {
   height: 100vh;
   position: relative; 
@@ -76,7 +73,6 @@ body {
   z-index: 1;
 }
 
-/* Header Content */
 .header-content {
   position: absolute;
   top: 145px; 
@@ -98,7 +94,6 @@ body {
   font-weight: normal !important;
 }
 
-/* Button Styles */
 .btn-enter-portfolio {
   display: inline-block;
   margin-top: 390px;
@@ -116,7 +111,6 @@ body {
   background-color: #DEDEDE;
 }
 
-/* Section Styles */
 section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
@@ -142,7 +136,6 @@ section p {
   font-size: 18px;
 }
 
-/* About Section */
 #about {
   display: flex;
   align-items: center;
@@ -203,7 +196,6 @@ section p {
   background-color: #8EE4FF; 
 }
 
-/* Portfolio Buttons */
 .portfolio-buttons {
   display: flex;
   justify-content: center;
@@ -229,7 +221,6 @@ section p {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Scroll-to-Top Button */
 .scroll-to-top {
   position: fixed;
   right: 15px;
