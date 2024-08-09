@@ -7,22 +7,23 @@ body {
 .navbar-wrapper {
   height: 56px;
   overflow: hidden;
-  position: relative;
+  position: fixed;
 }
 
 .navbar {
   background-color: rgba(52, 58, 64, 0);
-  position: fixed; 
+  position: relative; 
+  height: 80px;
   top: 0; 
   width: 100%;
   z-index: 1030;
   transition: background-color 0.3s ease, top 0.3s; 
-  top: 25px;
+  top: -24px;
 }
 
 .navbar.scrolled {
   background-color: rgba(52, 58, 64, 1); 
-  top: 25px;
+  top: 24px;
 }
 
 .navbar-nav .nav-item .nav-link {
