@@ -4,35 +4,32 @@ body {
   padding: 0; 
 }
 
-/* Wrapper to manage the visible part of the navbar */
 .navbar-wrapper {
-  height: 80px; /* Total height including the hidden part */
-  overflow: hidden; /* Hide the part that is scrolled out */
-  position: fixed; /* Fixed position at the top */
+  height: 90px; 
+  overflow: hidden; 
+  position: fixed; 
   top: 0;
   width: 100%;
-  z-index: 1020; /* Ensure it's below the navbar */
+  z-index: 1020; 
 }
 
-/* Initial state of the navbar */
+
 .navbar {
-  background-color: rgba(52, 58, 64, 0); /* Transparent background initially */
-  position: fixed; /* Fixed position at the top */
+  background-color: rgba(52, 58, 64, 0); 
+  position: fixed; 
   width: 100%;
-  z-index: 1030; /* Ensure it's above the wrapper */
-  transition: background-color 0.3s ease, top 0.3s; /* Smooth transitions */
-  height: 80px; /* Total height of the navbar */
-  top: 0; /* Start position */
+  z-index: 1030; 
+  transition: background-color 0.3s ease, top 0.3s; 
+  height: 90px; 
+  top: 0; 
 }
 
-/* State of the navbar when scrolled */
 .navbar.scrolled {
-  background-color: rgb(52, 58, 64, 1); /* Dark blue background */
-  height: 56px; /* Height after scrolling */
-  top: 0; /* Position at the top after scroll */
+  background-color: rgb(52, 58, 64, 1); 
+  height: 56px; 
+  top: 0;
 }
 
-/* Navbar links styling */
 .navbar-nav .nav-item .nav-link {
   color: #fff;
 }
