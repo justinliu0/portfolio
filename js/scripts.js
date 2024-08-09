@@ -8,4 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove('scrolled'); 
     }
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 56, // Adjust scroll position by 56 pixels
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 });
