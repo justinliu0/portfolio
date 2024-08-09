@@ -19,7 +19,7 @@ body {
   position: fixed; 
   width: 100%;
   z-index: 1030; 
-  transition: background-color 0.3s ease, top 0.3s; 
+  transition: background-color 0.3s ease, top 0.5s; 
   height: 90px; 
   top: 0; 
 }
@@ -27,7 +27,7 @@ body {
 .navbar.scrolled {
   background-color: rgb(52, 58, 64, 1); 
   height: 56px; 
-  top: 0;
+  top: 0px;
 }
 
 .navbar-nav .nav-item .nav-link {
