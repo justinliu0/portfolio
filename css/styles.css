@@ -54,7 +54,6 @@ body {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out;
-  color: #fff;
 }
 
 .navbar-icon.expanded {
@@ -62,13 +61,16 @@ body {
   transition: transform 0.3s ease;
 }
 
-.navbar-text {
-  transition: transform 0.3s ease;
+.navbar-brand p {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #fff;
 }
 
-.navbar-text.expanded {
-  transform: scale(1.5); 
+.navbar-brand p.expanded {
+  transform: scale(1.5) !important;
+  color: #fff;
 }
+
 
 #header {
   height: 100vh;
