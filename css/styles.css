@@ -42,8 +42,10 @@ body {
   color: #8EE4FF;
 }
 
-/* Navbar icon styling */
 .navbar-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
   margin-right: 5px;
   margin-top: -3px;
 }
