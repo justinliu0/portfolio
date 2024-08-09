@@ -47,8 +47,19 @@ body {
   object-fit: cover;
   margin-right: 5px;
   margin-top: -3px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand.expanded,
+.navbar-icon.expanded {
+  transform: scale(1.5); 
+}
 
 #header {
   height: 100vh;
