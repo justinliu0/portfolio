@@ -57,13 +57,13 @@ body {
 }
 
 .navbar-icon.expanded {
-  transform: scale(1.1) translateX(-10%);
+  transform: scale(1.2) translateX(-10%) !important;
   transition: transform 0.3s ease;
 }
 
 .navbar-brand.expanded {
   transform: scale(1.5); 
-  transition: transform 0.3s easet;
+  transition: transform 0.3s ease;
 }
 
 
