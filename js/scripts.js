@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
-  var prevScrollPos = window.pageYOffset;
 
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 56) {
-      navbar.style.top = "0"; // Show the navbar
+  window.addEventListener('scroll', function() {
+    if (window.scrollY === 0) {
+      navbar.classList.add('hidden');
     } else {
-      navbar.style.top = "-56px"; // Hide the navbar initially
+      navbar.classList.remove('hidden');
     }
-    prevScrollPos = currentScrollPos;
-  };
+  });
 });
