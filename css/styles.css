@@ -6,8 +6,8 @@ body {
 
 /* Wrapper to manage the visible part of the navbar */
 .navbar-wrapper {
-  height: 56px; /* Height visible after scroll */
-  overflow: hidden;
+  height: 80px; /* Total height including the hidden part */
+  overflow: hidden; /* Hide the part that is scrolled out */
   position: fixed; /* Fixed position at the top */
   top: 0;
   width: 100%;
@@ -28,8 +28,8 @@ body {
 /* State of the navbar when scrolled */
 .navbar.scrolled {
   background-color: rgb(52, 58, 64, 1); /* Dark blue background */
-  top: -24px; /* Move up to hide part of the navbar */
   height: 56px; /* Height after scrolling */
+  top: 0; /* Position at the top after scroll */
 }
 
 /* Navbar links styling */
@@ -50,6 +50,7 @@ body {
   margin-right: 5px;
   margin-top: -3px;
 }
+
 
 #header {
   height: 100vh;
