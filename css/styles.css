@@ -5,17 +5,18 @@ body {
 }
 
 .navbar {
-  background-color: rgba(52, 58, 64, 0); /* Default transparent background */
+  background-color: rgba(52, 58, 64, 0);
   position: fixed; 
   top: 0; 
   width: 100%;
   z-index: 1030;
   transition: background-color 0.3s ease, top 0.3s; 
+  top: 8px;
 }
 
 .navbar.scrolled {
   background-color: rgba(52, 58, 64, 1); 
-  top: 8px;
+  top: 0px;
 }
 
 .navbar-nav .nav-item .nav-link {
