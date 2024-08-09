@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
-  var navbarIcon = document.querySelector('.navbar-icon');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
-      navbarIcon.classList.remove('expanded');
 
       if (window.scrollY > 100) {
         scrollToTopBtn.classList.add('visible');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       navbar.classList.remove('scrolled');
       navbarBrand.classList.add('expanded');
-      navbarIcon.classList.add('expanded');
       scrollToTopBtn.classList.remove('visible');
     }
   });
