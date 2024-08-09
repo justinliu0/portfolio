@@ -4,11 +4,11 @@ body {
   padding: 0; 
 }
 
-/* Wrapper for the navbar to show only part of it */
+/* Wrapper to manage the visible part of the navbar */
 .navbar-wrapper {
-  height: 56px; /* Height to show the bottom part of the navbar */
+  height: 56px; /* Height visible after scroll */
   overflow: hidden;
-  position: fixed; /* Fixed position at the top of the viewport */
+  position: fixed; /* Fixed position at the top */
   top: 0;
   width: 100%;
   z-index: 1020; /* Ensure it's below the navbar */
@@ -17,19 +17,19 @@ body {
 /* Initial state of the navbar */
 .navbar {
   background-color: rgba(52, 58, 64, 0); /* Transparent background initially */
-  position: relative; /* Relative within the wrapper */
-  height: 70px; /* Total height of the navbar */
+  position: absolute; /* Position within the wrapper */
+  height: 80px; /* Total height of the navbar */
   width: 100%;
   z-index: 1030; /* Ensure it's above the wrapper */
   transition: background-color 0.3s ease, top 0.3s, height 0.3s; /* Smooth transitions */
-  top: -24px; /* Move up 24px initially */
+  top: -24px; /* Hide 24px of the navbar initially */
 }
 
 /* State of the navbar when scrolled */
 .navbar.scrolled {
   background-color: rgba(52, 58, 64, 1); /* Dark blue background */
   top: 0; /* Move to its normal position */
-  height: 56px; /* Height when scrolled */
+  height: 56px; /* Height after scrolling */
 }
 
 /* Navbar links styling */
@@ -50,6 +50,7 @@ body {
   margin-right: 5px;
   margin-top: -3px;
 }
+
 
 
 #header {
