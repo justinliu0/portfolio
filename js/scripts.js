@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
       if (window.scrollY > 260) {
-        scrollToTopBtn.style.display = 'block';
+        scrollToTopBtn.classList.add('visible'); 
       } else {
-        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.classList.remove('visible'); 
       }
     } else {
       navbar.classList.remove('scrolled');
-      scrollToTopBtn.style.display = 'none';
+      scrollToTopBtn.classList.remove('visible'); 
     }
   });
 
