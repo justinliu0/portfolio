@@ -54,21 +54,20 @@ body {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out;
+  color: #fff;
 }
 
 .navbar-icon.expanded {
-  transform: scale(1.2) translateX(-10%) !important;
+  transform: scale(1.2) translateX(-10%) ;
   transition: transform 0.3s ease;
 }
 
 .navbar-text {
   transition: transform 0.3s ease;
-  color: #fff;
 }
 
 .navbar-text.expanded {
-  transform: scale(1.5) !important; 
-  color: #fff;
+  transform: scale(1.5); 
 }
 
 #header {
