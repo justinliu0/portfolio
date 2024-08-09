@@ -127,7 +127,7 @@ section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
-  background-color: #e4e0dd;
+  background-color: #fff;
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
@@ -233,6 +233,15 @@ section p {
   transform: scale(1.08);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
+
+#skills {
+  background-color: 
+}
+
+
+
+
+
 
 .scroll-to-top {
   position: fixed;
