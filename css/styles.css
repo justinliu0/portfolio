@@ -242,6 +242,7 @@ section p {
   visibility: hidden; 
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; 
   z-index: 3;
+  font-family: 'Courier New', monospace;
 }
 
 .scroll-to-top.visible {
