@@ -1,25 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
-  var navbarText = document.querySelector('.navbar-text');
+  var navbarBrand = document.querySelector('.navbar-brand');
   var navbarIcon = document.querySelector('.navbar-icon');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
-      navbarText.classList.remove('expanded');
+      navbarBrand.classList.remove('expanded');
       navbarIcon.classList.remove('expanded');
-      
+
       if (window.scrollY > 100) {
-        scrollToTopBtn.classList.add('visible'); 
+        scrollToTopBtn.classList.add('visible');
       } else {
-        scrollToTopBtn.classList.remove('visible'); 
+        scrollToTopBtn.classList.remove('visible');
       }
     } else {
       navbar.classList.remove('scrolled');
-      navbarText.classList.add('expanded');
+      navbarBrand.classList.add('expanded');
       navbarIcon.classList.add('expanded');
-      scrollToTopBtn.classList.remove('visible'); 
+      scrollToTopBtn.classList.remove('visible');
     }
   });
 
