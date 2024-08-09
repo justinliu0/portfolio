@@ -17,12 +17,12 @@ body {
   width: 100%;
   z-index: 1030;
   transition: background-color 0.3s ease, top 0.3s; 
-  top: 15px;
+  top: 25px;
 }
 
 .navbar.scrolled {
   background-color: rgba(52, 58, 64, 1); 
-  top: 15px;
+  top: 25px;
 }
 
 .navbar-nav .nav-item .nav-link {
