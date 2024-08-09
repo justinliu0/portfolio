@@ -48,7 +48,6 @@ body {
   margin-right: 8px;
   margin-top: -3px;
   transition: transform 0.3s ease-in-out;
-  transform: scale(1.5);
 }
 
 .navbar-brand {
@@ -61,7 +60,7 @@ body {
 }
 
 .navbar-icon.expanded {
-  transform: scale(1.2); 
+  transform: scale(1.2) translateX(-5%); 
 }
 
 #header {
