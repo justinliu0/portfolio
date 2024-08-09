@@ -4,37 +4,22 @@ body {
   padding: 0; 
 }
 
-/* Wrapper to manage the visible part of the navbar */
-.navbar-wrapper {
-  height: 56px; /* Height visible after scroll */
-  overflow: hidden;
-  position: fixed; /* Fixed position at the top */
-  top: 0;
-  width: 100%;
-  z-index: 1020; /* Ensure it's below the navbar */
-}
-
-/* Initial state of the navbar */
 .navbar {
-  background-color: rgba(52, 58, 64, 0); /* Transparent background initially */
-  position: fixed; /* Fixed position at the top */
-  height: 80px; /* Total height of the navbar */
+  background-color: rgba(52, 58, 64, 0); 
+  position: fixed; 
+  top: 0; 
   width: 100%;
-  z-index: 1030; /* Ensure it's above the wrapper */
-  transition: background-color 0.3s ease, top 0.3s, height 0.3s; /* Smooth transitions */
-  top: -24px; /* Hide 24px of the navbar initially */
+  z-index: 1030;
+  transition: background-color 0.3s ease, top 0.3s; 
+  height: 56px;
 }
 
-/* State of the navbar when scrolled */
 .navbar.scrolled {
-  background-color: rgba(52, 58, 64, 1); /* Dark blue background */
-  top: 0; /* Move to its normal position */
-  height: 56px; /* Height after scrolling */
+  background-color: rgb(52, 58, 64, 1); 
 }
 
-/* Navbar links styling */
 .navbar-nav .nav-item .nav-link {
-  color: #fff;
+  color: #fff; 
 }
 
 .navbar-nav .nav-item .nav-link.active {
@@ -42,17 +27,13 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #8EE4FF;
+  color: #8EE4FF; 
 }
 
-/* Navbar icon styling */
 .navbar-icon {
-  margin-right: 5px;
-  margin-top: -3px;
+  margin-right: 5px; 
+  margin-top: -3px; 
 }
-
-
-
 
 #header {
   height: 100vh;
