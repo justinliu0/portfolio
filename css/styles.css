@@ -61,6 +61,15 @@ body {
   transition: transform 0.3s ease;
 }
 
+.navbar-text {
+  transition: transform 0.3s ease;
+}
+
+.navbar-text.expanded {
+  transform: scale(1.5); 
+  transition: transform 0.3s ease
+}
+
 #header {
   height: 100vh;
   position: relative; 
