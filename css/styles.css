@@ -54,7 +54,6 @@ body {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out;
-  font-weight: bold;
 }
 
 .navbar-icon.expanded {
