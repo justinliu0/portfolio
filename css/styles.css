@@ -4,32 +4,37 @@ body {
   padding: 0; 
 }
 
+/* Wrapper for the navbar to show only part of it */
 .navbar-wrapper {
-  height: 56px;
+  height: 56px; /* Height to show the bottom part of the navbar */
   overflow: hidden;
-  position: fixed;
+  position: fixed; /* Fixed position at the top of the viewport */
   top: 0;
-  width: 100%
-  z-index: 1020
-}
-
-.navbar {
-  background-color: rgba(52, 58, 64, 0);
-  position: relative; 
-  height: 80px;
   width: 100%;
-  z-index: 1030;
-  transition: background-color 0.3s ease, top 0.3s; 
-  top: -24px;
+  z-index: 1020; /* Ensure it's below the navbar */
 }
 
+/* Initial state of the navbar */
+.navbar {
+  background-color: rgba(52, 58, 64, 0); /* Transparent background initially */
+  position: relative; /* Relative within the wrapper */
+  height: 70px; /* Total height of the navbar */
+  width: 100%;
+  z-index: 1030; /* Ensure it's above the wrapper */
+  transition: background-color 0.3s ease, top 0.3s, height 0.3s; /* Smooth transitions */
+  top: -24px; /* Move up 24px initially */
+}
+
+/* State of the navbar when scrolled */
 .navbar.scrolled {
-  background-color: rgba(52, 58, 64, 1); 
-  top: 24px;
+  background-color: rgba(52, 58, 64, 1); /* Dark blue background */
+  top: 0; /* Move to its normal position */
+  height: 56px; /* Height when scrolled */
 }
 
+/* Navbar links styling */
 .navbar-nav .nav-item .nav-link {
-  color: #fff; 
+  color: #fff;
 }
 
 .navbar-nav .nav-item .nav-link.active {
@@ -37,13 +42,15 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #8EE4FF; 
+  color: #8EE4FF;
 }
 
+/* Navbar icon styling */
 .navbar-icon {
-  margin-right: 5px; 
-  margin-top: -3px; 
+  margin-right: 5px;
+  margin-top: -3px;
 }
+
 
 #header {
   height: 100vh;
