@@ -5,16 +5,20 @@ body {
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: rgb(52, 58, 64, 1);
   position: fixed; 
   top: 0; 
   width: 100%;
   z-index: 1030;
-  transition: top 0.3s; 
+  transition: background-color 0.3s ease, top 0.3s; 
 }
 
 .navbar-nav .nav-item .nav-link {
   color: #fff; 
+}
+
+.navbar.hidden {
+  background-color: rgba(52, 58, 64, 0); 
 }
 
 .navbar-nav .nav-item .nav-link.active {
