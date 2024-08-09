@@ -1,7 +1,9 @@
+// scripts.js
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
+  // Handle Navbar scroll effects and scroll-to-top button visibility
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('a.js-scroll-trigger[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 56, 
+          top: targetElement.offsetTop - 56, // Adjust for navbar height
           behavior: 'smooth'
         });
       }
@@ -40,5 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
       top: 0,
       behavior: 'smooth'
     });
+  });
+
+  // Initialize Bootstrap ScrollSpy
+  var scrollspy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar'
   });
 });
