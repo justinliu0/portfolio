@@ -182,7 +182,7 @@ section p {
 .portfolio-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
   margin-top: 20px;
 }
 
