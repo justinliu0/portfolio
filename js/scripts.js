@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 56, // Adjust scroll position by 56 pixels
+          top: targetElement.offsetTop - 56, 
           behavior: 'smooth'
         });
       }
