@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Scroll to top when button is clicked
   scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
