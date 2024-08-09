@@ -17,7 +17,7 @@ body {
 /* Initial state of the navbar */
 .navbar {
   background-color: rgba(52, 58, 64, 0); /* Transparent background initially */
-  position: absolute; /* Position within the wrapper */
+  position: fixed; /* Fixed position at the top */
   height: 80px; /* Total height of the navbar */
   width: 100%;
   z-index: 1030; /* Ensure it's above the wrapper */
@@ -50,6 +50,7 @@ body {
   margin-right: 5px;
   margin-top: -3px;
 }
+
 
 
 
