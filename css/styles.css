@@ -1,9 +1,12 @@
+/* General Body Styles */
 body {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
   margin: 0;
   padding: 0; 
+  font-family: 'Montserrat', sans-serif; /* Consistent font family */
 }
 
+/* Navbar Wrapper */
 .navbar-wrapper {
   height: 90px; 
   overflow: hidden; 
@@ -13,34 +16,33 @@ body {
   z-index: 1020; 
 }
 
+/* Navbar Styles */
 .navbar {
   background-color: rgba(52, 58, 64, 0); 
   position: fixed; 
   width: 100%;
   z-index: 1030; 
-  transition: height 0.1s ease-in-out, top 0.1s ease-in-out;
+  transition: height 0.1s ease-in-out, background-color 0.1s ease-in-out; /* Added background-color transition */
   height: 90px; 
   top: 0; 
 }
 
 .navbar.scrolled {
-  background-color: rgb(52, 58, 64, 1); 
+  background-color: rgba(52, 58, 64, 1); 
   height: 56px; 
-  top: 0px;
 }
 
+/* Navbar Links */
 .navbar-nav .nav-item .nav-link {
   color: #fff;
 }
 
-.navbar-nav .nav-item .nav-link.active {
-  color: #8EE4FF;
-}
-
+.navbar-nav .nav-item .nav-link.active,
 .navbar-nav .nav-item .nav-link:hover {
   color: #8EE4FF;
 }
 
+/* Navbar Icon */
 .navbar-icon {
   width: 32px;
   height: 32px;
@@ -49,6 +51,7 @@ body {
   margin-top: -3px;
 }
 
+/* Header Section */
 #header {
   height: 100vh;
   position: relative; 
@@ -73,10 +76,12 @@ body {
   z-index: 1;
 }
 
+/* Header Content */
 .header-content {
   position: absolute;
   top: 145px; 
-  left: 240px; 
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
   text-align: center; 
   color: #fff;
   z-index: 2;
@@ -94,6 +99,7 @@ body {
   font-weight: normal !important;
 }
 
+/* Button Styles */
 .btn-enter-portfolio {
   display: inline-block;
   margin-top: 390px;
@@ -111,6 +117,7 @@ body {
   background-color: #DEDEDE;
 }
 
+/* Section Styles */
 section, .section-image {
   font-family: 'Oxygen', sans-serif;
   position: relative;
@@ -136,6 +143,7 @@ section p {
   font-size: 18px;
 }
 
+/* About Section */
 #about {
   display: flex;
   align-items: center;
@@ -152,26 +160,24 @@ section p {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 545px;
+  margin-right: 20px; /* Adjusted margin for spacing */
 }
 
 .about-content {
-  position: absolute;
   max-width: 650px;
   text-align: left;
-  margin-left: 525px;
-  margin-bottom: 50px;
-  transform: translateY(-50px);
+  margin-left: 20px; /* Adjusted margin for alignment */
 }
 
+/* Social Buttons */
 .social-buttons {
   display: flex;
   gap: 15px; 
   margin-top: 20px; 
   align-items: center; 
-  margin-left: 115px;
 }
 
+/* Social Button */
 .social-button {
   display: flex;
   justify-content: center;
@@ -196,6 +202,7 @@ section p {
   background-color: #8EE4FF; 
 }
 
+/* Portfolio Buttons */
 .portfolio-buttons {
   display: flex;
   justify-content: center;
@@ -221,6 +228,7 @@ section p {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Scroll-to-Top Button */
 .scroll-to-top {
   position: fixed;
   right: 15px;
@@ -234,7 +242,6 @@ section p {
   background: rgba(52, 58, 64, 0.5);
   line-height: 45px;
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   opacity: 0; 
   visibility: hidden; 
