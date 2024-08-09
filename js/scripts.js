@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
-      if (window.scrollY > 260) {
+      if (window.scrollY > 100) {
         scrollToTopBtn.classList.add('visible'); 
       } else {
         scrollToTopBtn.classList.remove('visible'); 
