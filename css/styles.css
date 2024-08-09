@@ -8,13 +8,15 @@ body {
   height: 56px;
   overflow: hidden;
   position: fixed;
+  top: 0;
+  width: 100%
+  z-index: 1020
 }
 
 .navbar {
   background-color: rgba(52, 58, 64, 0);
   position: relative; 
   height: 80px;
-  top: 0; 
   width: 100%;
   z-index: 1030;
   transition: background-color 0.3s ease, top 0.3s; 
