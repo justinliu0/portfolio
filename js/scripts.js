@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
+  var navbarBrand = document.querySelector('.navbar-brand');
+  var navbarIcon = document.querySelector('.navbar-icon');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
+      navbarBrand.classList.remove('expanded');
+      navbarIcon.classList.remove('expanded');
+      
       if (window.scrollY > 100) {
         scrollToTopBtn.classList.add('visible'); 
       } else {
@@ -12,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else {
       navbar.classList.remove('scrolled');
+      navbarBrand.classList.add('expanded');
+      navbarIcon.classList.add('expanded');
       scrollToTopBtn.classList.remove('visible'); 
     }
   });
 
-  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -33,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Scroll to top when button is clicked
   scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
