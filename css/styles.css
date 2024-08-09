@@ -18,7 +18,7 @@ body {
   position: fixed; 
   width: 100%;
   z-index: 1030; 
-  transition: height 0.4s cubic-bezier(0.5, 0, 0.5, 1), top 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: height 1s cubic-bezier(0.15, 0.4, 0.7, 0.4), top 0.4s cubic-bezier(0.5, 0, 0.5, 1);
   height: 90px; 
   top: 0; 
 }
