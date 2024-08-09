@@ -63,10 +63,12 @@ body {
 
 .navbar-text {
   transition: transform 0.3s ease;
+  color: #fff;
 }
 
 .navbar-text.expanded {
-  transform: scale(1.5); 
+  transform: scale(1.5) !important; 
+  color: #fff;
 }
 
 #header {
