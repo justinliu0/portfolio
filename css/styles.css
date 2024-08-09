@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-  background-color: rgb(52, 58, 64, 1);
+  background-color: rgba(52, 58, 64, 0); /* Default transparent background */
   position: fixed; 
   top: 0; 
   width: 100%;
@@ -13,12 +13,12 @@ body {
   transition: background-color 0.3s ease, top 0.3s; 
 }
 
-.navbar-nav .nav-item .nav-link {
-  color: #fff; 
+.navbar.scrolled {
+  background-color: rgb(52, 58, 64, 1); 
 }
 
-.navbar.hidden {
-  background-color: rgba(52, 58, 64, 0); 
+.navbar-nav .nav-item .nav-link {
+  color: #fff; 
 }
 
 .navbar-nav .nav-item .nav-link.active {
