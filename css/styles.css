@@ -131,14 +131,14 @@ section p {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 515px;
+  margin-right: 520px;
 }
 
 .about-content {
   position: absolute;
   max-width: 650px;
   text-align: left;
-  margin-left: 525px;
+  margin-left: 520px;
   margin-bottom: 50px;
   transform: translateY(-50px);
 }
