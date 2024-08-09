@@ -4,6 +4,12 @@ body {
   padding: 0; 
 }
 
+.navbar-wrapper {
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
 .navbar {
   background-color: rgba(52, 58, 64, 0);
   position: fixed; 
@@ -11,12 +17,12 @@ body {
   width: 100%;
   z-index: 1030;
   transition: background-color 0.3s ease, top 0.3s; 
-  top: 8px;
+  top: 15px;
 }
 
 .navbar.scrolled {
   background-color: rgba(52, 58, 64, 1); 
-  top: 0px;
+  top: 15px;
 }
 
 .navbar-nav .nav-item .nav-link {
