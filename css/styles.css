@@ -235,13 +235,24 @@ section p {
 }
 
 #skills {
-  background-color: #00BFFA;
+  background-color: #FF6F3C;
   color: #fff;
 }
 
+#projects {
+  background-color: #FF6F3C;
+  color: #000;
+}
 
+#timeline {
+  background-color: #FF4C4C;
+  color: #fff;
+}
 
-
+contact {
+  background-color: #FF4C4C;
+  color: #000;
+}
 
 
 
