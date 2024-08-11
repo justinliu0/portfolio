@@ -54,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out; 
+  color: #343a40;
 }
 
 .navbar-brand.expanded {
