@@ -244,6 +244,53 @@ section p {
 
 
 
+
+
+
+.footer {
+  height: 180px;
+  background-color: #343a40;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-social-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #8EE4FF; 
+}
+
 .scroll-to-top {
   position: fixed;
   right: 15px;
