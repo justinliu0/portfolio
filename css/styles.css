@@ -264,6 +264,7 @@ section p {
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
+  margin-left: 40px;
 }
 
 .footer-left p {
@@ -289,7 +290,6 @@ section p {
 .footer-link:hover {
   color: #8EE4FF; 
 }
-
 
 .scroll-to-top {
   position: fixed;
