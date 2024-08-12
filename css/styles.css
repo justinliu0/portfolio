@@ -269,6 +269,7 @@ section p {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
+  background-color: #425D78;
 }
 
 .footer-right {
