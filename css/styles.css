@@ -269,7 +269,10 @@ section p {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
-  color: #425D78;
+}
+
+.footer-social-buttons a, .footer-right a {
+   background-color: #425D78;
 }
 
 .footer-right {
@@ -300,7 +303,6 @@ section p {
   background: rgba(52, 58, 64, 0.5);
   line-height: 60px;
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   opacity: 0; 
   visibility: hidden; 
