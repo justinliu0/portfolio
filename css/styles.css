@@ -155,8 +155,8 @@ section p {
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 90px;
 }
 
 .profile-pic {
@@ -239,6 +239,7 @@ section p {
   color: #fff;
   text-align: center;
   margin-top: 70px;
+  padding-top: 55px;
   padding-bottom: 105px;
 }
 
