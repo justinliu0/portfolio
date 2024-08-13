@@ -314,6 +314,7 @@ section p {
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .projects-button a:hover {
@@ -335,12 +336,6 @@ section p {
   color: #fff;
   background-color: #343a40;
   border-radius: 5px;
-}
-
-.btn-visit-github:hover {
-  background-color: #8EE4FF;
-  transform: scale(1.08);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
 #timeline {
