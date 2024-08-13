@@ -137,8 +137,6 @@ section, .section-image {
   flex-direction: column; 
   justify-content: center; 
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 90px;
 }
 
 section h2 {
@@ -157,6 +155,8 @@ section p {
   justify-content: center;
   width: 100%;
   position: relative;
+  margin-top: 50px;
+  margin-bottom: 90px;
 }
 
 .profile-pic {
@@ -238,7 +238,7 @@ section p {
   background-color: #425D78;
   color: #fff;
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 50px;
 }
 
 .skills-content {
