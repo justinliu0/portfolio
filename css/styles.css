@@ -271,6 +271,23 @@ section p {
   margin: 0;
 }
 
+.skill-logo-circle {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; 
+  background-color: #fff; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto; 
+}
+
+.skill-logo {
+  width: 60%; 
+  height: auto;
+}
+
+
 
 
 
