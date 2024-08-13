@@ -137,6 +137,8 @@ section, .section-image {
   flex-direction: column; 
   justify-content: center; 
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 90px;
 }
 
 section h2 {
@@ -153,8 +155,6 @@ section p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
   width: 100%;
   position: relative;
 }
@@ -213,7 +213,7 @@ section p {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .portfolio-buttons a {
