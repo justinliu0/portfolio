@@ -298,28 +298,22 @@ section p {
 
 
 
-
 .btn-visit-github {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
+  padding: 12px 20px;
+  font-size: 18px;
   color: #fff;
-  background-color: #8EE4FF;
-  border: none;
+  background-color: #343a40;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-visit-github:hover {
-  background-color: #6cc2e0; 
-  color: #fff; 
-}
-
-.btn-visit-github:focus {
-  outline: none;
+  background-color: #8EE4FF;
+  transform: scale(1.08);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
 
 #timeline {
