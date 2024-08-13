@@ -296,8 +296,12 @@ section p {
 
 
 
+
+
+
 .projects-button {
   text-align: center; 
+  margin-top: 30px;
 }
 
 .projects-button a {
@@ -308,7 +312,6 @@ section p {
   color: #fff;
   background-color: #343a40;
   border-radius: 5px;
-  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -332,9 +335,6 @@ section p {
   color: #fff;
   background-color: #343a40;
   border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-visit-github:hover {
@@ -347,6 +347,10 @@ section p {
   background-color: #425D78;
   color: #fff;
 }
+
+
+
+
 
 
 
