@@ -299,7 +299,28 @@ section p {
 
 
 
+.btn-visit-github {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: #8EE4FF;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+.btn-visit-github:hover {
+  background-color: #6cc2e0; 
+  color: #fff; 
+}
+
+.btn-visit-github:focus {
+  outline: none;
+}
 
 #timeline {
   background-color: #425D78;
