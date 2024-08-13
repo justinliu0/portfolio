@@ -18,7 +18,7 @@ body {
   position: fixed; 
   width: 100%;
   z-index: 1030; 
-  transition: height 0.1s ease-in-out, top 0.1s ease-in-out;
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
   height: 90px; 
   top: 0; 
 }
