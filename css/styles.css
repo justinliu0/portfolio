@@ -242,7 +242,9 @@ section p {
 }
 
 .skills-content {
+  display: flex;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
   margin-top: 30px;
