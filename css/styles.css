@@ -314,7 +314,7 @@ section p {
 
 .footer {
   height: 150px;
-  background-color: #343a40;
+  background-color: #425D78;
   color: #fff;
   display: flex;
   align-items: center;
@@ -343,7 +343,7 @@ section p {
 }
 
 .footer-social-buttons a {
-   background-color: #425D78;
+   background-color: #343a40;
 }
 
 .footer-right {
