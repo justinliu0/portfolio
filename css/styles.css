@@ -238,7 +238,8 @@ section p {
   background-color: #425D78;
   color: #fff;
   text-align: center;
-  padding: 50px 50px 100px 50px; 
+  margin-top: 50px;
+  margin-bottom: 53px;
 }
 
 .skills-content {
