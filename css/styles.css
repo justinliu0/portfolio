@@ -356,15 +356,19 @@ section p {
 
 #contact {
   background-color: #343a40;
+  color: fff;
 }
 
 #contact h2 {
-  color: fff;
   font-size: 42px;
 }
 
 #contact h4 {
-  color: #DEDEDE;
+  color: #DEDEDE !important;
+}
+
+.contact-info {
+  color: #8EE4FF !important;
 }
 
 form {
