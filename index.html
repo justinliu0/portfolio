@@ -197,20 +197,24 @@
     <div class="contact-content">
       <h3 class="animate__animated animate__fadeIn">Email: justinliu103@gmail.com || justinl553@nycstudents.net</h3>
       <br>
-      <h3 class="animate__animated animate__fadeIn">...or use the following form</h3>
+      <p class="animate__animated animate__fadeIn">...or use the following form</p>
       
       <form class="animate__animated animate__fadeIn">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <div class="form-left">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
   
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
   
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
   
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="form-right">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </div>
   
         <button type="submit">Send Message</button>
       </form>
