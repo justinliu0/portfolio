@@ -379,8 +379,8 @@ input[type="text"], input[type="email"], textarea {
 }
 
 textarea {
-  height: 100%; /
-  resize: none;
+  height: 100%; 
+  resize: none !imoportant;
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
@@ -402,7 +402,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #66d0ff;
 }
-
 
 .footer {
   height: 150px;
