@@ -358,6 +358,15 @@ section p {
   background-color: #343a40;
 }
 
+#contact h2 {
+  color: fff;
+  font-size: 42px;
+}
+
+#contact h4 {
+  color: #DEDEDE;
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,14 +406,13 @@ button[type="submit"] {
   grid-column: span 2; 
   padding: 10px 20px;
   font-size: 16px;
-  color: white;
-  background-color: #8EE4FF;
+  color: fff;
+  background-color: #00BFFA;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 400px;
 }
 
 button[type="submit"]:hover {
@@ -413,8 +421,8 @@ button[type="submit"]:hover {
 
 .footer {
   height: 150px;
-  background-color: #314559;
-  color: #fff;
+  background-color: #fff;
+  color: #00BFFA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +450,7 @@ button[type="submit"]:hover {
 }
 
 .footer-social-buttons a {
-   background-color: #343a40;
+   background-color: #00BFFA;
 }
 
 .footer-right {
