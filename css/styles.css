@@ -359,8 +359,9 @@ section p {
 
 #contact-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .left-side, .right-side {
@@ -388,15 +389,18 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::pla
   opacity: 1; 
 }
 
-button[type="submit"] {
-  background-color: #8EE4FF;
-  color: white;
-  padding: 15px;
-  font-size: 18px;
+#submit-btn {
+  display: block;
+  width: 100px; 
+  margin: 20px auto 0 auto; 
+  padding: 10px 20px;
+  background-color: #8EE4FF; 
+  color: #fff;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
