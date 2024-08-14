@@ -358,12 +358,14 @@ section p {
 }
 
 form {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   max-width: 800px;
   margin: 20px auto;
-  align-items: start; /* Align the fields at the start */
+  align-items: start; 
 }
 
 .form-left {
@@ -393,7 +395,7 @@ textarea {
 }
 
 button[type="submit"] {
-  grid-column: span 2; /* Span across both columns */
+  grid-column: span 2; 
   padding: 10px 20px;
   font-size: 16px;
   color: white;
@@ -403,32 +405,13 @@ button[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 20px;
-  width: 100%; /* Ensure the button stretches across */
+  width: 100px;
+  height: 50px;
+  align-self: center; /* Center the button */
 }
 
 button[type="submit"]:hover {
   background-color: #6cc0e4;
-}
-
-.submit-btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.submit-btn-container button {
-  width: 100px;
-  height: 50px;
-  background-color: #8EE4FF; /* Light blue background */
-  color: #fff; /* White text */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.submit-btn-container button:hover {
-  transform: scale(1.05);
 }
 
 .footer {
