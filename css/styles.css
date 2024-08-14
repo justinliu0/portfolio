@@ -410,6 +410,27 @@ button[type="submit"]:hover {
   background-color: #6cc0e4;
 }
 
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-btn-container button {
+  width: 100px;
+  height: 50px;
+  background-color: #8EE4FF; /* Light blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn-container button:hover {
+  transform: scale(1.05);
+}
+
 .footer {
   height: 150px;
   background-color: #314559;
