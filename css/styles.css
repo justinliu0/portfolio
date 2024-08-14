@@ -357,50 +357,52 @@ section p {
 #contact {
 }
 
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 800px;
-  margin: 20px auto;
+#contact-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
 }
 
-.form-left, .form-right {
+.left-side, .right-side {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
+input[type="text"], input[type="email"], textarea {
   padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  outline: none;
+}
+
+textarea {
+  height: 100%; /
+  resize: none;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+  color: #aaa;
+  opacity: 1; 
 }
 
 button[type="submit"] {
-  grid-column: span 2;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
   background-color: #8EE4FF;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
-  background-color: #6cc0e4;
+  background-color: #66d0ff;
 }
+
 
 .footer {
   height: 150px;
