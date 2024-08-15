@@ -424,7 +424,8 @@ input[type="email"] {
 }
 
 .submit-btn-container {
-  display: flex;
+  display: grid;
+  grid-column: 1 / -1;
   justify-content: center;
   width: 100%; 
 }
