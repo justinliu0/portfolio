@@ -497,7 +497,7 @@ button[type="submit"]:hover {
 .footer-right {
   display: flex;
   gap: 15px;
-  padding-left: 100px;
+  margin-left: 100px;
 }
 
 .footer-link {
