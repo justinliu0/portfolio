@@ -357,14 +357,17 @@ section p {
 #contact {
   background-color: #343a40;
   color: #fff;
+  padding-bottom: 40px;
 }
 
 #contact h2 {
   font-size: 42px;
+  margin-bottom: 10px;
 }
 
 #contact h4 {
   color: #DEDEDE !important;
+  margin-bottom: 10px;
 }
 
 .contact-info {
