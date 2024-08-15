@@ -366,15 +366,15 @@ section p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.6);
-  max-width: auto;
-  height: auto; 
-  z-index: 2; 
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  height: 80%; 
+  opacity: 0.5;
 }
 
 #contact-content {
   position: relative; 
-  z-index: 3; 
+  z-index: 5; 
 }
 
 #contact h2 {
