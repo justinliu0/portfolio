@@ -445,8 +445,8 @@ input[type="email"] {
 }
 
 button[type="submit"] {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 16px 28px;
+  font-size: 18px;
   color: white;
   background-color: #00BFFA;
   border: none;
