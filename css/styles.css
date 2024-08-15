@@ -448,7 +448,7 @@ button[type="submit"] {
   padding: 16px 28px;
   font-size: 18px;
   color: white;
-  background-color: #8EE4FF;
+  background-color: #000;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
