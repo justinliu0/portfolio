@@ -415,7 +415,7 @@ textarea {
 
 textarea {
   resize: none;
-  height: 240px;
+  height: 255px;
 }
 
 input[type="text"],
