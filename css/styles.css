@@ -407,11 +407,21 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 500;
+  width: 700px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+  height: 500px;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 100px;
 }
 
 button[type="submit"] {
