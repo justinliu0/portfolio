@@ -356,6 +356,10 @@ section p {
 
 
 #contact {
+  background-image: url('./imgs/map.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; /
   background-color: #343a40;
   color: #fff;
   padding-bottom: 80px;
