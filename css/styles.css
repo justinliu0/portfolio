@@ -367,15 +367,14 @@ section p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 80%;
-  height: auto;
-  opacity: 0.7; 
-  z-index: 1; 
+  max-width: 90%;
+  height: auto; 
+  z-index: 2; 
 }
 
 #contact-content {
   position: relative; 
-  z-index: 2; 
+  z-index: 3; 
 }
 
 #contact h2 {
