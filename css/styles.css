@@ -488,7 +488,7 @@ button[type="submit"]:hover {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
-  padding-left: 100px;
+  padding-left: 70px;
 }
 
 .footer-social-buttons a {
@@ -498,6 +498,7 @@ button[type="submit"]:hover {
 .footer-right {
   display: flex;
   gap: 15px;
+  padding-left: 70px;
 }
 
 .footer-link {
