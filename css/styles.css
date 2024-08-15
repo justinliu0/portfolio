@@ -365,9 +365,13 @@ section p {
   margin-bottom: 10px;
 }
 
+#contact h3 {
+  font-size: 30px;
+}
+
 #contact h4 {
   color: #DEDEDE !important;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .contact-info {
