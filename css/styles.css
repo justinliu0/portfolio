@@ -253,6 +253,7 @@ section p {
 }
 
 .skills-content > div {
+  color: #fff;
   background-color: #151f2e;
   padding: 20px;
   border-radius: 10px;
