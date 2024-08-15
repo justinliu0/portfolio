@@ -149,6 +149,8 @@ section p {
 }
 
 #about {
+  background-color: #2A3B4D;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,8 +236,8 @@ section p {
 }
 
 #skills {
-  background-color: #2A3B4D;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-align: center;
   margin-top: 70px;
   padding-top: 55px;
