@@ -2,7 +2,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0; 
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-wrapper {
@@ -70,7 +70,6 @@ body {
   padding: 0; 
   box-sizing: border-box;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
 }
 
 #header::before {
@@ -126,7 +125,6 @@ body {
 }
 
 section, .section-image {
-  font-family: 'Oxygen', sans-serif;
   position: relative;
   padding: 40px 0;
   background-color: #fff;
@@ -533,7 +531,7 @@ button[type="submit"]:hover {
   visibility: hidden; 
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out; 
   z-index: 3;
-  font-family: 'Courier New', monospace;
+  font-family: 'Courier New', monospace !important;
 }
 
 .scroll-to-top.visible {
