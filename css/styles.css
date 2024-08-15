@@ -121,7 +121,7 @@ body {
 }
 
 .btn-enter-portfolio:hover {
-  background-color: #DEDEDE;
+  background-color: #D1D1D1;
 }
 
 section, .section-image {
@@ -370,8 +370,8 @@ section p {
 }
 
 #contact h4 {
-  color: #DEDEDE !important;
-  margin-bottom: 20px;
+  color: #D1D1D1 !important;
+  margin-bottom: 200px;
 }
 
 .contact-info {
