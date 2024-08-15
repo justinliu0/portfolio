@@ -478,7 +478,6 @@ button[type="submit"]:hover {
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  padding-left: 40px;
 }
 
 .footer-left p {
@@ -488,7 +487,7 @@ button[type="submit"]:hover {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
-  padding-left: 80px;
+  padding-left: 75px;
 }
 
 .footer-social-buttons a {
