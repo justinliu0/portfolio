@@ -462,8 +462,8 @@ button[type="submit"]:hover {
 
 .footer {
   height: 150px;
-  background-color: #D1D1D1;
-  color: #00BFFA;
+  background-color: #fff;
+  color: #425D78;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -491,7 +491,7 @@ button[type="submit"]:hover {
 }
 
 .footer-social-buttons a {
-   background-color: #00BFFA;
+   background-color: #425D78;
 }
 
 .footer-right {
