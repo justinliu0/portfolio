@@ -500,6 +500,7 @@ button[type="submit"]:hover {
 }
 
 .footer-link {
+  background-color: #425D78
   text-decoration: none;
   transition: color 0.3s ease;
 }
