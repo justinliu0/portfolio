@@ -488,6 +488,7 @@ button[type="submit"]:hover {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
+  padding-left: 100px;
 }
 
 .footer-social-buttons a {
