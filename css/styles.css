@@ -407,7 +407,6 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: ;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -416,7 +415,7 @@ textarea {
 
 textarea {
   resize: none;
-  height: 410px;
+  height: 240px;
 }
 
 input[type="text"],
