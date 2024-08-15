@@ -159,7 +159,7 @@ section p {
 }
 
 .profile-pic {
-  border: 8px solid 000;
+  border: 8px solid #000;
   width: 350px;
   height: 350px;
   border-radius: 50%;
@@ -220,7 +220,7 @@ section p {
   padding: 16px 28px;
   font-size: 18px;
   color: #000;
-  background-color: 000;
+  background-color: #000;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -487,7 +487,6 @@ button[type="submit"]:hover {
 .footer-social-buttons {
   display: flex;
   gap: 15px;
-  padding-left: 75px;
 }
 
 .footer-social-buttons a {
