@@ -149,8 +149,8 @@ section p {
 }
 
 #about {
-  background-color: #2A3B4D;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
