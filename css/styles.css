@@ -357,7 +357,8 @@ section p {
 #contact {
   background-color: #343a40;
   color: #fff;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
+  padding-top: 30px;
 }
 
 #contact h2 {
