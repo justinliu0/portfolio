@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var expandableSections = document.querySelectorAll('.expandable-section');
   var portfolioButtons = document.querySelectorAll('.portfolio-buttons a');
   var socialButtons = document.querySelectorAll('.social-buttons .social-button');
-  var sections = document.querySelectorAll('section');
 
   window.addEventListener('scroll', function () {
     if (window.scrollY > 0) {
@@ -23,32 +22,39 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    sections.forEach(function (section) {
+    expandableSections.forEach(function (section) {
       var sectionRect = section.getBoundingClientRect();
       var windowHeight = window.innerHeight;
 
+      // Check if the expandable section is in view
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
-        section.querySelector('.expandable-section').classList.add('expanded');
+        section.classList.add('expanded');
 
+        // Find the closest parent section
+        var parentSection = section.closest('section');
+        var sectionId = parentSection.id;
+
+        // Activate the corresponding portfolio button
         portfolioButtons.forEach(function (button) {
           var targetId = button.getAttribute('href').substring(1);
-          if (section.id === targetId) {
+          if (sectionId === targetId) {
             button.classList.add('active');
           } else {
             button.classList.remove('active');
           }
         });
 
+        // Activate the corresponding social button
         socialButtons.forEach(function (button) {
           var targetId = button.getAttribute('href')?.substring(1);
-          if (section.id === targetId) {
+          if (sectionId === targetId) {
             button.classList.add('active');
           } else {
             button.classList.remove('active');
           }
         });
       } else {
-        section.querySelector('.expandable-section').classList.remove('expanded');
+        section.classList.remove('expanded');
       }
     });
   });
