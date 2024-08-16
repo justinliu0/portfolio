@@ -186,7 +186,7 @@ section p {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 800px;
+  margin-right: 700px;
 }
 
 .about-content {
@@ -194,7 +194,7 @@ section p {
   max-width: 650px;
   text-align: left;
   margin-top: -400px;
-  transform: translateX(345px);
+  transform: translateX(300px);
 }
 
 .social-buttons {
