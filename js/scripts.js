@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var portfolioButtons = document.querySelectorAll('.portfolio-buttons a');
-  var socialButtons = document.querySelectorAll('.social-buttons .social-button');
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+
+    if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
-
-      if (window.scrollY > 100) {
+      if (scrollPosition > 100) {
         scrollToTopBtn.classList.add('visible');
       } else {
         scrollToTopBtn.classList.remove('visible');
@@ -22,41 +22,44 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    var activeSectionId = '';
-
-    expandableSections.forEach(function (section) {
+    expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
-      var windowHeight = window.innerHeight;
+      var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
+      var socialButtons = section.querySelectorAll('.social-button');
 
-      // Check if the expandable section is in view
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
-
-        // Find the closest parent section
-        var parentSection = section.closest('section');
-        activeSectionId = parentSection.id;
+        portfolioButtons.forEach(button => button.classList.add('expanded'));
+        socialButtons.forEach(button => button.classList.add('expanded'));
       } else {
         section.classList.remove('expanded');
+        portfolioButtons.forEach(button => button.classList.remove('expanded'));
+        socialButtons.forEach(button => button.classList.remove('expanded'));
       }
     });
+  });
 
-    // Activate the corresponding portfolio and social buttons
-    portfolioButtons.forEach(function (button) {
-      var targetId = button.getAttribute('href').substring(1);
-      if (activeSectionId === targetId) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 56, 
+          behavior: 'smooth'
+        });
       }
     });
+  });
 
-    socialButtons.forEach(function (button) {
-      var targetId = button.getAttribute('href').substring(1);
-      if (activeSectionId === targetId) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
-      }
+  scrollToTopBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 });
