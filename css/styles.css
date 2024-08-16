@@ -161,8 +161,8 @@ section p {
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 90px;
   transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
