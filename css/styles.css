@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
 }
 
 .navbar {
-  background-color: rgba(52, 58, 64, 0); 
+  background-color: rgba(0, 0, 0, 0); 
   position: fixed; 
   width: 100%;
   z-index: 1030; 
@@ -31,7 +31,7 @@ html::-webkit-scrollbar {
 }
 
 .navbar.scrolled {
-  background-color: rgb(52, 58, 64, 1); 
+  background-color: rgb(0, 0, 0, 1); 
   height: 56px; 
   top: 0px;
 }
@@ -61,7 +61,7 @@ html::-webkit-scrollbar {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out; 
-  color: #8EE4FF;
+  color: #fff;
 }
 
 .navbar-brand.expanded {
@@ -154,7 +154,6 @@ section p {
 }
 
 #about {
-  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,8 +239,6 @@ section p {
 }
 
 #skills {
-  background-color: #fff;
-  color: #000;
   text-align: center;
   margin-top: 70px;
   padding-top: 55px;
@@ -317,7 +314,7 @@ section p {
   padding: 12px 20px;
   font-size: 18px;
   color: #fff;
-  background-color: 000;
+  background-color: #000;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -360,7 +357,6 @@ section p {
 
 #contact {
   position: relative; 
-  background-color: #343a40; 
   color: #fff; 
   padding-bottom: 81px;
   padding-top: 81px;
@@ -389,7 +385,7 @@ section p {
 }
 
 #contact h4 {
-  color: #D1D1D1 !important;
+  color: #D1D1D1;
   margin-bottom: 65px;
 }
 
@@ -452,7 +448,7 @@ input[type="email"] {
 button[type="submit"] {
   padding: 16px 28px;
   font-size: 18px;
-  color: white;
+  color: #fff;
   background-color: #000;
   border: none;
   border-radius: 5px;
