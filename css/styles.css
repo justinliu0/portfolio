@@ -190,7 +190,7 @@ section p {
   position: absolute;
   max-width: 650px;
   text-align: left;
-  transform: translateY(-500px);
+  margin-top: 500px;
   transform: translateX(500px);
 }
 
