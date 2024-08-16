@@ -4,24 +4,41 @@ document.addEventListener('DOMContentLoaded', function () {
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var scrollSpeed = 0.5; 
 
+  var scrollTimeout;
+
+  function adjustScrollSpeed() {
+    var targetScrollY = window.scrollY * scrollSpeed;
+
+    window.scrollTo({
+      top: targetScrollY,
+      behavior: 'smooth'
+    });
+  }
+
   window.addEventListener('scroll', function() {
-    // Adjust scroll speed
-    window.scrollBy(0, (window.scrollY - window.scrollY * scrollSpeed));
 
-    if (window.scrollY > 0) {
-      navbar.classList.add('scrolled');
-      navbarBrand.classList.remove('expanded');
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
+    }
 
-      if (window.scrollY > 100) {
-        scrollToTopBtn.classList.add('visible');
+    scrollTimeout = setTimeout(function() {
+      adjustScrollSpeed();
+
+      if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+        navbarBrand.classList.remove('expanded');
+
+        if (window.scrollY > 100) {
+          scrollToTopBtn.classList.add('visible');
+        } else {
+          scrollToTopBtn.classList.remove('visible');
+        }
       } else {
+        navbar.classList.remove('scrolled');
+        navbarBrand.classList.add('expanded');
         scrollToTopBtn.classList.remove('visible');
       }
-    } else {
-      navbar.classList.remove('scrolled');
-      navbarBrand.classList.add('expanded');
-      scrollToTopBtn.classList.remove('visible');
-    }
+    }, 100); 
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -33,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 56, 
+          top: targetElement.offsetTop - 56,
           behavior: 'smooth'
         });
       }
