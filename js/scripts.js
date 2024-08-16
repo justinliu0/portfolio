@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
+  var aboutSection = document.getElementById('about');
 
   window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
@@ -17,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove('scrolled');
       navbarBrand.classList.add('expanded');
       scrollToTopBtn.classList.remove('visible');
+    }
+
+    // Check if the About section is in view
+    var aboutSectionTop = aboutSection.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (aboutSectionTop >= 0 && aboutSectionTop < windowHeight) {
+      aboutSection.classList.add('in-view');
+    } else {
+      aboutSection.classList.remove('in-view');
     }
   });
 
