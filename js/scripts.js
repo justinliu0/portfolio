@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
+    var activeSectionId = '';
+
     expandableSections.forEach(function (section) {
       var sectionRect = section.getBoundingClientRect();
       var windowHeight = window.innerHeight;
@@ -32,29 +34,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Find the closest parent section
         var parentSection = section.closest('section');
-        var sectionId = parentSection.id;
-
-        // Activate the corresponding portfolio button
-        portfolioButtons.forEach(function (button) {
-          var targetId = button.getAttribute('href').substring(1);
-          if (sectionId === targetId) {
-            button.classList.add('active');
-          } else {
-            button.classList.remove('active');
-          }
-        });
-
-        // Activate the corresponding social button
-        socialButtons.forEach(function (button) {
-          var targetId = button.getAttribute('href')?.substring(1);
-          if (sectionId === targetId) {
-            button.classList.add('active');
-          } else {
-            button.classList.remove('active');
-          }
-        });
+        activeSectionId = parentSection.id;
       } else {
         section.classList.remove('expanded');
+      }
+    });
+
+    // Activate the corresponding portfolio and social buttons
+    portfolioButtons.forEach(function (button) {
+      var targetId = button.getAttribute('href').substring(1);
+      if (activeSectionId === targetId) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+
+    socialButtons.forEach(function (button) {
+      var targetId = button.getAttribute('href').substring(1);
+      if (activeSectionId === targetId) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
       }
     });
   });
