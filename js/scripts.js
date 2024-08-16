@@ -2,43 +2,36 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
-  var scrollSpeed = 0.5; 
 
-  var scrollTimeout;
+  var scrollSpeed = 0.5; // Adjust this value to control the scroll speed
+  var lastScrollTop = 0; // Track the last scroll position
 
-  function adjustScrollSpeed() {
-    var targetScrollY = window.scrollY * scrollSpeed;
+  function smoothScroll() {
+    var scrollTop = window.scrollY;
+    var delta = scrollTop - lastScrollTop;
+    lastScrollTop = scrollTop;
 
-    window.scrollTo({
-      top: targetScrollY,
-      behavior: 'smooth'
-    });
+    // Slow down the scroll by multiplying the delta
+    window.scrollBy(0, delta * scrollSpeed);
   }
 
   window.addEventListener('scroll', function() {
+    smoothScroll();
 
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+      navbarBrand.classList.remove('expanded');
 
-    scrollTimeout = setTimeout(function() {
-      adjustScrollSpeed();
-
-      if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-        navbarBrand.classList.remove('expanded');
-
-        if (window.scrollY > 100) {
-          scrollToTopBtn.classList.add('visible');
-        } else {
-          scrollToTopBtn.classList.remove('visible');
-        }
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add('visible');
       } else {
-        navbar.classList.remove('scrolled');
-        navbarBrand.classList.add('expanded');
         scrollToTopBtn.classList.remove('visible');
       }
-    }, 100); 
+    } else {
+      navbar.classList.remove('scrolled');
+      navbarBrand.classList.add('expanded');
+      scrollToTopBtn.classList.remove('visible');
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
