@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
+    // Update navbar and scroll-to-top button visibility
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -22,11 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
+    // Apply effects to expandable sections
     expandableSections.forEach(section => {
-      var sectionTop = section.offsetTop;
-      var sectionHeight = section.offsetHeight;
+      var sectionRect = section.getBoundingClientRect();
 
-      if (scrollPosition + windowHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      // Trigger effect when the section is more than 50% in view
+      if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
       } else {
         section.classList.remove('expanded');
