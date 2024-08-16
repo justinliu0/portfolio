@@ -2,14 +2,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
-  var aboutSection = document.getElementById('about');
+  var expandableSections = document.querySelectorAll('.expandable-section');
 
   window.addEventListener('scroll', function() {
-    if (window.scrollY > 0) {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+
+    if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
-
-      if (window.scrollY > 100) {
+      if (scrollPosition > 100) {
         scrollToTopBtn.classList.add('visible');
       } else {
         scrollToTopBtn.classList.remove('visible');
@@ -20,16 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    // Check if a significant part of the About section is in view
-    var aboutSectionRect = aboutSection.getBoundingClientRect();
-    var windowHeight = window.innerHeight;
+    expandableSections.forEach(section => {
+      var sectionTop = section.offsetTop;
+      var sectionHeight = section.offsetHeight;
 
-    // Trigger effect when the "About" section is more than 50% in view
-    if (aboutSectionRect.top < windowHeight * 0.5 && aboutSectionRect.bottom > windowHeight * 0.5) {
-      aboutSection.classList.add('in-view');
-    } else {
-      aboutSection.classList.remove('in-view');
-    }
+      if (scrollPosition + windowHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        section.classList.add('expanded');
+      } else {
+        section.classList.remove('expanded');
+      }
+    });
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
