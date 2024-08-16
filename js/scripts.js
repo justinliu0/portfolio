@@ -1,44 +1,46 @@
-<script>
-$(document).ready(function() {
-  var navbar = $('#navbar');
-  var navbarBrand = $('.navbar-brand');
-  var scrollToTopBtn = $('.scroll-to-top');
+document.addEventListener('DOMContentLoaded', function () {
+  var navbar = document.getElementById('navbar');
+  var navbarBrand = document.querySelector('.navbar-brand');
+  var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
-  $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 0) {
-      navbar.addClass('scrolled');
-      navbarBrand.removeClass('expanded');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
+      navbarBrand.classList.remove('expanded');
 
-      if ($(window).scrollTop() > 100) {
-        scrollToTopBtn.addClass('visible');
+      if (window.scrollY > 100) {
+        scrollToTopBtn.classList.add('visible');
       } else {
-        scrollToTopBtn.removeClass('visible');
+        scrollToTopBtn.classList.remove('visible');
       }
     } else {
-      navbar.removeClass('scrolled');
-      navbarBrand.addClass('expanded');
-      scrollToTopBtn.removeClass('visible');
+      navbar.classList.remove('scrolled');
+      navbarBrand.classList.add('expanded');
+      scrollToTopBtn.classList.remove('visible');
     }
   });
 
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
-    
-    var targetId = $(this).attr('href').substring(1);
-    var targetElement = $('#' + targetId);
-    
-    if (targetElement.length) {
-      $('html, body').animate({
-        scrollTop: targetElement.offset().top - 56
-      }, 800); // Adjust the duration to control the scroll speed
-    }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 56, 
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 
-  scrollToTopBtn.on('click', function(e) {
+  scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, 800); // Adjust the duration to control the scroll speed
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
-</script>
