@@ -190,8 +190,8 @@ section p {
   position: absolute;
   max-width: 650px;
   text-align: left;
-  margin-top: -450px;
-  transform: translateX(450px);
+  margin-top: -400px;
+  transform: translateX(400px);
 }
 
 .social-buttons {
