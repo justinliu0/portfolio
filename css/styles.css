@@ -5,7 +5,7 @@ body {
   overflow-y: scroll;
   scrollbar-width: none !important;
   color: #fff;
-  background-color: #080808;
+  background-color: #141414;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -33,7 +33,7 @@ html::-webkit-scrollbar {
 }
 
 .navbar.scrolled {
-  background-color: rgb(0, 0, 0, 1); 
+  background-color: rgb(13, 13, 13, 1); 
   height: 56px; 
   top: 0px;
 }
