@@ -169,10 +169,11 @@ section p {
   transform: scale(1.1);
 }
 
-.social-buttons.active,
-.portfolio-buttons a.active {
+.portfolio-buttons a.active,
+.social-buttons .social-button.active {
   background-color: #131417; 
 }
+
 
 #about {
   display: flex;
