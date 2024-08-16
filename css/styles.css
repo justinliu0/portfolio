@@ -358,6 +358,7 @@ section p {
 #contact {
   position: relative; 
   color: #fff; 
+  background-color: #000;
   padding-bottom: 81px;
   padding-top: 81px;
   font-size: 16px; 
