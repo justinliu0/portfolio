@@ -3,15 +3,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
+  var portfolioButtons = document.querySelectorAll('.portfolio-buttons a');
+  var socialButtons = document.querySelectorAll('.social-buttons .social-button');
+  var sections = document.querySelectorAll('section');
 
-  window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    var windowHeight = window.innerHeight;
-
-    if (scrollPosition > 0) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
-      if (scrollPosition > 100) {
+
+      if (window.scrollY > 100) {
         scrollToTopBtn.classList.add('visible');
       } else {
         scrollToTopBtn.classList.remove('visible');
@@ -22,38 +23,33 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    expandableSections.forEach(section => {
+    sections.forEach(function (section) {
       var sectionRect = section.getBoundingClientRect();
+      var windowHeight = window.innerHeight;
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
-        section.classList.add('expanded');
-      } else {
-        section.classList.remove('expanded');
-      }
-    });
-  });
+        section.querySelector('.expandable-section').classList.add('expanded');
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      var targetId = this.getAttribute('href').substring(1);
-      var targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 56, 
-          behavior: 'smooth'
+        portfolioButtons.forEach(function (button) {
+          var targetId = button.getAttribute('href').substring(1);
+          if (section.id === targetId) {
+            button.classList.add('active');
+          } else {
+            button.classList.remove('active');
+          }
         });
-      }
-    });
-  });
 
-  scrollToTopBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+        socialButtons.forEach(function (button) {
+          var targetId = button.getAttribute('href')?.substring(1);
+          if (section.id === targetId) {
+            button.classList.add('active');
+          } else {
+            button.classList.remove('active');
+          }
+        });
+      } else {
+        section.querySelector('.expandable-section').classList.remove('expanded');
+      }
     });
   });
 });
