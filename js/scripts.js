@@ -2,8 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
+  var scrollSpeed = 0.5; 
 
   window.addEventListener('scroll', function() {
+    // Adjust scroll speed
+    window.scrollBy(0, (window.scrollY - window.scrollY * scrollSpeed));
+
     if (window.scrollY > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
