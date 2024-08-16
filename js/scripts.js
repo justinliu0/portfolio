@@ -1,42 +1,44 @@
+<script>
 $(document).ready(function() {
-  var scrollSpeed = 500; // Duration in milliseconds for scroll
-
-  // Scroll handling for smooth scroll links
-  $('a[href^="#"]').on('click', function(event) {
-    event.preventDefault();
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top - 56
-      }, scrollSpeed);
-    }
-  });
-
-  var $navbar = $('#navbar');
-  var $navbarBrand = $('.navbar-brand');
-  var $scrollToTopBtn = $('.scroll-to-top');
+  var navbar = $('#navbar');
+  var navbarBrand = $('.navbar-brand');
+  var scrollToTopBtn = $('.scroll-to-top');
 
   $(window).on('scroll', function() {
-    if ($(this).scrollTop() > 0) {
-      $navbar.addClass('scrolled');
-      $navbarBrand.removeClass('expanded');
+    if ($(window).scrollTop() > 0) {
+      navbar.addClass('scrolled');
+      navbarBrand.removeClass('expanded');
 
-      if ($(this).scrollTop() > 100) {
-        $scrollToTopBtn.addClass('visible');
+      if ($(window).scrollTop() > 100) {
+        scrollToTopBtn.addClass('visible');
       } else {
-        $scrollToTopBtn.removeClass('visible');
+        scrollToTopBtn.removeClass('visible');
       }
     } else {
-      $navbar.removeClass('scrolled');
-      $navbarBrand.addClass('expanded');
-      $scrollToTopBtn.removeClass('visible');
+      navbar.removeClass('scrolled');
+      navbarBrand.addClass('expanded');
+      scrollToTopBtn.removeClass('visible');
     }
   });
 
-  $scrollToTopBtn.on('click', function(e) {
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    
+    var targetId = $(this).attr('href').substring(1);
+    var targetElement = $('#' + targetId);
+    
+    if (targetElement.length) {
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top - 56
+      }, 800); // Adjust the duration to control the scroll speed
+    }
+  });
+
+  scrollToTopBtn.on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
       scrollTop: 0
-    }, scrollSpeed);
+    }, 800); // Adjust the duration to control the scroll speed
   });
 });
+</script>
