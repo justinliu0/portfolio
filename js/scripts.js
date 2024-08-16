@@ -20,14 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    // Check if the About section is fully in view
+    // Check if a significant part of the About section is in view
     var aboutSectionRect = aboutSection.getBoundingClientRect();
-    var aboutSectionTop = aboutSectionRect.top;
-    var aboutSectionBottom = aboutSectionRect.bottom;
     var windowHeight = window.innerHeight;
 
-    // Trigger effect only when the "About" section is fully visible
-    if (aboutSectionTop >= windowHeight / 4 && aboutSectionBottom <= windowHeight * 3 / 4) {
+    // Trigger effect when the "About" section is more than 50% in view
+    if (aboutSectionRect.top < windowHeight * 0.5 && aboutSectionRect.bottom > windowHeight * 0.5) {
       aboutSection.classList.add('in-view');
     } else {
       aboutSection.classList.remove('in-view');
