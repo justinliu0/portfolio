@@ -163,6 +163,13 @@ section p {
   position: relative;
   margin-top: 50px;
   margin-bottom: 90px;
+  transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+#about.in-view {
+  transform: scale(1.1);
+  background-color: #EB5939;
+  color: black;
 }
 
 .profile-pic {
