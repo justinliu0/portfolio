@@ -252,8 +252,7 @@ section p {
 
 #skills {
   text-align: center;
-  margin-top: 70px;
-  padding-top: 55px;
+  padding-top: 70px;
   padding-bottom: 105px;
 }
 
@@ -307,8 +306,8 @@ section p {
 }
 
 #projects {
-  margin-top: 50px;
-  margin-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 
