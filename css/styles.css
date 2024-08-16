@@ -159,6 +159,9 @@ section p {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   border-radius: 15px;
   overflow: hidden; 
+  padding: 40px; 
+  margin: 50px auto;
+  
 }
 
 .expandable-section.expanded {
