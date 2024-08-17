@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var profilePic = document.querySelector('.profile-pic');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -27,25 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
       var sectionRect = section.getBoundingClientRect();
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
+      var profilePic = document.querySelector('.profile-pic');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
         socialButtons.forEach(button => button.classList.add('expanded'));
-
-        // Check if the "About" section is in view and apply the border change
-        if (section.id === 'about') {
-          profilePic.classList.add('profile-pic-border-changed');
-        }
+        profilePic.classList.add('profile-pic-border-changed');
       } else {
         section.classList.remove('expanded');
         portfolioButtons.forEach(button => button.classList.remove('expanded'));
         socialButtons.forEach(button => button.classList.remove('expanded'));
-
-        // Remove the border change if not in view
-        if (section.id === 'about') {
-          profilePic.classList.remove('profile-pic-border-changed');
-        }
+        profilePic.classList.remove('profile-pic-border-changed');
       }
     });
   });
