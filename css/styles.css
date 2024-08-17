@@ -165,7 +165,7 @@ section p {
 
 .expandable-section.expanded {
   background-color: #EB5939;
-  color: #000;
+  color: #131417;
   transform: scale(1.1);
 }
 
@@ -276,6 +276,7 @@ section p {
 
 .skills-content > div {
   background-color: #EB5939;
+  color: #131417;
   padding: 20px;
   border-radius: 10px;
   width: 300px; 
@@ -290,8 +291,8 @@ section p {
 
 .skills-content > div.color-changed {
   background-color: #444673;
+  color: #E9DFCE;
 }
-
 
 .skills-content h3 {
   margin-bottom: 10px;
