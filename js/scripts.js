@@ -25,23 +25,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
+      var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
+      var socialButtons = section.querySelectorAll('.social-button');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
+        portfolioButtons.forEach(button => button.classList.add('expanded'));
+        socialButtons.forEach(button => button.classList.add('expanded'));
+
+        // Check if the "About" section is in view and apply the border change
+        if (section.id === 'about') {
+          profilePic.classList.add('profile-pic-border-changed');
+        }
       } else {
         section.classList.remove('expanded');
+        portfolioButtons.forEach(button => button.classList.remove('expanded'));
+        socialButtons.forEach(button => button.classList.remove('expanded'));
+
+        // Remove the border change if not in view
+        if (section.id === 'about') {
+          profilePic.classList.remove('profile-pic-border-changed');
+        }
       }
     });
-
-    // Change profile picture border when the About section is in view
-    var aboutSection = document.getElementById('about');
-    var aboutSectionRect = aboutSection.getBoundingClientRect();
-
-    if (aboutSectionRect.top < windowHeight * 0.5 && aboutSectionRect.bottom > windowHeight * 0.5) {
-      profilePic.classList.add('profile-pic-border-changed');
-    } else {
-      profilePic.classList.remove('profile-pic-border-changed');
-    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
