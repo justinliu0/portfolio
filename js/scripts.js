@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         skillDivs.forEach(div => div.classList.remove('color-changed'));
       }
     });
-  }, { threshold: 0.5 }); // Adjust threshold as needed
+  }, { threshold: 0.2 }); // Lower threshold for faster activation
 
   observer.observe(skillsSection);
 
