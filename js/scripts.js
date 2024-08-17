@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var skillsSection = document.getElementById('skills'); 
+  var skillsSection = document.getElementById('skills'); // Add your skills section here
   var skillDivs = document.querySelectorAll('.skills-content > div');
 
   window.addEventListener('scroll', function() {
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
+
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
@@ -47,10 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Adjusted skills section color change
+    // Skills section color change
     var skillsRect = skillsSection.getBoundingClientRect();
-    var triggerPoint = windowHeight * 0.25; // Adjust this value to control when the color change occurs
-    if (skillsRect.top < windowHeight - triggerPoint && skillsRect.bottom > triggerPoint) {
+    if (skillsRect.top < windowHeight * 0.5 && skillsRect.bottom > windowHeight * 0.5) {
       skillDivs.forEach(div => div.classList.add('color-changed'));
     } else {
       skillDivs.forEach(div => div.classList.remove('color-changed'));
@@ -60,8 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+
       var targetId = this.getAttribute('href').substring(1);
       var targetElement = document.getElementById(targetId);
+
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 56, 
