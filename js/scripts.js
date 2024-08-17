@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     var skillsRect = skillsSection.getBoundingClientRect();
-    if (skillsRect.top < windowHeight * 0.4 && skillsRect.bottom > windowHeight * 0.4) {
+    if (skillsRect.top < windowHeight * 0.5 && skillsRect.bottom > windowHeight * 0.5) {
       skillDivs.forEach(div => div.classList.add('color-changed'));
     } else {
       skillDivs.forEach(div => div.classList.remove('color-changed'));
