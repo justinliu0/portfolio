@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
+    console.log('Scroll Position:', scrollPosition); // Debugging
+
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -24,22 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
+      console.log('Section:', section, 'Rect:', sectionRect); // Debugging
+
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
+        console.log('Expanding Section:', section.id); // Debugging
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
         socialButtons.forEach(button => button.classList.add('expanded'));
-        if (profilePic) {  // Check if profilePic exists before adding the class
+        if (profilePic) {
           profilePic.classList.add('profile-pic-border-changed');
         }
       } else {
+        console.log('Contracting Section:', section.id); // Debugging
         section.classList.remove('expanded');
         portfolioButtons.forEach(button => button.classList.remove('expanded'));
         socialButtons.forEach(button => button.classList.remove('expanded'));
-        if (profilePic) {  // Check if profilePic exists before removing the class
+        if (profilePic) {
           profilePic.classList.remove('profile-pic-border-changed');
         }
       }
