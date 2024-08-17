@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
+  var skillsSection = document.getElementById('skills'); // Add your skills section here
+  var skillDivs = document.querySelectorAll('.skills-content > div');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -45,6 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
+
+    // Skills section color change
+    var skillsRect = skillsSection.getBoundingClientRect();
+    if (skillsRect.top < windowHeight * 0.5 && skillsRect.bottom > windowHeight * 0.5) {
+      skillDivs.forEach(div => div.classList.add('color-changed'));
+    } else {
+      skillDivs.forEach(div => div.classList.remove('color-changed'));
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
