@@ -175,6 +175,10 @@ section p {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.profile-pic-border-changed {
+  border: 8px solid #131417; 
+}
+
 #about {
   display: flex;
   align-items: center;
