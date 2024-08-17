@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var skillsSection = document.getElementById('skills');
-  var skillDivs = document.querySelectorAll('.skills-content > div');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -47,19 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  // Intersection Observer for skills section
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        skillDivs.forEach(div => div.classList.add('color-changed'));
-      } else {
-        skillDivs.forEach(div => div.classList.remove('color-changed'));
-      }
-    });
-  }, { threshold: 0.2 }); // Lower threshold for faster activation
-
-  observer.observe(skillsSection);
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
