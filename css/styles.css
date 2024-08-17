@@ -189,6 +189,7 @@ section p {
 
 .profile-pic.profile-pic-border-changed {
   border: 8px solid #131417; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .about-content {
@@ -292,6 +293,7 @@ section p {
 .skills-content > div.color-changed {
   background-color: #444673;
   color: #E9DFCE;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skills-content h3 {
