@@ -32,12 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
         socialButtons.forEach(button => button.classList.add('expanded'));
-        profilePic.classList.add('profile-pic-border-changed');
+        if (profilePic) {  // Check if profilePic exists before adding the class
+          profilePic.classList.add('profile-pic-border-changed');
+        }
       } else {
         section.classList.remove('expanded');
         portfolioButtons.forEach(button => button.classList.remove('expanded'));
         socialButtons.forEach(button => button.classList.remove('expanded'));
-        profilePic.classList.remove('profile-pic-border-changed');
+        if (profilePic) {  // Check if profilePic exists before removing the class
+          profilePic.classList.remove('profile-pic-border-changed');
+        }
       }
     });
   });
