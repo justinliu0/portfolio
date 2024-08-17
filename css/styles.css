@@ -276,7 +276,7 @@ section p {
 }
 
 .skills-content > div {
-  background-color: #EB5939;
+  background-color: #444673;
   color: #131417;
   padding: 20px;
   border-radius: 10px;
@@ -288,12 +288,6 @@ section p {
 .skills-content > div:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.skills-content > div.color-changed {
-  background-color: #444673;
-  color: #E9DFCE;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .skills-content h3 {
