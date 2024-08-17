@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var skillsSection = document.getElementById('skills'); 
+  var skillsSection = document.getElementById('skills');
   var skillDivs = document.querySelectorAll('.skills-content > div');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
-    // Handle navbar and scroll-to-top button
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    // Handle expandable sections
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
@@ -48,23 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
-
-    // Handle skills section color change
-    var skillsRect = skillsSection.getBoundingClientRect();
-    var skillsSectionTop = skillsRect.top;
-    var skillsSectionBottom = skillsRect.bottom;
-
-    console.log('Skills Section Top:', skillsSectionTop);
-    console.log('Skills Section Bottom:', skillsSectionBottom);
-    console.log('Window Height:', windowHeight);
-
-    if (skillsSectionTop < windowHeight * 0.75 && skillsSectionBottom > windowHeight * 0.25) {
-      console.log('Skills section in view');
-      skillDivs.forEach(div => div.classList.add('color-changed'));
-    } else {
-      skillDivs.forEach(div => div.classList.remove('color-changed'));
-    }
   });
+
+  // Intersection Observer for skills section
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        skillDivs.forEach(div => div.classList.add('color-changed'));
+      } else {
+        skillDivs.forEach(div => div.classList.remove('color-changed'));
+      }
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed
+
+  observer.observe(skillsSection);
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
