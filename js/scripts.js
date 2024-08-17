@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
+    // Handle navbar and scroll-to-top button
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -24,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
+    // Handle expandable sections
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
-
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
@@ -48,8 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+    // Handle skills section color change
     var skillsRect = skillsSection.getBoundingClientRect();
-    if (skillsRect.top >= 0 && skillsRect.bottom <= windowHeight) {
+    var skillsSectionTop = skillsRect.top;
+    var skillsSectionBottom = skillsRect.bottom;
+
+    console.log('Skills Section Top:', skillsSectionTop);
+    console.log('Skills Section Bottom:', skillsSectionBottom);
+    console.log('Window Height:', windowHeight);
+
+    if (skillsSectionTop < windowHeight * 0.75 && skillsSectionBottom > windowHeight * 0.25) {
+      console.log('Skills section in view');
       skillDivs.forEach(div => div.classList.add('color-changed'));
     } else {
       skillDivs.forEach(div => div.classList.remove('color-changed'));
