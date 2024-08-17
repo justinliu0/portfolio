@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var sectionRect = section.getBoundingClientRect();
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
-      var profilePic = document.querySelector('.profile-pic');
+      var profilePic = section.querySelector('.profile-pic');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
