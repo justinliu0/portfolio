@@ -160,7 +160,7 @@ section p {
   border-radius: 15px;
   overflow: hidden; 
   padding: 40px; 
-  margin: 70px auto;
+  margin: 70px 120px;
 }
 
 .expandable-section.expanded {
