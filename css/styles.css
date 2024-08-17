@@ -164,7 +164,8 @@ section p {
 }
 
 .expandable-section.expanded {
-  background-color: #EB5939;
+  background-color: #00A2E8;
+  #EB5939;
   color: #000;
   transform: scale(1.1);
 }
