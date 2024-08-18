@@ -341,11 +341,6 @@ section p {
   text-decoration: none;
 }
 
-.projects-button a.expanded {
-  background-color: #131417; 
-  transition: background-color 0.3s ease, transform 0.3s ease; 
-}
-
 .projects-button a:hover {
   background-color: #8EE4FF;
   transform: scale(1.08);
@@ -365,6 +360,10 @@ section p {
   border-radius: 5px;
 }
 
+.btn-visit-github a.expanded {
+  background-color: #131417; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
 
 
 #timeline {
