@@ -3,12 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsButton = document.querySelector('.projects-button a'); 
+  var projectsButton = document.querySelector('.projects-button a'); // Select the projects button
+
+  console.log('Projects Button:', projectsButton);
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
     
+    console.log('Scroll Position:', scrollPosition);
+    console.log('Window Height:', windowHeight);
+
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -29,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
 
+      console.log('Section Rect:', sectionRect);
+
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
@@ -36,8 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (profilePic) {
           profilePic.classList.add('profile-pic-border-changed');
         }
+
+        // Add expanded class to the projects button when in view
         if (section.id === 'projects' && projectsButton) {
           projectsButton.classList.add('expanded');
+          console.log('Projects Button Expanded');
         }
       } else {
         section.classList.remove('expanded');
@@ -47,8 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
           profilePic.classList.remove('profile-pic-border-changed');
         }
 
+        // Remove expanded class from the projects button when out of view
         if (section.id === 'projects' && projectsButton) {
           projectsButton.classList.remove('expanded');
+          console.log('Projects Button Collapsed');
         }
       }
     });
