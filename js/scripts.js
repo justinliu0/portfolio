@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
-
-    // Existing behavior for navbar and scroll-to-top button
+    
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -24,17 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
-    // Handle expandable sections
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
+      var projectsButtonRect = projectsButton.getBoundingClientRect();
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
         socialButtons.forEach(button => button.classList.add('expanded'));
+        projectsButton.classList.add('expanded');
         if (profilePic) {
           profilePic.classList.add('profile-pic-border-changed');
         }
@@ -42,19 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
         section.classList.remove('expanded');
         portfolioButtons.forEach(button => button.classList.remove('expanded'));
         socialButtons.forEach(button => button.classList.remove('expanded'));
+        projectsButton.classList.remove('expanded');
         if (profilePic) {
           profilePic.classList.remove('profile-pic-border-changed');
         }
       }
     });
-
-    // New scroll behavior for projects button
-    var projectsButtonRect = projectsButton.getBoundingClientRect();
-    if (projectsButtonRect.top < windowHeight && projectsButtonRect.bottom > 0) {
-      projectsButton.classList.add('visible');
-    } else {
-      projectsButton.classList.remove('visible');
-    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
