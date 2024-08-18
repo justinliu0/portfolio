@@ -341,7 +341,10 @@ section p {
   text-decoration: none;
 }
 
-
+.projects-button a.visible {
+  background-color: #131417; 
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
 
 .projects-button a:hover {
   background-color: #8EE4FF;
