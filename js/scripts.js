@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsButton = document.querySelector('.projects-button a');
+  var projectsButton = document.querySelector('btn-visiit-github');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
