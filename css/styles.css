@@ -348,7 +348,7 @@ section p {
 }
 
 .projects-button a.expanded {
-  background-color: #131417;
+  background-color: #131417 !important;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
