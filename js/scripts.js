@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsButton = document.querySelector('.projects-button a'); // Select the projects button
+  var projectsButton = document.querySelector('.projects-button a'); 
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
-      var sectionID = section.getAttribute('id');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
@@ -37,9 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (profilePic) {
           profilePic.classList.add('profile-pic-border-changed');
         }
-
-        // Check if the section is the projects section
-        if (sectionID === 'projects') {
+        if (section.id === 'projects' && projectsButton) {
           projectsButton.classList.add('expanded');
         }
       } else {
@@ -50,8 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
           profilePic.classList.remove('profile-pic-border-changed');
         }
 
-        // Remove the expanded class from the projects button
-        if (sectionID === 'projects') {
+        if (section.id === 'projects' && projectsButton) {
           projectsButton.classList.remove('expanded');
         }
       }
