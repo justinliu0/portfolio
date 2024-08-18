@@ -341,9 +341,9 @@ section p {
   text-decoration: none;
 }
 
-.projects-button a.visible {
+.projects-button a.expanded {
   background-color: #131417; 
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .projects-button a:hover {
