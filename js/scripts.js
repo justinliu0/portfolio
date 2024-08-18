@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
+  var projectsButton = document.querySelector('.projects-button a');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
+    // Existing behavior for navbar and scroll-to-top button
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
+    // Handle expandable sections
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
@@ -44,6 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
+
+    // New scroll behavior for projects button
+    var projectsButtonRect = projectsButton.getBoundingClientRect();
+    if (projectsButtonRect.top < windowHeight && projectsButtonRect.bottom > 0) {
+      projectsButton.classList.add('visible');
+    } else {
+      projectsButton.classList.remove('visible');
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
