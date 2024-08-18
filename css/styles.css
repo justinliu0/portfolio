@@ -159,7 +159,7 @@ section p {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   border-radius: 15px;
   overflow: hidden; 
-  padding: 40px; 
+  padding: 40px 80px; 
   margin: 70px auto;
 }
 
