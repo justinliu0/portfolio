@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsButton = document.querySelector('.btn-visit-github');
+  var projectsButton = document.querySelector('.projects-button a'); // Select the projects button
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -28,23 +28,31 @@ document.addEventListener('DOMContentLoaded', function () {
       var portfolioButtons = section.querySelectorAll('.portfolio-buttons a');
       var socialButtons = section.querySelectorAll('.social-button');
       var profilePic = section.querySelector('.profile-pic');
-      var projectsButtonRect = projectsButton.getBoundingClientRect();
+      var sectionID = section.getAttribute('id');
 
       if (sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5) {
         section.classList.add('expanded');
         portfolioButtons.forEach(button => button.classList.add('expanded'));
         socialButtons.forEach(button => button.classList.add('expanded'));
-        projectsButton.classList.add('expanded');
         if (profilePic) {
           profilePic.classList.add('profile-pic-border-changed');
+        }
+
+        // Check if the section is the projects section
+        if (sectionID === 'projects') {
+          projectsButton.classList.add('expanded');
         }
       } else {
         section.classList.remove('expanded');
         portfolioButtons.forEach(button => button.classList.remove('expanded'));
         socialButtons.forEach(button => button.classList.remove('expanded'));
-        projectsButton.classList.remove('expanded');
         if (profilePic) {
           profilePic.classList.remove('profile-pic-border-changed');
+        }
+
+        // Remove the expanded class from the projects button
+        if (sectionID === 'projects') {
+          projectsButton.classList.remove('expanded');
         }
       }
     });
