@@ -358,7 +358,7 @@ section p {
   text-decoration: none;
 }
 
-.projects-button a.expanded {
+.btn-visit-github.expanded {
   background-color: #131417;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
