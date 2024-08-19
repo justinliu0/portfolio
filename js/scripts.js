@@ -10,12 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
-    // Navbar and scroll-to-top button logic
     navbar.classList.toggle('scrolled', scrollPosition > 0);
     navbarBrand.classList.toggle('expanded', scrollPosition === 0);
     scrollToTopBtn.classList.toggle('visible', scrollPosition > 100);
 
-    // Expandable sections logic
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
       var isInView = sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5;
@@ -26,15 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
     });
 
-    // Projects button logic
     if (projectsSection) {
-      var projectsRect = projectsSection.getBoundingClientRect();
-      var projectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
       projectsButton?.classList.toggle('expanded', projectsInView);
     }
   });
 
-  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Scroll-to-top button click event
   scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
