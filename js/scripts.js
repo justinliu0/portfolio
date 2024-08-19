@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
+    // Handle navbar and scroll-to-top button
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
@@ -24,29 +25,30 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollToTopBtn.classList.remove('visible');
     }
 
+    // Handle expandable sections
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
       var isInView = sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5;
 
+      // Toggle the expanded class for the section and its buttons
       section.classList.toggle('expanded', isInView);
       section.querySelectorAll('.portfolio-buttons a').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelectorAll('.social-button').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
 
-      // Check if the section is the projects section
+      // If this is the projects section, toggle the expanded class for the projects button
       if (section === projectsSection) {
         projectsButton?.classList.toggle('expanded', isInView);
       }
     });
   });
 
+  // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-
       var targetId = this.getAttribute('href').substring(1);
       var targetElement = document.getElementById(targetId);
-
       if (targetElement) {
         window.scrollTo({
           top: targetElement.offsetTop - 56, 
@@ -56,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Scroll to top button click handler
   scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
