@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsButton = document.querySelector('.projects-button a'); 
+  var projectsSection = document.getElementById('projects');
+  var projectsButton = document.querySelector('.projects-button a');
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle projects button color change
-    var projectsSection = document.getElementById('projects');
     if (projectsSection) {
       var projectsRect = projectsSection.getBoundingClientRect();
       var projectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
