@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var navbarBrand = document.querySelector('.navbar-brand');
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
-  var projectsSection = document.getElementById('projects');
-  var projectsButton = document.querySelector('.btn-visit-github');
+  var projectsButton = document.querySelector('.projects-button a'); 
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
@@ -14,11 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (scrollPosition > 0) {
       navbar.classList.add('scrolled');
       navbarBrand.classList.remove('expanded');
-      if (scrollPosition > 100) {
-        scrollToTopBtn.classList.add('visible');
-      } else {
-        scrollToTopBtn.classList.remove('visible');
-      }
+      scrollToTopBtn.classList.toggle('visible', scrollPosition > 100);
     } else {
       navbar.classList.remove('scrolled');
       navbarBrand.classList.add('expanded');
@@ -30,36 +25,39 @@ document.addEventListener('DOMContentLoaded', function () {
       var sectionRect = section.getBoundingClientRect();
       var isInView = sectionRect.top < windowHeight * 0.5 && sectionRect.bottom > windowHeight * 0.5;
 
-      // Toggle the expanded class for the section and its buttons
       section.classList.toggle('expanded', isInView);
       section.querySelectorAll('.portfolio-buttons a').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelectorAll('.social-button').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
-
-    if (isInView) {
-      projectsButton?.classList.add('expanded');
-    } else {
-      projectsButton?.classList.remove('expanded');
-    }
     });
+
+    // Handle projects button color change
+    var projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      var projectsRect = projectsSection.getBoundingClientRect();
+      var projectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
+      projectsButton?.classList.toggle('expanded', projectsInView);
+    }
   });
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+
       var targetId = this.getAttribute('href').substring(1);
       var targetElement = document.getElementById(targetId);
+
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 56, 
+          top: targetElement.offsetTop - 56,
           behavior: 'smooth'
         });
       }
     });
   });
 
-  // Scroll to top button click handler
+  // Scroll to top button functionality
   scrollToTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
