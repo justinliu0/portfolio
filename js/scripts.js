@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (projectsSection) {
-      projectsButton?.classList.toggle('expanded', projectsInView);
+      var projectsRect = projectsSection.getBoundingClientRect();
+      var isProjectsInView = projectsRect.top < window.innerHeight && projectsRect.bottom > 0;
+      projectsButton?.classList.toggle('expanded', isProjectsInView);
     }
   });
 
