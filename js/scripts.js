@@ -22,8 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
       section.querySelectorAll('.portfolio-buttons a').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelectorAll('.social-button').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
-      projectsButton?.classList.toggle('expanded', isInView);
     });
+    var projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      var projectsRect = projectsSection.getBoundingClientRect();
+      var isProjectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
+      projectsButton?.classList.toggle('expanded', isProjectsInView);
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
