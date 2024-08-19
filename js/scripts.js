@@ -37,8 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
 
       // If this is the projects section, toggle the expanded class for the projects button
-      if (section === projectsSection) {
-        projectsButton?.classList.toggle('expanded', isInView);
+      if (section === projectsSection && isInView) {
+        projectsButton?.classList.add('expanded');
+      } else {
+        projectsButton?.classList.remove('expanded');
       }
     });
   });
