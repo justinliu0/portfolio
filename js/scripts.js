@@ -23,12 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
       section.querySelectorAll('.social-button').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
     });
-    
-    if (projectsSection) {
+  
       var projectsRect = projectsSection.getBoundingClientRect();
       var isProjectsInView = projectsRect.top < window.innerHeight * 0.5 && projectsRect.bottom > window.innerHeight * 0.5;
       projectsButton?.classList.toggle('expanded', isProjectsInView);
-    }
+    
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
