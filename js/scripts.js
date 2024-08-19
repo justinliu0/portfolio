@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var scrollToTopBtn = document.querySelector('.scroll-to-top');
   var expandableSections = document.querySelectorAll('.expandable-section');
   var projectsSection = document.getElementById('projects');
-  var projectsButton = document.querySelector('.projects-button a');
+  var projectsButton = document.querySelector('.btn-visit-github'); // Update the selector here
 
-  window.addEventListener('scroll', function() {
+  function handleScroll() {
     var scrollPosition = window.scrollY;
     var windowHeight = window.innerHeight;
 
@@ -33,12 +33,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle projects button color change
-    if (projectsSection) {
+    if (projectsSection && projectsButton) {
       var projectsRect = projectsSection.getBoundingClientRect();
       var projectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
-      projectsButton?.classList.toggle('expanded', projectsInView);
+      projectsButton.classList.toggle('expanded', projectsInView);
     }
-  });
+  }
+
+  // Initial check
+  handleScroll();
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
