@@ -36,12 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
       section.querySelectorAll('.social-button').forEach(button => button.classList.toggle('expanded', isInView));
       section.querySelector('.profile-pic')?.classList.toggle('profile-pic-border-changed', isInView);
 
-      // If this is the projects section, toggle the expanded class for the projects button
-      if (section === projectsSection && isInView) {
-        projectsButton?.classList.add('expanded');
-      } else {
-        projectsButton?.classList.remove('expanded');
-      }
+    if (isInView) {
+      projectsButton?.classList.add('expanded');
+    } else {
+      projectsButton?.classList.remove('expanded');
+    }
     });
   });
 
