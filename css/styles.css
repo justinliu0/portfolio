@@ -336,8 +336,8 @@ section p {
 }
 
 .proj1:hover, .proj2:hover, .proj3:hover, .proj4:hover, .proj5:hover, .proj6:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .proj1 a, .proj2 a, .proj3 a, .proj4 a, .proj5 a, .proj6 a {
