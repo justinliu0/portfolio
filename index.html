@@ -224,20 +224,20 @@
       <br>
       <h4 class="animate__animated animate__fadeIn">...or use the following form</h4>
       
-      <form class="animate__animated animate__fadeIn">
-        <div class="form-left">
-          <input type="text" id="name" placeholder="  Your Name *" required data-validation-required-message="Please enter your name.">
-          <input type="email" id="email" placeholder="  Your Email *" required data-validation-required-message="Please enter your email address.">
-          <input type="text" id="subject" placeholder="  Subject">
-        </div>
-  
-        <div class="form-right">
-          <textarea id="message" placeholder="  Your Message *" rows="8" required data-validation-required-message="Please enter a message."></textarea>
-        </div>
-
-        <div class="submit-btn-container">
-          <button type="submit">Send Message</button>
-        </div>
+      <form id="contact-form" method="POST" action="send_mail.php" class="animate__animated animate__fadeIn">
+          <div class="form-left">
+              <input type="text" name="name" id="name" placeholder="  Your Name *" required data-validation-required-message="Please enter your name.">
+              <input type="email" name="email" id="email" placeholder="  Your Email *" required data-validation-required-message="Please enter your email address.">
+              <input type="text" name="subject" id="subject" placeholder="  Subject">
+          </div>
+      
+          <div class="form-right">
+              <textarea name="message" id="message" placeholder="  Your Message *" rows="8" required data-validation-required-message="Please enter a message."></textarea>
+          </div>
+      
+          <div class="submit-btn-container">
+              <button type="submit">Send Message</button>
+          </div>
       </form>
     </div>
   </section>
