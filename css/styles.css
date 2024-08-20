@@ -326,10 +326,9 @@ section p {
   align-items: center;
 }
 
-.proj1, .proj2, .proj3, .proj4, .proj5, .proj6 {
+.project {
   margin: 20px 0;
   padding: 20px;
-  font-style: none;
   background-color: #444673;
   color: #E9DFCE;
   width: 1000px;
@@ -338,12 +337,12 @@ section p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proj1:hover, .proj2:hover, .proj3:hover, .proj4:hover, .proj5:hover, .proj6:hover {
+.project:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.proj1 a, .proj2 a, .proj3 a, .proj4 a, .proj5 a, .proj6 a {
+.project a {
   text-decoration: none;
   color: #E9DFCE;
 }
