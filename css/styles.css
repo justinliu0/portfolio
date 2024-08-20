@@ -155,19 +155,7 @@ section p {
   font-size: 18px;
 }
 
-.expandable-section {
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  border-radius: 15px;
-  overflow: hidden; 
-  padding: 40px 80px; 
-  margin: 70px auto;
-}
 
-.expandable-section.expanded {
-  background-color: #EB5939;
-  color: #131417;
-  transform: scale(1.1);
-}
 
 #about {
   display: flex;
@@ -330,7 +318,7 @@ section p {
   margin: 20px 0;
   padding: 20px;
   font-style: none;
-  background-color: #444673 !important;
+  background-color: #444673;
   color: #E9DFCE;
   width: 1000px;
   border-radius: 15px;
