@@ -323,26 +323,16 @@ section p {
   background-color: #f9f9f9;
 }
 
-.expandable-section {
+.projects-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.projects-content {
-  width: 100%; /* Ensures the content area is full-width */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers the boxes horizontally */
-}
-
 .proj1, .proj2, .proj3, .proj4, .proj5, .proj6 {
-  width: 1000px; /* Set a fixed width for the project boxes */
   margin: 20px 0;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #fff;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
