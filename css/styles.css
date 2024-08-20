@@ -229,7 +229,7 @@ section p {
 }
 
 .social-button:hover {
-  background-color: #8EE4FF; 
+  background-color: #8EE4FF !important; 
 }
 
 .portfolio-buttons {
@@ -252,7 +252,7 @@ section p {
 }
 
 .portfolio-buttons a:hover {
-  background-color: #8EE4FF;
+  background-color: #8EE4FF !important;
   transform: scale(1.08);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
@@ -337,7 +337,7 @@ section p {
 }
 
 .projects-button a:hover {
-  background-color: #8EE4FF;
+  background-color: #8EE4FF !important;
   transform: scale(1.08);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
 }
