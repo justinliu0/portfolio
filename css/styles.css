@@ -332,6 +332,7 @@ section p {
   font-style: none;
   background-color: #444673;
   color: #E9DFCE;
+  width: 1000px;
   border-radius: 15px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
