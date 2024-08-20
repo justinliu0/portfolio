@@ -330,7 +330,7 @@ section p {
   margin: 20px 0;
   padding: 20px;
   font-style: none;
-  background-color: #444673;
+  background-color: #444673 !important;
   color: #E9DFCE;
   width: 1000px;
   border-radius: 15px;
@@ -341,11 +341,6 @@ section p {
 #projects-content > div:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-#projects-content > div a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .projects-button {
