@@ -316,8 +316,6 @@ section p {
   height: auto;
 }
 
-
-
 #projects {
   padding: 40px 0;
 }
@@ -331,6 +329,7 @@ section p {
 .proj1, .proj2, .proj3, .proj4, .proj5, .proj6 {
   margin: 20px 0;
   padding: 20px;
+   border: 1px solid #fff;
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
