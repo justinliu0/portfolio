@@ -389,12 +389,11 @@ section p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1 !important;
+  z-index: 1;
 }
 
 #contact-content {
   position: relative; 
-  z-index: 3 !important; 
 }
 
 #contact h2 {
@@ -449,6 +448,7 @@ textarea {
   border-radius: 5px;
   box-sizing: border-box;
   pointer-events: auto;
+  z-index: 3;
 }
 
 textarea {
@@ -471,12 +471,13 @@ input[type="email"] {
 button[type="submit"] {
   padding: 16px 28px;
   font-size: 18px;
-  color: #fff;
+  color: #E9DFCE;
   background-color: #000;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
   margin-top: 20px;
+  z-index: 3;
 }
 
 
