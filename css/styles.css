@@ -320,13 +320,13 @@ section p {
   padding: 40px 0;
 }
 
-.projects-content {
+#projects-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.proj1, .proj2, .proj3, .proj4, .proj5, .proj6 {
+#projects-content > div {
   margin: 20px 0;
   padding: 20px;
   font-style: none;
@@ -338,13 +338,14 @@ section p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proj1:hover, .proj2:hover, .proj3:hover, .proj4:hover, .proj5:hover, .proj6:hover {
+#projects-content > div:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.proj1 a, .proj2 a, .proj3 a, .proj4 a, .proj5 a, .proj6 a {
+#projects-content > div a {
   text-decoration: none;
+  color: inherit;
 }
 
 .projects-button {
