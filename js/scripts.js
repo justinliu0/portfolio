@@ -63,4 +63,23 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
   });
+
+  var contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var formData = new FormData(contactForm);
+
+    fetch('send_mail.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert(data); 
+    })
+    .catch(error => {
+      alert('There was an error submitting the form.');
+    });
+  });
 });
