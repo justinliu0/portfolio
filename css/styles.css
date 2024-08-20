@@ -329,7 +329,8 @@ section p {
 .proj1, .proj2, .proj3, .proj4, .proj5, .proj6 {
   margin: 20px 0;
   padding: 20px;
-   border: 1px solid #fff;
+  background-color: #444673;
+  color: #E9DFCE;
   border-radius: 15px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -342,7 +343,6 @@ section p {
 
 .proj1 a, .proj2 a, .proj3 a, .proj4 a, .proj5 a, .proj6 a {
   text-decoration: none;
-  color: inherit;
 }
 .projects-button {
   text-align: center; 
