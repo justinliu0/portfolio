@@ -63,4 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
   });
+
+  var currentYear = new Date().getFullYear();
+  document.getElementById('copyright-year').textContent = currentYear;
+  
 });
