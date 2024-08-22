@@ -29,14 +29,13 @@ html::-webkit-scrollbar {
   z-index: 1030; 
   transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
   height: 90px; 
-  top: 0; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled {
   background-color: rgb(13, 13, 13, 1); 
   height: 56px; 
   top: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-nav .nav-item .nav-link {
