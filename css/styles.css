@@ -455,6 +455,7 @@ section p {
   background-color: #444673; /* Line color */
   transform: translateX(-50%);
   z-index: 0;
+  max-width: 1200px;
 }
 
 .timeline-item::before {
