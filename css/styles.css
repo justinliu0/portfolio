@@ -392,16 +392,77 @@ section p {
 }
 
 #timeline {
+  padding: 40px 0;
 }
 
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 80%; /* Adjust width as needed */
+}
 
+.timeline-item.timeline-left {
+  justify-content: flex-end;
+}
 
+.timeline-item.timeline-right {
+  justify-content: flex-start;
+}
 
+.timeline-image {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #444673; /* Border around the images */
+  z-index: 1;
+}
 
+.timeline-content {
+  max-width: 400px; /* Adjust as needed */
+  padding: 10px;
+}
 
+.timeline-left .timeline-content {
+  text-align: right;
+  margin-right: 20px;
+}
 
+.timeline-right .timeline-content {
+  text-align: left;
+  margin-left: 20px;
+}
 
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #444673; /* Line color */
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #444673;
+  left: 50%;
+  top: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+}
 
 
 #contact {
