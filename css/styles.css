@@ -422,16 +422,15 @@ section p {
 }
 
 .timeline-image {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
+  width: 180px; 
+  height: 180px;
   border-radius: 50%;
-  border: 5px solid #444673; /* Border around the images */
+  border: 5px solid #444673; 
   z-index: 1;
-  background-color: #E9DFCE; /* Placeholder background */
 }
 
 .timeline-content {
-  max-width: 300px; /* Adjust as needed */
+  max-width: 400px; 
   padding: 10px;
   background-color: #444673;
   color: #E9DFCE;
