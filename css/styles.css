@@ -454,10 +454,10 @@ section p {
   content: "";
   position: absolute;
   width: 4px;
-  height: 70%; /* Adjust height as needed */
+  height: 50%; /* Adjust height as needed */
   background-color: #444673;
   left: 50%;
-  top: 110px; /* Adjust to position below the image */
+  top: 200px; /* Adjust to position below the image */
   z-index: -1;
   transform: translateX(-50%);
 }
