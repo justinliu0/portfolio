@@ -395,12 +395,6 @@ section p {
   padding: 40px 0;
 }
 
-.expandable-section {
-  max-width: 1200px; /* Increase this value to allow more space */
-  margin: 0 auto; /* Center the section */
-  padding: 0 20px; /* Optional: Add padding for breathing room */
-}
-
 .timeline-container {
   display: flex;
   flex-direction: column;
