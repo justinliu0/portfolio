@@ -455,10 +455,10 @@ section p {
   content: "";
   position: absolute;
   width: 4px;
-  height: calc(100% - 75px); /* Adjust this value based on image size */
+  height: 70%; /* Adjust height as needed */
   background-color: #444673;
   left: 50%;
-  top: 75px; /* Adjust this value based on image size */
+  top: 110px; /* Adjust to position below the image */
   z-index: -1;
   transform: translateX(-50%);
 }
