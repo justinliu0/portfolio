@@ -446,8 +446,8 @@ section p {
 
 .timeline-image {
   position: absolute;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background-color: #ffffff;
   border: 2px solid #ddd;
