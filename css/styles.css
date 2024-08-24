@@ -428,9 +428,6 @@ section p {
 .timeline-content {
   position: relative;
   padding: 20px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   top: -30px;
 }
