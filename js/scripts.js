@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   var navbar = document.getElementById('navbar');
   var navbarBrand = document.querySelector('.navbar-brand');
-  var scrollToTopBtn = document.querySelector('.scroll-to-top');
+  var navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
   var expandableSections = document.querySelectorAll('.expandable-section');
   var projectsSection = document.getElementById('projects');
   var projectsButton = document.querySelector('.btn-visit-github'); 
+  var scrollToTopBtn = document.querySelector('.scroll-to-top');
 
   function handleScroll() {
     var scrollPosition = window.scrollY;
@@ -19,6 +20,19 @@ document.addEventListener('DOMContentLoaded', function () {
       navbarBrand.classList.add('expanded');
       scrollToTopBtn.classList.remove('visible');
     }
+
+    navLinks.forEach(link => {
+      var section = document.querySelector(link.getAttribute('href'));
+      if (section) {
+        var sectionRect = section.getBoundingClientRect();
+        var isInView = sectionRect.top <= 56 && sectionRect.bottom >= 56;
+
+        if (isInView) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
 
     expandableSections.forEach(section => {
       var sectionRect = section.getBoundingClientRect();
