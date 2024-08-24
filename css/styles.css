@@ -393,7 +393,8 @@ section p {
 
 .timeline-container {
   position: relative;
-  width: ;
+  width: 70%;
+  padding-top: 40px;
 }
 
 .timeline-item {
