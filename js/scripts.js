@@ -23,18 +23,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Update active state of navbar links
+        let currentActiveLink = null;
         navLinks.forEach(link => {
             var section = document.querySelector(link.getAttribute('href'));
             if (section) {
-                var sectionTop = section.offsetTop - 56;  // Adjust this offset as necessary
+                var sectionTop = section.offsetTop - 100; // Adjust for navbar height
                 var sectionBottom = sectionTop + section.offsetHeight;
 
                 if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    link.classList.add('active');
+                    currentActiveLink = link;
                 }
             }
         });
+
+        navLinks.forEach(link => link.classList.remove('active'));
+        if (currentActiveLink) {
+            currentActiveLink.classList.add('active');
+        }
 
         // Expandable sections logic
         expandableSections.forEach(section => {
