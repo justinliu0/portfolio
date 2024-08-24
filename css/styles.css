@@ -432,7 +432,7 @@ section p {
   background-color: #ffffff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  top: 60px;
+  top: 200px;
 }
 
 .timeline-left .timeline-content {
@@ -452,7 +452,7 @@ section p {
   border-radius: 50%;
   background-color: #ffffff;
   border: 2px solid #ddd;
-  top: 65px;
+  top: 60px;
   transform: translateY(-50%);
 }
 
