@@ -428,6 +428,9 @@ section p {
 .timeline-content {
   position: relative;
   top: -40px;
+  background-color: #444673;
+  color: #E9DFCE;
+  border-radius: 15px;
 }
 
 .timeline-left .timeline-content {
