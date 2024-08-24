@@ -417,8 +417,8 @@ section p {
 .timeline-container::before {
   content: '';
   position: absolute;
-  width: 2px;
-  background-color: #ddd;
+  width: 4px;
+  background-color: #444673;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -445,8 +445,8 @@ section p {
   width: 200px;
   height: 200px; 
   border-radius: 50%;
-  background-color: #ffffff;
-  border: 2px solid #ddd;
+  background-color: #fff;
+  border: 8px solid #444673;
   top: 60px;
   transform: translateY(-50%);
 }
