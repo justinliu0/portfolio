@@ -35,6 +35,24 @@ document.addEventListener('DOMContentLoaded', function () {
       var projectsInView = projectsRect.top < windowHeight * 0.5 && projectsRect.bottom > windowHeight * 0.5;
       projectsButton.classList.toggle('expanded', projectsInView);
     }
+
+    // Handle active navbar link on scroll
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
+
+    sections.forEach((section) => {
+      let top = window.scrollY;
+      let offset = section.offsetTop - 60; // Adjust for the height of the fixed navbar
+      let height = section.offsetHeight;
+      let id = section.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+        document.querySelector('.navbar-nav .nav-item .nav-link[href="#' + id + '"]').classList.add('active');
+      }
+    });
   }
 
   handleScroll();
@@ -66,25 +84,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var currentYear = new Date().getFullYear();
   document.getElementById('copyright-year').textContent = currentYear;
-  
-});
-
-
-window.addEventListener('scroll', function() {
-  let sections = document.querySelectorAll('section');
-  let navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
-
-  sections.forEach((section, i) => {
-    let top = window.scrollY;
-    let offset = section.offsetTop
-    let height = section.offsetHeight;
-    let id = section.getAttribute('id');
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((link) => {
-        link.classList.remove('active');
-      });
-      document.querySelector('.navbar-nav .nav-item .nav-link[href="#' + id + '"]').classList.add('active');
-    }
-  });
 });
