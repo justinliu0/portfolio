@@ -46,6 +46,10 @@ html::-webkit-scrollbar {
   color: #8EE4FF;
 }
 
+.navbar-nav .nav-item .nav-link.active {
+  color: #8EE4FF; 
+}
+
 .navbar-icon {
   width: 32px;
   height: 32px;
