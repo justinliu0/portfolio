@@ -42,10 +42,6 @@ html::-webkit-scrollbar {
   color: #fff;
 }
 
-.navbar-nav .nav-item .nav-link.active {
-  color: #8EE4FF;
-}
-
 .navbar-nav .nav-item .nav-link:hover {
   color: #8EE4FF;
 }
