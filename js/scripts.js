@@ -36,13 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
       projectsButton.classList.toggle('expanded', projectsInView);
     }
 
-    // Handle active navbar link on scroll
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
 
     sections.forEach((section) => {
       let top = window.scrollY;
-      let offset = section.offsetTop - 60; // Adjust for the height of the fixed navbar
+      let offset = section.offsetTop - 60; 
       let height = section.offsetHeight;
       let id = section.getAttribute('id');
 
