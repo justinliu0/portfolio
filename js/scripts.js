@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sections.forEach((section) => {
       let top = window.scrollY;
-      let offset = section.offsetTop - 60;
+      let offset = section.offsetTop - 60; // Adjust for the height of the fixed navbar
       let height = section.offsetHeight;
       let id = section.getAttribute('id');
 
