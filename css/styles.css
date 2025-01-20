@@ -4,9 +4,13 @@ body {
   padding: 0; 
   overflow-y: scroll;
   scrollbar-width: none !important;
-  color: #E9DFCE;
-  background-color: #131417;
+  color: ;
+  background-color: ;
   font-family: 'Montserrat', sans-serif;
+}
+
+imgs {
+  max-width: 200px;
 }
 
 
