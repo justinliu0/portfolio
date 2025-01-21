@@ -14,54 +14,6 @@ img {
 }
 
 
-/* Full-page height for the projects section */
-#projects {
-    height: 100vh; /* Ensure it occupies full viewport height */
-    overflow: hidden; /* Prevent default vertical scrolling inside this section */
-    position: relative; /* Initial position */
-}
-
-/* Add a fixed position once we scroll past the section */
-#projects.fixed {
-    position: fixed; /* Fix it to the viewport */
-    top: 0; /* Stick to the top of the viewport */
-    left: 0; /* Ensure it stays in place */
-    width: 100%; /* Full width */
-    z-index: 10; /* Ensure it stays above other content */
-}
-
-/* Horizontal scrolling container */
-.projects-scroll-container {
-    display: flex;
-    align-items: center;
-    height: 100%; /* Full height of the section */
-    overflow: hidden; /* Prevent vertical scrolling inside this container */
-    position: relative;
-}
-
-/* Horizontally aligned projects */
-.projects-content {
-    display: inline-flex;
-    gap: 20px; /* Space between projects */
-    padding: 20px;
-    transition: transform 0.3s ease; /* Smooth animation during scroll */
-}
-
-/* Individual project item */
-.project-item {
-    min-width: 300px; /* Fixed width for each project */
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Optional: make the container look better */
-.project-item:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-}
 
 .scroll-to-top {
   position: fixed;
