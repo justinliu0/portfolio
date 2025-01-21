@@ -13,5 +13,11 @@ document.addEventListener("scroll", () => {
         const horizontalScroll = (scrollOffset / sectionHeight) * maxScroll; // Map vertical scroll to horizontal scroll
 
         container.style.transform = `translateX(-${horizontalScroll}px)`; // Apply horizontal scroll
+
+        // Fix the projects section in place when scrolling into it
+        projectsSection.classList.add("fixed");
+    } else {
+        // Remove the fixed class when scrolling past the section
+        projectsSection.classList.remove("fixed");
     }
 });
