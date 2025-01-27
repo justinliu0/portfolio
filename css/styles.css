@@ -13,6 +13,48 @@ img {
   width: 100px;
 }
 
+/* Projects Section */
+#projects {
+  position: relative;
+  height: 200vh; /* Make the section tall enough for scrolling */
+}
+
+.projects-scroll-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projects-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-content {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between projects */
+}
+
+.project-1, .project-2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
 
 
 .scroll-to-top {
