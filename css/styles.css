@@ -22,20 +22,17 @@ img {
 /* Overall section setup */
 #projects {
   position: relative;
-  height: 300vh; /* Tall enough to scroll through all projects */
   background: #f8f9fa;
 }
 
 .projects-scroll-container {
   position: relative;
-  height: 100vh; /* Full viewport height */
   overflow: hidden; /* Ensures content doesn't spill out */
 }
 
 .projects-sticky {
   position: sticky;
   top: 0;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
