@@ -16,24 +16,12 @@ img {
 #header {
   height: 100vh;
   position: relative; 
-  background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+    url('../imgs/bg.jpg') center/cover fixed no-repeat;
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
-}
-
-#header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0) 
-  );
-  z-index: 1;
 }
 
 .header-content {
@@ -41,6 +29,7 @@ img {
   color: #fff;
   z-index: 2;
 }
+
 
 
 
