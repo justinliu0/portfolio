@@ -16,11 +16,10 @@ img {
 #header {
   height: 100vh;
   position: relative; 
-  background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
+  background: url('../imgs/bg.jpg');
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
-  font-weight: bold;
 }
 
 #header::before {
