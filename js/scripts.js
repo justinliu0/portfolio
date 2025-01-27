@@ -7,6 +7,9 @@ window.addEventListener('wheel', (event) => {
   if (!isScrolling) {
     isScrolling = true;
 
+    // Lock vertical scroll during horizontal scroll
+    document.body.style.overflowY = 'hidden'; 
+
     const currentScroll = scrollContainer.scrollLeft;
     const scrollAmount = event.deltaY;
 
@@ -20,6 +23,7 @@ window.addEventListener('wheel', (event) => {
 
     setTimeout(() => {
       isScrolling = false;
+      document.body.style.overflowY = 'auto';  // Restore vertical scroll when horizontal scroll stops
     }, 50);
   }
 });
@@ -30,10 +34,10 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // Section is in view, allow horizontal scrolling
-      document.body.style.overflowX = 'hidden';
+      document.body.style.overflowX = 'hidden'; // Disable vertical scroll
     } else {
       // Section is out of view, reset vertical scrolling
-      document.body.style.overflowX = 'scroll';
+      document.body.style.overflowX = 'scroll'; // Enable vertical scroll again
     }
   });
 }, { threshold: 0.5 });
