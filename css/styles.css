@@ -14,9 +14,66 @@ img {
 }
 
 #header {
-  background-image: url("bg.jpg");
+  height: 100vh;
+  position: relative; 
+  background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-weight: bold;
+}
 
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0) 
+  );
+  z-index: 1;
+}
 
+.header-content {
+  position: absolute;
+  top: 145px; 
+  left: 240px; 
+  text-align: center; 
+  color: #fff;
+  z-index: 2;
+}
+
+#header h1 {
+  font-size: 130px;
+  margin-bottom: 5px;
+}
+
+#header h2 {
+  font-size: 50px;
+  font-style: italic;
+  margin-top: 0;
+  font-weight: normal !important;
+}
+
+.btn-enter-portfolio {
+  display: inline-block;
+  margin-top: 390px;
+  padding: 15px 25px;
+  font-size: 25px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enter-portfolio:hover {
+  background-color: #D1D1D1;
+}
 
 
 .scroll-to-top {
