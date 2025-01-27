@@ -4,28 +4,32 @@ let horizontalScrollEnabled = false;  // Flag to track horizontal scroll state
 window.addEventListener('wheel', (event) => {
   const scrollContainer = document.querySelector('.projects-scroll-container');
   const content = document.querySelector('.projects-content');
-  
-  // Pause vertical scroll if horizontal scroll is enabled
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.offsetWidth;
+  const currentScroll = scrollContainer.scrollLeft;
+
+  // Only enable horizontal scroll if section is in view
   if (horizontalScrollEnabled) {
     event.preventDefault();
-    const currentScroll = scrollContainer.scrollLeft;
-    const scrollAmount = event.deltaY;
 
-    if (scrollAmount > 0) {
+    // Horizontal scroll behavior
+    if (event.deltaY > 0) {
       // Scroll Down - Move Right
-      content.style.transform = `translateX(-${currentScroll + 200}px)`;  // Adjust 200px to the scroll speed
+      if (currentScroll < maxScroll) {
+        content.style.transform = `translateX(-${currentScroll + 200}px)`;  // Adjust 200px to the scroll speed
+      }
     } else {
       // Scroll Up - Move Left
-      content.style.transform = `translateX(-${Math.max(currentScroll - 200, 0)}px)`;  // Adjust 200px to the scroll speed
+      if (currentScroll > 0) {
+        content.style.transform = `translateX(-${Math.max(currentScroll - 200, 0)}px)`;  // Adjust 200px to the scroll speed
+      }
     }
-    return;
+    return; // Prevent further scrolling if horizontal scroll is active
   }
 
-  // If we're not scrolling horizontally, allow vertical scrolling
+  // If horizontal scroll is not enabled, allow vertical scrolling
   if (!isScrolling) {
     isScrolling = true;
 
-    // Allow vertical scrolling after we are at the end of horizontal scrolling
     setTimeout(() => {
       isScrolling = false;
     }, 50);
