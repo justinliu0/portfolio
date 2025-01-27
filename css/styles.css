@@ -38,40 +38,19 @@ img {
 
 .header-content {
   position: absolute;
-  top: 145px; 
-  left: 240px; 
-  text-align: center; 
   color: #fff;
   z-index: 2;
 }
 
-#header h1 {
-  font-size: 130px;
-  margin-bottom: 5px;
-}
-
-#header h2 {
-  font-size: 50px;
-  font-style: italic;
-  margin-top: 0;
-  font-weight: normal !important;
-}
-
 .btn-enter-portfolio {
   display: inline-block;
-  margin-top: 390px;
   padding: 15px 25px;
   font-size: 25px;
   color: #000;
   background-color: #fff;
   border: none;
   border-radius: 15px;
-  text-decoration: none;
   transition: background-color 0.3s ease;
-}
-
-.btn-enter-portfolio:hover {
-  background-color: #D1D1D1;
 }
 
 
