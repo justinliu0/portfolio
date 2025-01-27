@@ -13,19 +13,23 @@ img {
   width: 100px;
 }
 
-/* Projects Section */
+
+
+
+
+
+
+/* Overall section setup */
 #projects {
   position: relative;
-  height: 200vh; /* Make the section tall enough for scrolling */
+  height: 300vh; /* Tall enough to scroll through all projects */
+  background: #f8f9fa;
 }
 
 .projects-scroll-container {
   position: relative;
   height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overflow: hidden; /* Ensures content doesn't spill out */
 }
 
 .projects-sticky {
@@ -33,27 +37,61 @@ img {
   top: 0;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .projects-content {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Space between projects */
+  gap: 50px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out; /* Smooth animations */
 }
 
-.project-1, .project-2 {
-  background-color: #ffffff;
+/* Individual project cards */
+.project {
+  width: 80%;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+/* Add a hover effect for project cards */
+.project:hover {
+  transform: scale(1.05); /* Slight zoom */
+  opacity: 1;
+}
+
+/* Parallax-like scrolling */
+.projects-sticky.is-scrolling .projects-content {
+  transform: translateY(-100%); /* Moves the project cards up */
+}
+
+/* Footer styling */
+.projects-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-visit-github {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-visit-github:hover {
+  background-color: #0056b3;
+}
+
 
 
 
