@@ -15,7 +15,7 @@ img {
 
 #projects {
   position: relative;
-  height: 600px; /* Increase this if necessary */
+  height: 600px; /* Adjust the height as necessary */
   overflow: hidden;
 }
 
@@ -36,8 +36,8 @@ img {
 .project-4,
 .project-5,
 .project-6 {
-  flex: 0 0 40%; /* Adjust as necessary */
-  margin-right: 20px;
+  flex: 0 0 16.67%;  /* Adjust to show more projects */
+  margin-right: 20px; /* Optional spacing between items */
 }
 
 .projects-footer {
