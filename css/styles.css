@@ -13,37 +13,7 @@ img {
   width: 100px;
 }
 
-#projects {
-  position: relative;
-  height: 1000px; 
-  overflow: hidden;
-}
 
-.projects-scroll-container {
-  width: 180%;
-  overflow: hidden;
-  position: relative;
-}
-
-.projects-content {
-  display: flex;
-  transition: transform 0.5s ease-out;
-}
-
-.project-1,
-.project-2,
-.project-3,
-.project-4,
-.project-5,
-.project-6 {
-  flex: 0 0 20%;  /* Adjust to show more projects */
-  margin-right: 10px; /* Optional spacing between items */
-}
-
-.projects-footer {
-  text-align: center;
-  padding: 50px 0;
-}
 
 
 
