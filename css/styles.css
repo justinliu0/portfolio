@@ -21,7 +21,6 @@ body {
 }
 
 .header-content {
-  position: absolute;
   color: #fff;
   z-index: 2;
 }
