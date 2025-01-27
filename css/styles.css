@@ -31,7 +31,11 @@ img {
 }
 
 .project-1,
-.project-2 {
+.project-2,
+.project-3,
+.project-4,
+.project-5,
+.project-6 {
   flex: 0 0 60%; /* Adjust as necessary */
   margin-right: 20px;
 }
