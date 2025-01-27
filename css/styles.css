@@ -5,7 +5,7 @@ body {
   overflow-y: scroll;
   scrollbar-width: none !important;
   color: #fff;
-  background-color: #fff;
+  background-color: #000;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,7 +16,7 @@ img {
 #header {
   height: 100vh;
   position: relative; 
-  background: url('../imgs/bg.jpg');
+  background: url('../imgs/bg.jpg') center/cover fixed no-repeat;
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
@@ -41,6 +41,7 @@ img {
   color: #fff;
   z-index: 2;
 }
+
 
 .btn-enter-portfolio {
   display: inline-block;
