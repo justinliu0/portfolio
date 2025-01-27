@@ -36,8 +36,8 @@ img {
 .project-4,
 .project-5,
 .project-6 {
-  flex: 0 0 16.67%;  /* Adjust to show more projects */
-  margin-right: 20px; /* Optional spacing between items */
+  flex: 0 0 40%;  /* Adjust to show more projects */
+  margin-right: 10px; /* Optional spacing between items */
 }
 
 .projects-footer {
