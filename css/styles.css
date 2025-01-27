@@ -36,7 +36,7 @@ img {
 .project-4,
 .project-5,
 .project-6 {
-  flex: 0 0 30%;  /* Adjust to show more projects */
+  flex: 0 0 20%;  /* Adjust to show more projects */
   margin-right: 10px; /* Optional spacing between items */
 }
 
