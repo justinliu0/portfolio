@@ -13,33 +13,32 @@ img {
   width: 100px;
 }
 
+#projects {
+  position: relative;
+  height: 600px; /* Increase this if necessary */
+  overflow: hidden;
+}
 
 .projects-scroll-container {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
   position: relative;
-  background-color: #f9f9f9;
-  padding: 20px 0;
 }
 
 .projects-content {
   display: flex;
-  gap: 20px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s;
+  transition: transform 0.5s ease-out;
 }
 
 .project-1,
 .project-2 {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  min-width: 300px; /* Set a fixed width for items */
-  max-width: 300px;
+  flex: 0 0 60%; /* Adjust as necessary */
+  margin-right: 20px;
+}
+
+.projects-footer {
+  text-align: center;
+  padding: 50px 0;
 }
 
 
