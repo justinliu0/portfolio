@@ -22,6 +22,7 @@ body {
   color: #fff;
   z-index: 2;
   margin-top: 100px;
+  font-size: calc(1em + 30px);
 }
 
 
