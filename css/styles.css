@@ -8,13 +8,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #B2B5B4; 
-  border-color: #B2B5B4; 
+  background-color: #00BFFA; 
+  border-color: #00BFFA; 
   padding: 15px 30px;
 }
 
 .btn-secondary:hover {
-  background-color: #E3ECEB;
+  background-color: #8EE4FF;
 }
 
 .btn-secondary {
