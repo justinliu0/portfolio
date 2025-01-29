@@ -107,6 +107,15 @@ body {
   margin-top: 100px;
 }
 
+.skills-card {
+  background-color: #fff;
+}
+
+.skills-logo {
+  height: 100px;
+  width: 100px;
+}
+
 
 
 
