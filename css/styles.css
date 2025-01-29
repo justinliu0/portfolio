@@ -7,6 +7,15 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.btn-secondary {
+    background-color: #E3ECEB;
+    border-color: #B2B5B4; 
+}
+
+.btn-secondary:hover {
+    background-color: #B2B5B4; 
+}
+
 #header {
   height: 100vh;
   position: relative; 
