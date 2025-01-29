@@ -23,6 +23,7 @@ body {
 .header-content {
   color: #fff;
   z-index: 2;
+  margin-top: 100px;
 }
 
 
