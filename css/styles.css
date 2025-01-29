@@ -22,8 +22,18 @@ body {
   color: #fff;
   z-index: 2;
   margin-top: 100px;
-  font-size: calc(1em + 60px);
 }
+
+.header-content h1 {
+  font-weight: bold;
+  font-size: 78px;
+}
+
+.header-content h2 {
+  font-size: 40px;
+}
+
+
 
 
 
