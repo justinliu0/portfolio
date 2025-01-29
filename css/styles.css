@@ -78,7 +78,9 @@ body {
   border-radius: 50%; 
   background-color: #00BFFA; 
   overflow: hidden;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-button:hover {
