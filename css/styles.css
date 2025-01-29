@@ -39,6 +39,7 @@ body {
   color: #fff;
   z-index: 2;
   margin-top: 100px;
+  gap: 20px;
 }
 
 .header-content h1 {
@@ -48,11 +49,6 @@ body {
 
 .header-content h2 {
   font-size: 40px;
-}
-
-.btn-enter-portfolio {
-  padding: 20px;
-  font-weight: none;
 }
 
 
