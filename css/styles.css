@@ -22,7 +22,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: #B2B5B4; 
+  background-color: #B2B5B4; 
 }
 
 #header {
@@ -62,7 +62,7 @@ body {
 } 
 
 .about-content {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .profile-pic {
