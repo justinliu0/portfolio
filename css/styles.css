@@ -107,6 +107,51 @@ body {
   margin-top: 100px;
 }
 
+.skill-card {
+  background-color: #f9f9f9; /* Light background color for card */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Spacing inside card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 10px 0; /* Space between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.skill-logo-circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px; /* Center the circle with spacing below */
+  border-radius: 50%; /* Circle shape */
+  background-color: #eee; /* Circle background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.skill-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the circle */
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Darker heading color */
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #666; /* Lighter text color */
+}
+
+
 
 
 .scroll-to-top {
