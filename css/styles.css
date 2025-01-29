@@ -8,7 +8,7 @@ body {
 }
 
 .btn-primary {
-
+  padding: 15px 30px;
 }
 
 .btn-secondary:hover {
@@ -16,8 +16,9 @@ body {
 }
 
 .btn-secondary {
-    background-color: #E3ECEB;
-    border-color: #B2B5B4; 
+  background-color: #E3ECEB;
+  border-color: #B2B5B4; 
+  padding: 15px 30px;
 }
 
 .btn-secondary:hover {
