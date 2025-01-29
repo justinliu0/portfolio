@@ -2,8 +2,8 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0; 
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -67,31 +67,35 @@ body {
 /* Social buttons container */
 .social-buttons {
     display: flex;
-    gap: 10px; /* Adds space between buttons */
+    gap: 20px; /* Adds space between buttons */
+    justify-content: center; /* Centers the buttons horizontally */
     margin-top: 20px; /* Adds top space for better layout */
 }
 
 /* Social button styling */
 .social-button {
-    width: 100px; /* Set width to 50px */
-    height: 100px; /* Set height to 50px */
+    width: 50px; /* Set width to 50px */
+    height: 50px; /* Set height to 50px */
     border-radius: 50%; /* Make the button circular */
+    background-color: black; /* Set background color to black */
     overflow: hidden;
     display: flex; /* Ensure buttons are aligned horizontally */
     justify-content: center; /* Center image in the button */
     align-items: center; /* Center image in the button */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
 
+/* Hover effect for social buttons */
 .social-button:hover {
     transform: scale(1.1); /* Slightly scale up the button on hover */
+    background-color: #333; /* Darker background color on hover */
 }
 
 /* Image styling inside social buttons */
 .social-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the button fully */
+    width: 70%; /* Ensures the image is not too large for the circle */
+    height: 70%; /* Keeps the image proportional */
+    object-fit: cover; /* Ensures the image covers the button fully */
 }
 
 
