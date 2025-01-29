@@ -76,14 +76,14 @@ body {
   width: 60px; 
   height: 60px; 
   border-radius: 50%; 
-  background-color: #8E8E8E; 
+  background-color: #8EE4FF; 
   overflow: hidden;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .social-button:hover {
   transform: scale(1.1); 
-  background-color: #333; 
+  background-color: #00BFFA; 
 }
 
 .social-button img {
