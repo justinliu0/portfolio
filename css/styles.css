@@ -2,8 +2,8 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0; 
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
 
