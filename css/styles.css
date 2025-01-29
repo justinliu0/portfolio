@@ -77,7 +77,7 @@ body {
     width: 50px; /* Set width to 50px */
     height: 50px; /* Set height to 50px */
     border-radius: 50%; /* Make the button circular */
-    background-color: black; /* Set background color to black */
+    background-color: #fff; /* Set background color to black */
     overflow: hidden;
     display: flex; /* Ensure buttons are aligned horizontally */
     justify-content: center; /* Center image in the button */
