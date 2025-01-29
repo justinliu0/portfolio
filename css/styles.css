@@ -101,10 +101,11 @@ body {
 .social-button img {
   width: 60%; 
   height: 60%; 
-
 }
 
-
+#skills {
+  margin-top: 100px;
+}
 
 
 
