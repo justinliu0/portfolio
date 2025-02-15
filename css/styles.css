@@ -27,6 +27,7 @@ body {
   background-color: #B2B5B4; 
 }
 
+/* Navbar base styles */
 .navbar {
   position: fixed;
   width: 100%;
@@ -34,40 +35,48 @@ body {
   left: 0;
   z-index: 1000;
   background-color: transparent;
-  transition: all 0.3s ease-in-out;
-  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(30px); /* Initially 30px lower */
 }
 
+/* Navbar shrinks when scrolling */
 .navbar.navbar-shrink {
-  background-color: #0D3960 !important; 
-  margin-top: 0; 
+  background-color: #0D3960 !important;
   padding: 10px 0;
+  transform: translateY(0); /* Move back up smoothly */
 }
 
+/* Navbar links */
 .navbar .nav-link {
   color: white !important;
   transition: transform 0.3s ease-in-out;
 }
 
+/* Navbar brand image transition */
 .navbar-brand img {
-  transition: transform 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-.navbar:not(.navbar-shrink) .navbar-brand{
-  transform: scale(1.5) translate(10px, 10px);
+/* Scale and move the logo when navbar is at the top */
+.navbar:not(.navbar-shrink) .navbar-brand img {
+  transform: scale(1.5) translate(10px, 10px); /* Scale and move 10px right and down */
 }
 
-.navbar.navbar-shrink .navbar-brand {
-  transform: scale(1); 
-}
-
+/* Move links down slightly when navbar is at the top */
 .navbar:not(.navbar-shrink) .navbar-nav .nav-link {
   transform: translateY(10px);
 }
 
+/* When the navbar shrinks, reset the transformations */
+.navbar.navbar-shrink .navbar-brand img {
+  transform: scale(1) translate(0, 0);
+}
+
+/* Reset link positions when navbar is shrunk */
 .navbar.navbar-shrink .navbar-nav .nav-link {
   transform: translateY(0);
 }
+
 
 
 
