@@ -7,6 +7,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+section {
+  padding-top: 90px; 
+  margin-top: -90px; 
+}
+
+
 .btn-primary {
   background-color: #00BFFA; 
   border-color: #00BFFA; 
@@ -83,10 +89,6 @@ body {
   margin-top: 250px;
   color: #000;
 }
-
-#about {
-  margin-top: 176px;
-} 
 
 .about-content {
   margin-top: 50px;
