@@ -27,29 +27,6 @@ body {
   background-color: #B2B5B4; 
 }
 
-.navbar {
-  color: #fff;
-  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 15px 0; 
-}
-
-.navbar.transparent {
-  background-color: transparent;
-}
-
-.navbar.solid {
-  background-color: #0D3960;
-  padding: 50px 0; 
-}
-
-.body-padding {
-  padding-top: 56px; 
-}
 
 
 #header {
