@@ -1,19 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".navbar");
-    const body = document.body;
+$(document).ready(function () {
+  var navbar = $(".navbar");
 
-    function updateNavbar() {
-        if (window.scrollY > 50) {
-            navbar.classList.remove("transparent");
-            navbar.classList.add("solid");
-            body.classList.add("body-padding");
-        } else {
-            navbar.classList.remove("solid");
-            navbar.classList.add("transparent");
-            body.classList.remove("body-padding");
-        }
+  function navbarCollapse() {
+    if ($(window).scrollTop() > 50) {
+      navbar.addClass("navbar-shrink");
+    } else {
+      navbar.removeClass("navbar-shrink");
     }
+  }
 
-    window.addEventListener("scroll", updateNavbar);
-    updateNavbar(); // Run once on page load
+  navbarCollapse();
+
+  $(window).scroll(navbarCollapse);
 });
