@@ -52,11 +52,6 @@ body {
   color: #8EE4FF;
 }
 
-
-
-
-
-
 #header {
   height: 100vh;
   position: relative; 
@@ -135,7 +130,7 @@ body {
 }
 
 .portfolio-buttons {
-  margin-top: 10px; 
+  margin: 15px 0px; 
 }
 
 .portfolio-buttons a {
