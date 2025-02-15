@@ -37,27 +37,13 @@ body {
 }
 
 .navbar-shrink {
-  background-color: rgb(13, 13, 13);
+  background-color: #0D3960;
   height: 56px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
-  display: flex;
-  align-items: center;
   color: #fff;
-  transition: transform 0.3s ease-in-out;
-}
-
-.navbar-brand.expanded {
-  transform: scale(1.3);
-}
-
-.navbar-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  margin-right: 8px;
   transition: transform 0.3s ease-in-out;
 }
 
