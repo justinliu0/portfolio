@@ -8,8 +8,8 @@ body {
 }
 
 section {
-  padding-top: 90px; 
-  margin-top: -90px; 
+  padding-top: 80px; 
+  margin-top: -80px; 
 }
 
 
@@ -133,10 +133,6 @@ section {
 .social-button img {
   width: 60%; 
   height: 60%; 
-}
-
-.portfolio-buttons {
-  margin: 100px 0px; 
 }
 
 .portfolio-buttons a {
