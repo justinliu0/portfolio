@@ -102,6 +102,7 @@ body {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
+  border: 10px solid white;
 }
 
 .social-buttons {
@@ -131,6 +132,14 @@ body {
 .social-button img {
   width: 60%; 
   height: 60%; 
+}
+
+.portfolio-buttons {
+  margin-top: 10px; 
+}
+
+.portfolio-buttons a {
+  margin-right: 5px; 
 }
 
 #skills {
