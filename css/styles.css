@@ -90,6 +90,10 @@ section {
   color: #000;
 }
 
+#about { 
+  margin-top: 80px;
+}
+
 .about-content {
   margin-top: 50px;
 }
@@ -140,7 +144,7 @@ section {
 }
 
 #skills {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .skills-card {
