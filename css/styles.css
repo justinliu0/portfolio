@@ -42,10 +42,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-brand {
-  color: #fff;
-  transition: transform 0.3s ease-in-out;
-}
 
 .navbar-nav .nav-link {
   color: #fff;
