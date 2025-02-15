@@ -27,6 +27,15 @@ body {
   background-color: #B2B5B4; 
 }
 
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+  color: #fff;
+}
+
+.navbar.navbar-shrink {
+  background-color: #0D3960 !important;
+}
+
 
 
 #header {
