@@ -1,5 +1,7 @@
 $(document).ready(function () {
   var navbar = $(".navbar");
+  var sections = $("section");
+  var navLinks = $(".navbar-nav .nav-link");
 
   function navbarCollapse() {
     if ($(window).scrollTop() > 50) {
@@ -10,6 +12,22 @@ $(document).ready(function () {
   }
 
   navbarCollapse();
-
   $(window).scroll(navbarCollapse);
+
+  function activateNavLink() {
+    var scrollPosition = $(window).scrollTop();
+
+    sections.each(function () {
+      var sectionTop = $(this).offset().top - 80; 
+      var sectionBottom = sectionTop + $(this).outerHeight();
+      var sectionId = $(this).attr("id");
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        navLinks.removeClass("active"); 
+        $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active"); 
+      }
+    });
+  }
+
+  $(window).on("scroll", activateNavLink);
 });
