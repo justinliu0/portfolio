@@ -166,9 +166,10 @@ section {
   width: 100px;
 }
 
-timeline img {
-  height: 100px;
-  width: 100px;
+.timeline-image {
+    height: 100px;
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the whole image is visible */
 }
 
 
