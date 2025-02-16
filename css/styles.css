@@ -159,7 +159,7 @@ section {
 }
 
 .skills-card {
-  background-color: #0D2540;
+  background-color: #112F52;
   padding: 20px;
   border-radius: 20px; 
   height: 350px; 
@@ -186,9 +186,9 @@ section {
 }
 
 .timeline-image {
-    height: 100px;
-    width: auto; 
-    object-fit: contain; 
+  height: 100px;
+  width: auto; 
+  object-fit: contain; 
 }
 
 
