@@ -191,6 +191,21 @@ section {
   object-fit: contain; 
 }
 
+#contact {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.contact-bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+    z-index: -1; 
+}
+
+
 
 
 .scroll-to-top {
