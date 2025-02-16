@@ -62,7 +62,7 @@ section {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   /* color: #8EE4FF; */
-  color: #0B5ED7;
+  color: #50B6FC;
 }
 
 #header {
@@ -132,11 +132,11 @@ section {
   align-items: center;
 }
 
-.social-button:hover {
+/* .social-button:hover {
   transform: scale(1.1); 
-  /* background-color: #8EE4FF; */
+  /* background-color: #8EE4FF; 
   background-color: #0B5ED7;
-}
+} */
 
 .social-button img {
   width: 60%; 
