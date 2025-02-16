@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 
 section {
   padding-top: 120px; 
-  margin-top: -120px; 
+  margin-top: -75px; 
 }
 
 
@@ -103,7 +103,7 @@ section {
 }
 
 #about {
-  margin-top: 45px;
+  /*margin-top: 45px;*/
 }
 
 .about-content {
@@ -157,19 +157,18 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
 }
 
 .skills-card {
-  background-color: #0D3960; /* Dark blue background */
-  color: white; /* Text color */
+  background-color: #0D3960; 
   padding: 20px;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 20px; 
   text-align: center;
-  height: 100%; /* Ensures all cards match height */
+  height: 100%; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures spacing inside */
+  justify-content: space-between; /
   align-items: center;
 }
 
