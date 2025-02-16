@@ -228,6 +228,12 @@ textarea {
   flex-wrap: wrap;
 }
 
+.footer-right {
+  display: flex; 
+  gap: 15px;
+  justify-content: center; 
+}
+
 .footer-link {
   color: #fff;
   text-decoration: none;
