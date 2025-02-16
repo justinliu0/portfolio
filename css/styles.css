@@ -204,7 +204,9 @@ section {
     z-index: -1; 
 }
 
-
+#footer {
+  background-color: #20395E;
+}
 
 
 .scroll-to-top {
