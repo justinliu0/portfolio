@@ -191,20 +191,23 @@ section {
   object-fit: contain; 
 }
 
-/* #contact {
-    position: relative;
-} */
-
-.contact-bg {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1; 
+#contact {
+  position: relative;
 }
 
-#footer {
-  background-color: #0F2947 !important;
+.contact-bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; 
+}
+
+input {
+  height: 100px;
+}
+
+textarea {
+  height: 350px;
 }
 
 
