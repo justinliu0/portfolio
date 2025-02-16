@@ -203,13 +203,15 @@ section {
   z-index: -1; 
 }
 
+contact
+
 input {
   height: 70px;
   font-size: 20px;
 }
 
 textarea {
-  height: 250px;
+  height: 240px;
   font-size: 20px;
 }
 
