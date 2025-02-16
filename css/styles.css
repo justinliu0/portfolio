@@ -216,7 +216,7 @@ textarea {
 
 .footer {
   background-color: #0F2947;
-/*   padding: 40px 0; */
+  padding: 40px 0;
 }
 
 .footer .row {
@@ -229,12 +229,12 @@ textarea {
 .footer-right {
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 
 .footer-link {
-/*   color: #fff; */
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
 
 
