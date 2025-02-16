@@ -204,7 +204,7 @@ section {
   z-index: -1; 
 }
 
-input {
+/* input {
   height: 70px;
   font-size: 20px;
   padding: 20px;
@@ -214,6 +214,34 @@ textarea {
   height: 243px;
   font-size: 20px;
   padding: 20px;
+} */
+/* Increase Input Box & Textarea Size */
+input, textarea {
+  height: 70px; /* Make input fields taller */
+  font-size: 20px; /* Increase text size */
+  padding: 15px; /* Add spacing inside inputs */
+}
+
+/* Make Textarea Taller */
+textarea {
+  height: 250px;
+}
+
+/* Add Spacing Between Input Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Center the Placeholder Text */
+input::placeholder, textarea::placeholder {
+  text-align: center;
+}
+
+/* Move Everything Up (Except Background) */
+#contact .container {
+  position: relative;
+  z-index: 2;
+  margin-top: -50px; /* Adjust to move content higher */
 }
 
 .footer {
