@@ -194,7 +194,6 @@ section {
 
 #contact {
   position: relative;
-  margin-top: -100px;
 }
 
 .contact-bg {
@@ -218,7 +217,7 @@ textarea {
 
 .footer {
   background-color: #0F2947;
-  padding: 45px 0;
+  padding: 50px 0px 45px 0px;
 }
 
 .footer .row {
@@ -230,7 +229,7 @@ textarea {
 
 .footer-right {
   display: flex; 
-  gap: 15px;
+  gap: 20px;
   justify-content: center; 
 }
 
