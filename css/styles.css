@@ -30,7 +30,7 @@ section {
   padding: 15px 30px;
 }
 
-.btn-secondary:hover {
+.btn-primary:hover {
   /* background-color: #8EE4FF; */
   background-color: #0B5ED7;
 }
