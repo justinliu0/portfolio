@@ -176,8 +176,14 @@ section {
   height: 100px;
   width: 100px;
   object-fit: contain;
-  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 50%; 
+  padding: 15px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .row .col-4 {
   display: flex;
