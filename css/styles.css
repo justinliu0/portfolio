@@ -191,9 +191,9 @@ section {
   object-fit: contain; 
 }
 
-#contact {
+/* #contact {
     position: relative;
-}
+} */
 
 .contact-bg {
     position: absolute;
