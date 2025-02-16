@@ -227,6 +227,7 @@ textarea {
 }
 
 .footer-right {
+  display: flex;
   gap: 15px;
 }
 
