@@ -217,20 +217,20 @@ textarea {
 
 .footer {
   background-color: #0F2947;
-  padding: 50px 0px 45px 0px;
+  padding: 45px 0px 50px 0px;
 }
 
-.footer .row {
+/* .footer .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} */
 
 .footer-right {
   display: flex; 
   gap: 20px;
-  justify-content: center; 
+/*   justify-content: center;  */
 }
 
 .footer-link {
