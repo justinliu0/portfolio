@@ -231,7 +231,7 @@ textarea {
 .footer-right {
   display: flex; 
   gap: 20px;
-/*   justify-content: center;  */
+  justify-content: center; 
 }
 
 .footer-link {
