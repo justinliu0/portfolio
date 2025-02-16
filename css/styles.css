@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0; 
   color: #fff;
-  background-color: #0D3960;
+  /* background-color: #0D3960; */
+  background-color: #244466;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -43,7 +44,8 @@ section {
 }
 
 .navbar-shrink {
-  background-color: #0D3960;
+  /* background-color: #0D3960; */
+  background-color: #20395E;
   height: 56px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
