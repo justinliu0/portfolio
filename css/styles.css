@@ -166,7 +166,10 @@ section {
   width: 100px;
 }
 
-
+.timeline img {
+  height: 100px;
+  width: 100px;
+}
 
 
 
