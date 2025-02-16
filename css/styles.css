@@ -15,8 +15,10 @@ section {
 
 
 .btn-primary {
+  /* background-color: #00BFFA; 
+  border-color: #00BFFA; */
   background-color: #00BFFA; 
-  border-color: #00BFFA; 
+  border-color: #00BFFA;
   padding: 15px 30px;
 }
 
