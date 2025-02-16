@@ -194,6 +194,7 @@ section {
 
 #contact {
   position: relative;
+  margin-top: -100px;
 }
 
 .contact-bg {
