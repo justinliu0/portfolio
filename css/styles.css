@@ -191,6 +191,18 @@ section {
   object-fit: contain; 
 }
 
+#contact {
+    position: relative;
+    background: url('./imgs/map.png') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 2; 
+}
+
 
 
 .scroll-to-top {
