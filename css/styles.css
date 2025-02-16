@@ -18,6 +18,9 @@ section {
   padding-top: 140px; 
 }
 
+.section-header {
+  margin: 10px 0;
+}
 
 .btn-primary {
   /* background-color: #00BFFA; 
