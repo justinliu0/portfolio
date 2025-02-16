@@ -207,11 +207,13 @@ section {
 input {
   height: 70px;
   font-size: 20px;
+  padding: 20px;
 }
 
 textarea {
   height: 243px;
   font-size: 20px;
+  padding: 20px;
 }
 
 .footer {
@@ -219,12 +221,12 @@ textarea {
   padding: 45px 0px 50px 0px;
 }
 
-/* .footer .row {
+.footer .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-} */
+}
 
 .footer-right {
   display: flex; 
