@@ -221,6 +221,11 @@ textarea {
   padding: 20px;
 }
 
+input.form-control,
+textarea.form-control {
+  padding: 20px !important;
+}
+
 .footer {
   background-color: #0F2947;
   padding: 45px 0px 50px 0px;
