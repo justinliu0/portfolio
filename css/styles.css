@@ -25,11 +25,13 @@ section {
   border-color: #50B6FC;
   padding: 15px 30px;
   border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
   /* background-color: #8EE4FF; */
   background-color: #0B5ED7;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
@@ -130,10 +132,6 @@ section {
 .social-button img {
   width: 60%; 
   height: 60%; 
-}
-
-.portfolio-buttons a {
-  margin-right: 5px; 
 }
 
 .skills-content {
