@@ -24,6 +24,7 @@ section {
   background-color: #50B6FC; 
   border-color: #50B6FC;
   padding: 15px 30px;
+  border-radius: 20px;
 }
 
 .btn-primary:hover {
