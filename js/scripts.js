@@ -3,7 +3,6 @@ $(document).ready(function () {
   $("#copyright-year").text(new Date().getFullYear());
 
   var navbar = $(".navbar");
-  var navbar = $(".navbar");
   var sections = $("section");
   var navLinks = $(".navbar-nav .nav-link");
 
@@ -33,5 +32,7 @@ $(document).ready(function () {
     });
   }
 
+  activateNavLink(); 
   $(window).on("scroll", activateNavLink);
+
 });
