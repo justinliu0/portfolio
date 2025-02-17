@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
 
 section {
   padding-top: 140px; 
+  padding-botton: 100px;
 }
 
 .section-header {
