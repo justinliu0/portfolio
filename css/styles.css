@@ -194,6 +194,7 @@ section {
 
 #contact {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .contact-bg {
@@ -211,7 +212,7 @@ input {
 }
 
 textarea {
-  height: 243px;
+  height: 242px;
   font-size: 20px;
   padding: 20px;
 }
@@ -238,8 +239,6 @@ textarea {
   color: #fff;
   text-decoration: none;
 }
-
-
 
 .scroll-to-top {
   position: fixed;
