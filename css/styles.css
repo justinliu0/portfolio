@@ -194,7 +194,7 @@ section {
 
 #contact {
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 125px;
 }
 
 .contact-bg {
@@ -219,7 +219,7 @@ textarea {
 
 input.form-control,
 textarea.form-control {
-  padding: 20px !important;
+  padding: 20px;
 }
 
 .footer {
