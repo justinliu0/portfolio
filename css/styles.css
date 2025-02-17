@@ -229,6 +229,9 @@ textarea {
   flex-wrap: wrap;
 }
 
+.footer-left {
+  margin-top: 10px;
+
 .footer-right {
   display: flex; 
   gap: 20px;
