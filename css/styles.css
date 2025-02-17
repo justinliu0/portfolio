@@ -186,6 +186,10 @@ section {
   align-items: center;
 }
 
+#timeline {
+  margin: 100px;
+}
+
 .timeline-image {
   height: 100px;
   width: auto; 
