@@ -194,7 +194,7 @@ section {
 
 #contact {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .contact-bg {
@@ -231,6 +231,7 @@ textarea {
 
 .footer-left {
   margin-top: 10px;
+}
 
 .footer-right {
   display: flex; 
