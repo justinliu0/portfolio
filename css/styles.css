@@ -216,14 +216,6 @@ textarea {
   padding: 20px;
 }
 
-
-/* Move Everything Up (Except Background) */
-#contact .container {
-  position: relative;
-  z-index: 2;
-  margin-top: -100px; /* Adjust to move content higher */
-}
-
 .footer {
   background-color: #0F2947;
   padding: 45px 0px 50px 0px;
