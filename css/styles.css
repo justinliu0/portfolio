@@ -1,5 +1,11 @@
+html {
+  overflow: -moz-hidden-unscrollable; 
+  overflow: hidden; 
+}
+
 body {
-  scrollbar-width: none;
+  overflow-y: scroll !important; 
+  scrollbar-width: none; 
   -ms-overflow-style: none;
 }
 
