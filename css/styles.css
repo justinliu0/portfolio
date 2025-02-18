@@ -191,6 +191,16 @@ section {
   z-index: -1; 
 }
 
+.contact-info {
+  color: #50B6FC;
+  text-decoration: none;
+}
+
+.contact-info:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 input {
   height: 70px;
   font-size: 20px;
