@@ -170,7 +170,7 @@ section {
 
 .container-sticky {
   position: sticky;
-  top: 0;
+  top: 80px;
   height: 100vh;
   overflow: hidden;
 }
