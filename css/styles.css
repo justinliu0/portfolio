@@ -182,8 +182,8 @@ section {
 }
 
 .projects-header {
-  position: absolute;
-  color: #000 !important; 
+/*   position: absolute; */
+  color: #fff !important; 
 }
 
 .projects-footer {
