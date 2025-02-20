@@ -95,10 +95,6 @@ section {
   margin-top: 250px;
 }
 
-#about {
-  padding-top: 120px !important;
-}
-
 .profile-pic {
   width: 350px;
   height: 350px;
@@ -198,10 +194,6 @@ section {
   text-decoration: none !important; 
   border-radius: 20px;
   margin: auto auto;
-}
-
-.empty-spacer {
-  flex: 0 0 25vw;
 }
 
 .projects-footer {
