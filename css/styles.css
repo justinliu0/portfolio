@@ -168,9 +168,9 @@ section {
   align-items: center;
 }
 
-/* .horizontal-container {
+.horizontal-container {
   position: relative;
-} */
+}
 
 .container-sticky {
   position: sticky;
