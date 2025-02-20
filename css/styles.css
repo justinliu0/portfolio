@@ -181,14 +181,10 @@ section {
 }
 
 .projects-footer {
-  position: absolute;
+/*   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  z-index: 15;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
+  z-index: 3; */
 }
 
 .horizontal-wrapper {
