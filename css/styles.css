@@ -184,8 +184,6 @@ section {
 .projects-header {
   position: absolute;
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.6); 
   color: #fff; 
 }
 
