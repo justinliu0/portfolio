@@ -175,19 +175,19 @@ section {
   overflow: hidden;
 }
 
-.projects-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
 .horizontal-wrapper {
   display: flex;
 }
 
 .h-section {
   flex: 0 0 100vw;
+}
+
+.projects-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
 .project-box {
