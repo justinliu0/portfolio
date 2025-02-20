@@ -178,12 +178,6 @@ section {
   left: 0;
   height: 100vh;
   overflow: hidden;
-  z-index: 10; 
-}
-
-.projects-header {
-/*   position: absolute; */
-  color: #fff !important; 
 }
 
 .projects-footer {
@@ -194,7 +188,6 @@ section {
   z-index: 15;
   text-align: center;
   padding: 20px;
-  background-color: rgba(0,0,0,0.6); 
   color: #fff;
 }
 
