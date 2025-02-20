@@ -155,7 +155,8 @@ section {
   align-items: center;
 }
 
-.skills-card:hover {
+.skills-card:hover,
+.project-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -198,7 +199,7 @@ section {
   bottom: 100px;
 }
 
-.project-box {
+.project-card {
   width: 80%;
   height: 100%; 
   padding: 2rem;
