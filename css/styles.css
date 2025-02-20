@@ -189,9 +189,7 @@ section {
 
 .horizontal-wrapper {
   display: flex;
-  height: 100%;
-/*   padding-top: 120px;  
-  padding-bottom: 120px; */
+/*   height: 100%; */
 }
 
 .h-section {
