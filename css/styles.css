@@ -168,14 +168,9 @@ section {
   align-items: center;
 }
 
-/* .horizontal-container {
-  position: relative;
-}
- */
 .container-sticky {
   position: sticky;
   top: 0;
-  left: 0;
   height: 100vh;
   overflow: hidden;
 }
@@ -189,14 +184,10 @@ section {
 
 .horizontal-wrapper {
   display: flex;
-/*   height: 100%; */
 }
 
 .h-section {
   flex: 0 0 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .project-box {
