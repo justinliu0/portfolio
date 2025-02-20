@@ -203,7 +203,9 @@ section {
   width: 80%;
   height: 100%; 
   padding: 2rem;
+  color: #fff;
   background-color: #0F2947;
+  text-decoration: none;
   border-radius: 20px;
   margin: auto auto;
 }
