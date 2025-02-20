@@ -204,9 +204,8 @@ section {
   height: 100%; 
   padding: 2rem;
   background-color: #0F2947;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  margin: auto auto;
+  border-radius: 20px;
+/*   margin: auto auto; */
 }
 
 .timeline-image {
