@@ -35,43 +35,54 @@ $(document).ready(function () {
   activateNavLink(); 
   $(window).on("scroll", activateNavLink);
 
-  (function(){
+  (function () {
     const horizontalContainer = document.getElementById('projects');
     const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
     if (!horizontalContainer || !horizontalWrapper) return;
-  
+
     function updateHeights() {
-      const totalWidth = horizontalWrapper.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const scrollLength = totalWidth - viewportWidth;
-      const finalHeight = window.innerHeight + scrollLength;
-      horizontalContainer.style.height = `${finalHeight}px`;
+        const totalWidth = horizontalWrapper.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const scrollLength = totalWidth - viewportWidth;
+        const finalHeight = window.innerHeight + scrollLength;
+
+        horizontalContainer.style.height = `${finalHeight}px`;
     }
-  
-    function onScroll() {
-      const containerTop = horizontalContainer.offsetTop;
-      const scrollY = window.scrollY;
-      const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
-      const containerBottom = containerTop + containerHeight;
-  
-      if (scrollY < containerTop || scrollY > containerBottom) return;
-  
-      const distance = scrollY - containerTop;
-      const totalWidth = horizontalWrapper.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const scrollLength = totalWidth - viewportWidth;
-      const clamped = Math.max(0, Math.min(distance, scrollLength));
-  
-      horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
+
+    function onScroll(event) {
+        const containerTop = horizontalContainer.offsetTop;
+        const scrollY = window.scrollY;
+        const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
+        const containerBottom = containerTop + containerHeight;
+        const maxScrollX = -2958;
+
+        if (scrollY < containerTop) {
+            horizontalWrapper.style.transform = `translateX(0px)`;
+            return;
+        }
+
+        if (scrollY > containerBottom) {
+            horizontalWrapper.style.transform = `translateX(${maxScrollX}px)`;
+            return;
+        }
+
+        const distance = scrollY - containerTop;
+        const totalWidth = horizontalWrapper.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        const scrollLength = totalWidth - viewportWidth;
+        const clamped = Math.max(0, Math.min(distance, scrollLength));
+
+        horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
     }
-  
+
     window.addEventListener('scroll', onScroll);
     window.addEventListener('resize', () => {
-      updateHeights();
-      onScroll();
+        updateHeights();
+        onScroll();
     });
-  
+
     updateHeights();
     onScroll();
   })();
+
 });
