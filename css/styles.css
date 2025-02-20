@@ -95,6 +95,10 @@ section {
   margin-top: 250px;
 }
 
+#about {
+  padding-top: 120px !important;
+}
+
 .profile-pic {
   width: 350px;
   height: 350px;
