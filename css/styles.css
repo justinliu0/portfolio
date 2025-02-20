@@ -181,10 +181,15 @@ section {
 
 .horizontal-wrapper {
   display: flex;
+  padding-left: 25vw; 
 }
 
 .h-section {
-  flex: 0 0 100vw;
+  flex: 0 0 50vw;
+}
+
+.empty-spacer {
+  flex: 0 0 25vw;
 }
 
 .projects-footer {
@@ -194,12 +199,13 @@ section {
 }
 
 .project-box {
-  width: 70%;
+  width: 80%;
+  height: 100%; 
   padding: 2rem;
   background-color: #0F2947;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  margin: 100px auto;
+  margin: auto auto;
 }
 
 .timeline-image {
