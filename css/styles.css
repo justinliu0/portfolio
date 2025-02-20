@@ -189,16 +189,6 @@ section {
   flex: 0 0 50vw;
 }
 
-.empty-spacer {
-  flex: 0 0 25vw;
-}
-
-.projects-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 100px;
-}
-
 .project-card {
   width: 80%;
   height: 100%; 
@@ -208,6 +198,16 @@ section {
   text-decoration: none !important;
   border-radius: 20px;
   margin: auto auto;
+}
+
+.empty-spacer {
+  flex: 0 0 25vw;
+}
+
+.projects-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
 }
 
 .timeline-image {
