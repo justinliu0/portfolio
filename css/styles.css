@@ -185,9 +185,8 @@ section {
 
 .projects-footer {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 3;
+  width: 100%;
+  bottom: 100px;
 }
 
 .project-box {
