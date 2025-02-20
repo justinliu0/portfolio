@@ -195,7 +195,7 @@ section {
   padding: 2rem;
   color: #fff;
   background-color: #0F2947;
-  text-decoration: none !important;
+  text-decoration: none !important; 
   border-radius: 20px;
   margin: auto auto;
 }
