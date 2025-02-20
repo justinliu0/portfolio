@@ -183,8 +183,7 @@ section {
 
 .projects-header {
   position: absolute;
-  text-align: center;
-  color: #fff; 
+  color: #000 !important; 
 }
 
 .projects-footer {
