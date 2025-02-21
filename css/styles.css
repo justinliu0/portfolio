@@ -199,10 +199,6 @@ section {
   object-fit: cover; 
 }
 
-/* .project-link {
-  text-decoration: none !important; 
-} */
-
 .project-overlay {
   position: absolute;
   bottom: 0;
@@ -214,21 +210,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-/*   text-align: center; */
   padding: 1rem;
 }
 
 .project-card:hover .project-overlay {
   height: 100%; 
   background: rgba(0, 0, 0, 0.8); 
-/*   align-items: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
 }
 
 .project-title {
   font-size: 1.5rem;
-/*   margin: 0; */
 }
 
 .project-description {
