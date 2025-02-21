@@ -209,7 +209,7 @@ section {
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  justify-content: center;
 }
 
 .project-card:hover .project-overlay {
