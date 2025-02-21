@@ -170,7 +170,7 @@ section {
 
 .container-sticky {
   position: sticky;
-  top: 40px;
+  top: 80px;
   height: 100vh;
   overflow: hidden;
 }
@@ -178,6 +178,7 @@ section {
 .horizontal-wrapper {
   display: flex;
   padding-left: 25vw; 
+  align-items: center;
 }
 
 .h-section {
