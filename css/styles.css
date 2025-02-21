@@ -177,9 +177,7 @@ section {
 
 .horizontal-wrapper {
   display: flex;
-  padding-left: 25vw; 
-  align-items: center;
-  height: 80vh; 
+  padding-left: 25vw;  
 }
 
 .h-section {
