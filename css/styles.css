@@ -203,7 +203,7 @@ section {
   text-decoration: none !important; 
 }
 
-/* .project-overlay {
+.project-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -218,7 +218,7 @@ section {
   padding: 1rem;
   transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
 }
- */
+
 .project-title {
   font-size: 1.5rem;
   margin: 0;
