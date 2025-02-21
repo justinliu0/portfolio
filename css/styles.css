@@ -179,6 +179,7 @@ section {
   display: flex;
   padding-left: 25vw; 
   align-items: center;
+  height: 80vh; 
 }
 
 .h-section {
