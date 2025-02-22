@@ -245,6 +245,10 @@ section {
   bottom: 100px;
 }
 
+#timeline {
+  margin-top: -80px;
+}
+
 .timeline {
   position: relative;
   padding: 0;
