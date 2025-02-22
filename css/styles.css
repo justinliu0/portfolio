@@ -265,12 +265,7 @@ section {
 
 .timeline-left,
 .timeline-right {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 150px;
-  margin-bottom: 50px;
 }
 
 .timeline-image {
@@ -292,12 +287,12 @@ section {
 
 .timeline-left .timeline-content {
   text-align: right;
-  margin-right: 70%;
+  margin-right: 60%;
 }
 
 .timeline-right .timeline-content {
   text-align: left;
-  margin-left: 70%;
+  margin-left: 60%;
 }
 
 #contact {
