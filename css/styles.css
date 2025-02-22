@@ -251,10 +251,92 @@ section {
   bottom: 100px;
 }
 
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ddd;
+  transform: translateX(-50%);
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
 .timeline-image {
+  width: 100px;
   height: 100px;
-  width: auto; 
-  object-fit: contain; 
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  background-color: white;
+  z-index: 2;
+}
+
+.timeline-left {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.timeline-right {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.timeline-content {
+  max-width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Titles */
+.timeline-title h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.timeline-title h4 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #777;
+}
+
+.timeline-body p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-left .timeline-image {
+  order: 2;
+  margin-right: 30px;
+}
+
+.timeline-left .timeline-content {
+  order: 1;
+}
+
+.timeline-right .timeline-image {
+  order: 1;
+  margin-left: 30px;
+}
+
+.timeline-right .timeline-content {
+  order: 2;
 }
 
 #contact {
