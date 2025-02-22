@@ -274,8 +274,8 @@ section {
 }
 
 .timeline-image {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #0F2947;
@@ -292,17 +292,17 @@ section {
 
 .timeline-left .timeline-content {
   text-align: right;
-  margin-right: 55%;
+  margin-right: 70%;
 }
 
 .timeline-right .timeline-content {
   text-align: left;
-  margin-left: 55%;
+  margin-left: 70%;
 }
 
 #contact {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .contact-bg {
