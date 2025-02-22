@@ -178,19 +178,10 @@ section {
 .horizontal-wrapper {
   display: flex;
   padding-left: 25vw;
-  align-items: center; /* Ensures project boxes are vertically centered */
-  justify-content: flex-start; /* Starts scroll from the left */
-  height: calc(100vh - 160px); /* Adjusts dynamically based on viewport height */
- /* Adjust this value for spacing */
 }
-
 
 .h-section {
   flex: 0 0 50vw;
- display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
 }
 
 .project-card {
