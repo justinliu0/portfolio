@@ -182,6 +182,7 @@ section {
 
 .h-section {
   flex: 0 0 50vw;
+  padding: 30px auto;
 }
 
 .project-card {
