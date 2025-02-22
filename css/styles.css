@@ -324,13 +324,13 @@ section {
 }
 
 input {
-  height: 70px;
+  height: 75px;
   font-size: 20px;
   padding: 20px;
 }
 
 textarea {
-  height: 242px;
+  height: 257px;
   font-size: 20px;
   padding: 20px;
 }
