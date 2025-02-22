@@ -10,6 +10,7 @@
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   height: 100%; /* Ensures full height */
+    position: sticky;
 }
 .projects-footer {
   position: relative; /* Change from absolute */
