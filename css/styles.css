@@ -187,6 +187,10 @@ section {
 
 .h-section {
   flex: 0 0 50vw;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 .project-card {
