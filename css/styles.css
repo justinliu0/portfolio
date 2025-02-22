@@ -246,6 +246,66 @@ section {
   bottom: 100px;
 }
 
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  content: '';
+  background-color: #e9ecef;
+  transform: translateX(-50%);
+}
+
+/* Individual timeline items */
+.timeline-left,
+.timeline-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 150px;
+  margin-bottom: 50px;
+}
+
+/* Timeline images */
+.timeline-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e9ecef;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+/* Content styling */
+.timeline-content {
+  width: 45%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-left .timeline-content {
+  text-align: right;
+  margin-right: 55%;
+}
+
+.timeline-right .timeline-content {
+  text-align: left;
+  margin-left: 55%;
+}
 
 #contact {
   position: relative;
