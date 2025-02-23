@@ -2,10 +2,7 @@ $(document).ready(function () {
     $("#copyright-year").text(new Date().getFullYear());
 
     var navbar = $(".navbar");
-    var sections = $("section");
     var navLinks = $(".navbar-nav .nav-link");
-    var horizontalContainer = $("#projects");
-    var horizontalWrapper = $(".horizontal-wrapper");
 
     function navbarCollapse() {
         if ($(window).scrollTop() > 50) {
@@ -19,84 +16,73 @@ $(document).ready(function () {
     $(window).scroll(navbarCollapse);
 
     function activateNavLink() {
-        var scrollPosition = $(window).scrollTop();
-        var windowHeight = $(window).height();
+        let observerOptions = {
+            root: null,
+            rootMargin: "-50% 0px -50% 0px",
+            threshold: 0
+        };
 
-        var containerTop = horizontalContainer.offset().top;
-        var containerHeight = horizontalContainer.outerHeight();
-        var containerBottom = containerTop + containerHeight;
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                let sectionId = entry.target.id;
+                let navLink = $(".navbar-nav .nav-link[href='#" + sectionId + "']");
 
-        var timelineTop = $("#timeline").offset().top;
-        var timelineBottom = timelineTop + $("#timeline").outerHeight();
+                if (entry.isIntersecting) {
+                    navLinks.removeClass("active");
+                    navLink.addClass("active");
+                }
+            });
+        }, observerOptions);
 
-        var contactTop = $("#contact").offset().top;
-
-        var projectsLink = $(".navbar-nav .nav-link[href='#projects']");
-        var timelineLink = $(".navbar-nav .nav-link[href='#timeline']");
-        var contactLink = $(".navbar-nav .nav-link[href='#contact']");
-
-        navLinks.removeClass("active");
-
-        if (scrollPosition >= containerTop && scrollPosition < containerBottom) {
-            projectsLink.addClass("active");
-        }
-
-        if (scrollPosition >= containerBottom && scrollPosition < timelineTop - windowHeight / 2) {
-            projectsLink.addClass("active");
-        }
-
-        if (scrollPosition >= timelineTop - windowHeight / 2 && scrollPosition < timelineBottom) {
-            timelineLink.addClass("active");
-        }
-
-        if (scrollPosition >= timelineBottom - windowHeight / 3) {
-            contactLink.addClass("active");
-        }
+        $("section").each(function () {
+            observer.observe(this);
+        });
     }
 
     activateNavLink();
-    $(window).on("scroll", activateNavLink);
 
     (function () {
-        if (!horizontalContainer.length || !horizontalWrapper.length) return;
+        const horizontalContainer = document.getElementById('projects');
+        const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
+
+        if (!horizontalContainer || !horizontalWrapper) return;
 
         function updateHeights() {
-            const totalWidth = horizontalWrapper[0].scrollWidth;
+            const totalWidth = horizontalWrapper.scrollWidth;
             const viewportWidth = window.innerWidth;
             const scrollLength = totalWidth - viewportWidth;
             const finalHeight = window.innerHeight + scrollLength;
 
-            horizontalContainer.css("height", `${finalHeight}px`);
+            horizontalContainer.style.height = `${finalHeight}px`;
         }
 
         function onScroll() {
-            const containerTop = horizontalContainer.offset().top;
+            const containerTop = horizontalContainer.offsetTop;
             const scrollY = window.scrollY;
-            const containerHeight = parseFloat(horizontalContainer.css("height")) || window.innerHeight;
-            const containerBottom = containerTop + containerHeight;
+            const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
             const maxScrollX = -3000;
 
             if (scrollY < containerTop) {
-                horizontalWrapper.css("transform", `translateX(0px)`);
+                horizontalWrapper.style.transform = `translateX(0px)`;
                 return;
             }
 
-            if (scrollY > containerBottom) {
-                horizontalWrapper.css("transform", `translateX(${maxScrollX}px)`);
+            if (scrollY > containerTop + containerHeight) {
+                horizontalWrapper.style.transform = `translateX(${maxScrollX}px)`;
                 return;
             }
 
             const distance = scrollY - containerTop;
-            const totalWidth = horizontalWrapper[0].scrollWidth;
+            const totalWidth = horizontalWrapper.scrollWidth;
             const viewportWidth = window.innerWidth;
             const scrollLength = totalWidth - viewportWidth;
             const clamped = Math.max(0, Math.min(distance, scrollLength));
 
-            horizontalWrapper.css("transform", `translateX(-${clamped}px)`);
+            horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
         }
 
-        $(window).on("scroll", onScroll);
-        $(window).on("resize", () => {
+        window.addEventListener('scroll', onScroll);
+        window.addEventListener('resize', () => {
             updateHeights();
             onScroll();
         });
