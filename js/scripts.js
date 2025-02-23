@@ -54,7 +54,7 @@ $(document).ready(function () {
         const scrollY = window.scrollY;
         const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
         const containerBottom = containerTop + containerHeight;
-        const maxScrollX = -5000;
+        const maxScrollX = -3000;
 
         if (scrollY < containerTop) {
             horizontalWrapper.style.transform = `translateX(0px)`;
