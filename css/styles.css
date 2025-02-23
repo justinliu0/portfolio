@@ -176,6 +176,7 @@ section {
 .horizontal-wrapper {
   display: flex;
   padding-left: 25vw;
+  transition: none !important;
 }
 
 .h-section {
