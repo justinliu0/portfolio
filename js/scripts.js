@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         var projectsTop = projectsSection.offset().top;
         var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top;
+        var timelineTop = timelineSection.offset().top - 50;
 
         navLinks.removeClass("active");
 
