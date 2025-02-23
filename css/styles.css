@@ -364,8 +364,8 @@ textarea.form-control {
   display: none;
   padding: 20px;
   position: fixed;
-  width: 150vw;
-  height: 150vh;
+  width: 100vw;
+  height: 100vh;
   background-color: #244466;
   z-index: 9999;
   overflow: hidden;
