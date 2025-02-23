@@ -6,7 +6,11 @@ $(document).ready(function () {
     var navLinks = $(".navbar-nav .nav-link");
 
     function navbarCollapse() {
-        navbar.toggleClass("navbar-shrink", $(window).scrollTop() > 50);
+        if ($(window).scrollTop() > 50) {
+            navbar.addClass("navbar-shrink");
+        } else {
+            navbar.removeClass("navbar-shrink");
+        }
     }
 
     navbarCollapse();
@@ -14,24 +18,43 @@ $(document).ready(function () {
 
     function activateNavLink() {
         var scrollPosition = $(window).scrollTop();
-        var closestSection = null;
-        var minDistance = Infinity;
+        var projectsSection = $("#projects");
+        var timelineSection = $("#timeline");
+        var contactSection = $("#contact");
 
+        var projectsTop = projectsSection.offset().top;
+        var projectsBottom = projectsTop + projectsSection.outerHeight();
+        var timelineTop = timelineSection.offset().top - 100; // Activates earlier
+        var contactTop = contactSection.offset().top - 150; // Activates earlier
+
+        // Remove all active states before re-adding
+        navLinks.removeClass("active");
+
+        // Regular Section Activation
         sections.each(function () {
             var section = $(this);
-            var sectionTop = section.offset().top - 100; // Adjusted for smoother transition
-            var distance = Math.abs(scrollPosition - sectionTop);
+            var sectionTop = section.offset().top - 100;
+            var sectionBottom = sectionTop + section.outerHeight();
+            var sectionId = section.attr("id");
 
-            if (distance < minDistance) {
-                minDistance = distance;
-                closestSection = section;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
             }
         });
 
-        if (closestSection) {
-            var sectionId = closestSection.attr("id");
-            navLinks.removeClass("active");
-            $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
+        // Fix Dead Zone: Ensure only Projects OR Timeline is active at a time
+        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#projects']").addClass("active");
+        } else if (scrollPosition >= timelineTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#timeline']").addClass("active");
+        }
+
+        // Ensure Contact Activates Earlier
+        if (scrollPosition >= contactTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#contact']").addClass("active");
         }
     }
 
