@@ -24,12 +24,10 @@ $(document).ready(function () {
 
     var projectsTop = projectsSection.offset().top;
     var projectsBottom = projectsTop + projectsSection.outerHeight();
-    var timelineTop = timelineSection.offset().top - 10; // Slightly lower activation
+    var timelineTop = timelineSection.offset().top - 10;
 
-    // Remove all active states
     navLinks.removeClass("active");
 
-    // Regular Section Activation
     sections.each(function () {
       var section = $(this);
       var sectionTop = section.offset().top - 100;
@@ -41,7 +39,6 @@ $(document).ready(function () {
       }
     });
 
-    // Fixes Dead Zone Between Projects & Timeline
     if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
       $(".navbar-nav .nav-link[href='#projects']").addClass("active");
     }
