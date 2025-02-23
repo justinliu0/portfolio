@@ -38,7 +38,6 @@ $(document).ready(function () {
             }
         });
 
-        // If scrolling inside #projects, manually set it active
         if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
             $(".navbar-nav .nav-link").removeClass("active");
             $(".navbar-nav .nav-link[href='#projects']").addClass("active");
@@ -48,7 +47,6 @@ $(document).ready(function () {
     activateNavLink();
     $(window).on("scroll", activateNavLink);
 
-    // Horizontal scrolling for projects section
     (function () {
         const horizontalContainer = document.getElementById('projects');
         const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
