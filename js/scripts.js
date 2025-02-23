@@ -20,39 +20,37 @@ $(document).ready(function () {
 
     function activateNavLink() {
         var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
         var containerTop = horizontalContainer.offset().top;
         var containerHeight = horizontalContainer.outerHeight();
         var containerBottom = containerTop + containerHeight;
-        var windowHeight = $(window).height();
+
         var timelineTop = $("#timeline").offset().top;
+        var timelineBottom = timelineTop + $("#timeline").outerHeight();
+
+        var contactTop = $("#contact").offset().top;
 
         var projectsLink = $(".navbar-nav .nav-link[href='#projects']");
         var timelineLink = $(".navbar-nav .nav-link[href='#timeline']");
+        var contactLink = $(".navbar-nav .nav-link[href='#contact']");
 
-        sections.each(function () {
-            var sectionTop = $(this).offset().top - 80;
-            var sectionBottom = sectionTop + $(this).outerHeight();
-            var sectionId = $(this).attr("id");
+        navLinks.removeClass("active");
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navLinks.removeClass("active");
-                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
-            }
-        });
-
-        if (scrollPosition >= containerTop && scrollPosition <= containerBottom) {
-            navLinks.removeClass("active");
+        if (scrollPosition >= containerTop && scrollPosition < containerBottom) {
             projectsLink.addClass("active");
         }
 
         if (scrollPosition >= containerBottom && scrollPosition < timelineTop - windowHeight / 2) {
-            navLinks.removeClass("active");
             projectsLink.addClass("active");
         }
 
-        if (scrollPosition >= timelineTop - windowHeight / 2) {
-            navLinks.removeClass("active");
+        if (scrollPosition >= timelineTop - windowHeight / 2 && scrollPosition < timelineBottom) {
             timelineLink.addClass("active");
+        }
+
+        if (scrollPosition >= timelineBottom - windowHeight / 3) {
+            contactLink.addClass("active");
         }
     }
 
