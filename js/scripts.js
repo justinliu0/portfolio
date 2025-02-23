@@ -21,13 +21,17 @@ $(document).ready(function () {
     var scrollPosition = $(window).scrollTop();
     var projectsSection = $("#projects");
     var timelineSection = $("#timeline");
+    var contactSection = $("#contact");
 
     var projectsTop = projectsSection.offset().top;
     var projectsBottom = projectsTop + projectsSection.outerHeight();
-    var timelineTop = timelineSection.offset().top - 50; //ahdiuahd
+    var timelineTop = timelineSection.offset().top - 50; // Activate earlier
+    var contactTop = contactSection.offset().top - 150; // Ensure smooth transition
 
+    // Remove all active states
     navLinks.removeClass("active");
 
+    // Regular Section Activation
     sections.each(function () {
       var section = $(this);
       var sectionTop = section.offset().top - 100;
@@ -39,8 +43,14 @@ $(document).ready(function () {
       }
     });
 
+    // Fix Dead Zone Between Projects & Timeline
     if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
       $(".navbar-nav .nav-link[href='#projects']").addClass("active");
+    }
+
+    // Ensure Contact Activates Earlier
+    if (scrollPosition >= contactTop) {
+      $(".navbar-nav .nav-link[href='#contact']").addClass("active");
     }
   }
 
@@ -48,8 +58,8 @@ $(document).ready(function () {
   $(window).on("scroll", activateNavLink);
 
   (function () {
-    const horizontalContainer = document.getElementById('projects');
-    const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
+    const horizontalContainer = document.getElementById("projects");
+    const horizontalWrapper = horizontalContainer?.querySelector(".horizontal-wrapper");
 
     if (!horizontalContainer || !horizontalWrapper) return;
 
@@ -58,7 +68,7 @@ $(document).ready(function () {
       const viewportWidth = window.innerWidth;
       const scrollLength = totalWidth - viewportWidth;
       const finalHeight = window.innerHeight + scrollLength;
-      
+
       horizontalContainer.style.height = `${finalHeight}px`;
     }
 
@@ -96,5 +106,4 @@ $(document).ready(function () {
     updateHeights();
     onScroll();
   })();
-
 });
