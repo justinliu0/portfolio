@@ -268,7 +268,10 @@ section {
 .timeline-left,
 .timeline-right {
   display: flex;
-  margin: 40px auto;
+}
+
+.timeline li:not(:last-child) {
+  margin-bottom: 80px;
 }
 
 .timeline-image {
@@ -283,7 +286,7 @@ section {
   transform: translateX(-50%);
 }
 
-#timeline h2 {
+.subheading {
   color: #50B6FC;
 }
 
