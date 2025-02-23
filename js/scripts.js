@@ -25,7 +25,7 @@ $(document).ready(function () {
         var projectsTop = projectsSection.offset().top;
         var projectsBottom = projectsTop + projectsSection.outerHeight();
         var timelineTop = timelineSection.offset().top - 5;
-        var contactTop = contactSection.offset().top - window.innerHeight / 2;  // 🔹 Adjusted threshold
+        var contactTop = contactSection.offset().top - window.innerHeight * 0.8; // 🔹 Adjusted threshold
 
         navLinks.removeClass("active");
 
