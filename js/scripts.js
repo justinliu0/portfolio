@@ -46,7 +46,7 @@ $(document).ready(function () {
         const scrollLength = totalWidth - viewportWidth;
         const finalHeight = window.innerHeight + scrollLength;
 
-        horizontalContainer.style.height = ${finalHeight}px;
+        horizontalContainer.style.height = `${finalHeight}px`;
     }
 
     function onScroll(event) {
@@ -54,15 +54,15 @@ $(document).ready(function () {
         const scrollY = window.scrollY;
         const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
         const containerBottom = containerTop + containerHeight;
-        const maxScrollX = -3000;
+        const maxScrollX = -5000;
 
         if (scrollY < containerTop) {
-            horizontalWrapper.style.transform = translateX(0px);
+            horizontalWrapper.style.transform = `translateX(0px)`;
             return;
         }
 
         if (scrollY > containerBottom) {
-            horizontalWrapper.style.transform = translateX(${maxScrollX}px);
+            horizontalWrapper.style.transform = `translateX(${maxScrollX}px)`;
             return;
         }
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
         const scrollLength = totalWidth - viewportWidth;
         const clamped = Math.max(0, Math.min(distance, scrollLength));
 
-        horizontalWrapper.style.transform = translateX(-${clamped}px);
+        horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
     }
 
     window.addEventListener('scroll', onScroll);
