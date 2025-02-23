@@ -50,7 +50,6 @@ section {
   position: fixed;
   width: 100%;
   z-index: 1030;
-  transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
   height: 90px;
 }
 
@@ -63,7 +62,6 @@ section {
 
 .navbar-nav .nav-link {
   color: #fff;
-  transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link.active,
