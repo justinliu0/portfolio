@@ -3,7 +3,6 @@ $(document).ready(function () {
 
     var navbar = $(".navbar");
     var navLinks = $(".navbar-nav .nav-link");
-    var sections = $("section");
 
     function navbarCollapse() {
         if ($(window).scrollTop() > 50) {
@@ -16,52 +15,28 @@ $(document).ready(function () {
     navbarCollapse();
     $(window).scroll(navbarCollapse);
 
-    function activateNavLink() {
-        var scrollPosition = $(window).scrollTop();
-        var projectsSection = $("#projects");
-        var timelineSection = $("#timeline");
-        var contactSection = $("#contact");
+    // Create an Intersection Observer
+    let observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let sectionId = entry.target.id;
+                    navLinks.removeClass("active");
+                    $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
+                }
+            });
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
 
-        var projectsTop = projectsSection.offset().top;
-        var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top - 5;
-        var contactTop = contactSection.offset().top - window.innerHeight * 0.8; // 🔹 Adjusted threshold
-
-        navLinks.removeClass("active");
-
-        sections.each(function () {
-            var section = $(this);
-            var sectionTop = section.offset().top - 100;
-            var sectionBottom = sectionTop + section.outerHeight();
-            var sectionId = section.attr("id");
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
-            }
-        });
-
-        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#projects']").addClass("active");
-        }
-
-        if (scrollPosition >= timelineTop && scrollPosition < contactTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#timeline']").addClass("active");
-        }
-
-        if (scrollPosition >= contactTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#contact']").addClass("active");
-        }
-    }
-
-    activateNavLink();
-    $(window).on("scroll", activateNavLink);
+    // Observe all sections
+    $("section").each(function () {
+        observer.observe(this);
+    });
 
     (function () {
-        const horizontalContainer = document.getElementById('projects');
-        const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
+        const horizontalContainer = document.getElementById("projects");
+        const horizontalWrapper = horizontalContainer?.querySelector(".horizontal-wrapper");
 
         if (!horizontalContainer || !horizontalWrapper) return;
 
@@ -70,7 +45,6 @@ $(document).ready(function () {
             const viewportWidth = window.innerWidth;
             const scrollLength = totalWidth - viewportWidth;
             const finalHeight = window.innerHeight + scrollLength;
-
             horizontalContainer.style.height = `${finalHeight}px`;
         }
 
@@ -99,8 +73,8 @@ $(document).ready(function () {
             horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
         }
 
-        window.addEventListener('scroll', onScroll);
-        window.addEventListener('resize', () => {
+        window.addEventListener("scroll", onScroll);
+        window.addEventListener("resize", () => {
             updateHeights();
             onScroll();
         });
