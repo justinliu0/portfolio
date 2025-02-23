@@ -24,13 +24,11 @@ $(document).ready(function () {
 
         var projectsTop = projectsSection.offset().top;
         var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top - 100; // Activates earlier
-        var contactTop = contactSection.offset().top - 150; // Activates earlier
-
-        // Remove all active states before re-adding
+        var timelineTop = timelineSection.offset().top - 100; 
+        var contactTop = contactSection.offset().top - 150;
+        
         navLinks.removeClass("active");
 
-        // Regular Section Activation
         sections.each(function () {
             var section = $(this);
             var sectionTop = section.offset().top - 100;
@@ -42,7 +40,6 @@ $(document).ready(function () {
             }
         });
 
-        // Fix Dead Zone: Ensure only Projects OR Timeline is active at a time
         if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
             $(".navbar-nav .nav-link").removeClass("active");
             $(".navbar-nav .nav-link[href='#projects']").addClass("active");
@@ -51,7 +48,6 @@ $(document).ready(function () {
             $(".navbar-nav .nav-link[href='#timeline']").addClass("active");
         }
 
-        // Ensure Contact Activates Earlier
         if (scrollPosition >= contactTop) {
             $(".navbar-nav .nav-link").removeClass("active");
             $(".navbar-nav .nav-link[href='#contact']").addClass("active");
