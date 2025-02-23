@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     var projectsTop = projectsSection.offset().top;
     var projectsBottom = projectsTop + projectsSection.outerHeight();
-    var timelineTop = timelineSection.offset().top - 10;
+    var timelineTop = timelineSection.offset().top; //ahdiuahd
 
     navLinks.removeClass("active");
 
