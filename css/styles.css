@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0; 
   overflow-y: scroll;
-  scrollbar-width: none !important;
   color: #fff;
   /* background-color: #0D3960; */
   background-color: #244466;
