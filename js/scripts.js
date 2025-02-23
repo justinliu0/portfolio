@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     var navbar = $(".navbar");
     var navLinks = $(".navbar-nav .nav-link");
+    var sections = $("section");
 
     function navbarCollapse() {
         if ($(window).scrollTop() > 50) {
@@ -16,31 +17,38 @@ $(document).ready(function () {
     $(window).scroll(navbarCollapse);
 
     function activateNavLink() {
-        let observerOptions = {
-            root: null,
-            rootMargin: "-50% 0px -50% 0px",
-            threshold: 0
-        };
+        var scrollPosition = $(window).scrollTop();
+        var projectsSection = $("#projects");
+        var timelineSection = $("#timeline");
 
-        let observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                let sectionId = entry.target.id;
-                let navLink = $(".navbar-nav .nav-link[href='#" + sectionId + "']");
+        var projectsTop = projectsSection.offset().top;
+        var projectsBottom = projectsTop + projectsSection.outerHeight();
+        var timelineTop = timelineSection.offset().top;
 
-                if (entry.isIntersecting) {
-                    navLinks.removeClass("active");
-                    navLink.addClass("active");
-                }
-            });
-        }, observerOptions);
+        navLinks.removeClass("active");
 
-        $("section").each(function () {
-            observer.observe(this);
+        sections.each(function () {
+            var section = $(this);
+            var sectionTop = section.offset().top - 100;
+            var sectionBottom = sectionTop + section.outerHeight();
+            var sectionId = section.attr("id");
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
+            }
         });
+
+        // If scrolling inside #projects, manually set it active
+        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#projects']").addClass("active");
+        }
     }
 
     activateNavLink();
+    $(window).on("scroll", activateNavLink);
 
+    // Horizontal scrolling for projects section
     (function () {
         const horizontalContainer = document.getElementById('projects');
         const horizontalWrapper = horizontalContainer?.querySelector('.horizontal-wrapper');
