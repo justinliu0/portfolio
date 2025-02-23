@@ -15,10 +15,17 @@ $(document).ready(function () {
     function activateNavLink() {
         var scrollPosition = $(window).scrollTop();
         var activeLink = null;
+        var projectsSection = $("#projects");
+        var timelineSection = $("#timeline");
 
+        var projectsTop = projectsSection.offset().top;
+        var projectsBottom = projectsTop + projectsSection.outerHeight();
+        var timelineTop = timelineSection.offset().top - 120; // Activates earlier
+
+        // Regular Section Activation
         sections.each(function () {
             var section = $(this);
-            var sectionTop = section.offset().top - 120; 
+            var sectionTop = section.offset().top - 120;
             var sectionBottom = sectionTop + section.outerHeight();
             var sectionId = section.attr("id");
 
@@ -27,6 +34,12 @@ $(document).ready(function () {
             }
         });
 
+        // Fixes "Dead Zone" between Projects and Timeline
+        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
+            activeLink = $(".navbar-nav .nav-link[href='#projects']");
+        }
+
+        // Ensures only one active link
         navLinks.removeClass("active");
         if (activeLink) activeLink.addClass("active");
     }
@@ -50,7 +63,6 @@ $(document).ready(function () {
             const containerTop = horizontalContainer.offset().top;
             const scrollY = window.scrollY;
             const containerHeight = horizontalContainer.outerHeight();
-            const scrollDistance = scrollY - containerTop;
             const totalScrollWidth = horizontalWrapper[0].scrollWidth - window.innerWidth;
 
             if (scrollY < containerTop) {
@@ -58,8 +70,9 @@ $(document).ready(function () {
             } else if (scrollY > containerTop + containerHeight - window.innerHeight) {
                 horizontalWrapper.css("transform", `translateX(-${totalScrollWidth}px)`);
             } else {
-                const progress = Math.max(0, Math.min(scrollDistance, totalScrollWidth));
-                horizontalWrapper.css("transform", `translateX(-${progress}px)`);
+                const scrollProgress = scrollY - containerTop;
+                const clampedProgress = Math.max(0, Math.min(scrollProgress, totalScrollWidth));
+                horizontalWrapper.css("transform", `translateX(-${clampedProgress}px)`);
             }
         }
 
