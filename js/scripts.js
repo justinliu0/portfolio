@@ -19,7 +19,7 @@ $(document).ready(function () {
 
         sections.each(function () {
             var section = $(this);
-            var sectionTop = section.offset().top - 100; // Adjusted for smoother transition
+            var sectionTop = section.offset().top - 100;
             var distance = Math.abs(scrollPosition - sectionTop);
 
             if (distance < minDistance) {
