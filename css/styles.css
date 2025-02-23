@@ -283,6 +283,10 @@ section {
   transform: translateX(-50%);
 }
 
+#timeline h2 {
+  color: #50B6FC;
+}
+
 .timeline-content {
   width: 45%;
   padding: 20px;
