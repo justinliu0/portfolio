@@ -6,11 +6,7 @@ $(document).ready(function () {
     var navLinks = $(".navbar-nav .nav-link");
 
     function navbarCollapse() {
-        if ($(window).scrollTop() > 50) {
-            navbar.addClass("navbar-shrink");
-        } else {
-            navbar.removeClass("navbar-shrink");
-        }
+        navbar.toggleClass("navbar-shrink", $(window).scrollTop() > 50);
     }
 
     navbarCollapse();
@@ -18,39 +14,24 @@ $(document).ready(function () {
 
     function activateNavLink() {
         var scrollPosition = $(window).scrollTop();
-        var projectsSection = $("#projects");
-        var timelineSection = $("#timeline");
-        var contactSection = $("#contact");
-
-        var projectsTop = projectsSection.offset().top;
-        var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top - 100; 
-        var contactTop = contactSection.offset().top - 150; 
-
-        navLinks.removeClass("active");
+        var closestSection = null;
+        var minDistance = Infinity;
 
         sections.each(function () {
             var section = $(this);
-            var sectionTop = section.offset().top - 100;
-            var sectionBottom = sectionTop + section.outerHeight();
-            var sectionId = section.attr("id");
+            var sectionTop = section.offset().top - 100; // Adjusted for smoother transition
+            var distance = Math.abs(scrollPosition - sectionTop);
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestSection = section;
             }
         });
 
-        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#projects']").addClass("active");
-        } else if (scrollPosition >= timelineTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#timeline']").addClass("active");
-        }
-
-        if (scrollPosition >= contactTop) {
-            $(".navbar-nav .nav-link").removeClass("active");
-            $(".navbar-nav .nav-link[href='#contact']").addClass("active");
+        if (closestSection) {
+            var sectionId = closestSection.attr("id");
+            navLinks.removeClass("active");
+            $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
         }
     }
 
