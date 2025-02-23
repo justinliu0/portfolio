@@ -17,10 +17,12 @@ $(document).ready(function () {
         var activeLink = null;
         var projectsSection = $("#projects");
         var timelineSection = $("#timeline");
+        var contactSection = $("#contact");
 
         var projectsTop = projectsSection.offset().top;
         var projectsBottom = projectsTop + projectsSection.outerHeight();
         var timelineTop = timelineSection.offset().top - 120; // Activates earlier
+        var contactTop = contactSection.offset().top - 250; // 🚀 **Fix: Activate Contact Even Earlier**
 
         // Regular Section Activation
         sections.each(function () {
@@ -37,6 +39,11 @@ $(document).ready(function () {
         // Fixes "Dead Zone" between Projects and Timeline
         if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
             activeLink = $(".navbar-nav .nav-link[href='#projects']");
+        }
+
+        // Fixes "Gap" between Timeline and Contact
+        if (scrollPosition >= contactTop) {
+            activeLink = $(".navbar-nav .nav-link[href='#contact']");
         }
 
         // Ensures only one active link
