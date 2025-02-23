@@ -21,10 +21,9 @@ $(document).ready(function () {
 
         var projectsTop = projectsSection.offset().top;
         var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top - 120; // Activates earlier
-        var contactTop = contactSection.offset().top - 250; // 🚀 **Fix: Activate Contact Even Earlier**
+        var timelineTop = timelineSection.offset().top - 120; 
+        var contactTop = contactSection.offset().top - 250; 
 
-        // Regular Section Activation
         sections.each(function () {
             var section = $(this);
             var sectionTop = section.offset().top - 120;
@@ -36,17 +35,14 @@ $(document).ready(function () {
             }
         });
 
-        // Fixes "Dead Zone" between Projects and Timeline
         if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
             activeLink = $(".navbar-nav .nav-link[href='#projects']");
         }
 
-        // Fixes "Gap" between Timeline and Contact
         if (scrollPosition >= contactTop) {
             activeLink = $(".navbar-nav .nav-link[href='#contact']");
         }
 
-        // Ensures only one active link
         navLinks.removeClass("active");
         if (activeLink) activeLink.addClass("active");
     }
@@ -54,7 +50,6 @@ $(document).ready(function () {
     activateNavLink();
     $(window).on("scroll", activateNavLink);
 
-    // Horizontal Scrolling Logic
     (function () {
         const horizontalContainer = $("#projects");
         const horizontalWrapper = horizontalContainer.find(".horizontal-wrapper");
