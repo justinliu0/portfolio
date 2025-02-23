@@ -1,109 +1,113 @@
 $(document).ready(function () {
+    $("#copyright-year").text(new Date().getFullYear());
 
-  $("#copyright-year").text(new Date().getFullYear());
+    var navbar = $(".navbar");
+    var sections = $("section");
+    var navLinks = $(".navbar-nav .nav-link");
 
-  var navbar = $(".navbar");
-  var sections = $("section");
-  var navLinks = $(".navbar-nav .nav-link");
-
-  function navbarCollapse() {
-    if ($(window).scrollTop() > 50) {
-      navbar.addClass("navbar-shrink");
-    } else {
-      navbar.removeClass("navbar-shrink");
-    }
-  }
-
-  navbarCollapse();
-  $(window).scroll(navbarCollapse);
-
-  function activateNavLink() {
-    var scrollPosition = $(window).scrollTop();
-    var projectsSection = $("#projects");
-    var timelineSection = $("#timeline");
-    var contactSection = $("#contact");
-
-    var projectsTop = projectsSection.offset().top;
-    var projectsBottom = projectsTop + projectsSection.outerHeight();
-    var timelineTop = timelineSection.offset().top - 50; // Activate earlier
-    var contactTop = contactSection.offset().top - 150; // Ensure smooth transition
-
-    // Remove all active states
-    navLinks.removeClass("active");
-
-    // Regular Section Activation
-    sections.each(function () {
-      var section = $(this);
-      var sectionTop = section.offset().top - 100;
-      var sectionBottom = sectionTop + section.outerHeight();
-      var sectionId = section.attr("id");
-
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
-      }
-    });
-
-    // Fix Dead Zone Between Projects & Timeline
-    if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
-      $(".navbar-nav .nav-link[href='#projects']").addClass("active");
+    function navbarCollapse() {
+        if ($(window).scrollTop() > 50) {
+            navbar.addClass("navbar-shrink");
+        } else {
+            navbar.removeClass("navbar-shrink");
+        }
     }
 
-    // Ensure Contact Activates Earlier
-    if (scrollPosition >= contactTop) {
-      $(".navbar-nav .nav-link[href='#contact']").addClass("active");
-    }
-  }
+    navbarCollapse();
+    $(window).scroll(navbarCollapse);
 
-  activateNavLink();
-  $(window).on("scroll", activateNavLink);
+    function activateNavLink() {
+        var scrollPosition = $(window).scrollTop();
+        var projectsSection = $("#projects");
+        var timelineSection = $("#timeline");
+        var contactSection = $("#contact");
 
-  (function () {
-    const horizontalContainer = document.getElementById("projects");
-    const horizontalWrapper = horizontalContainer?.querySelector(".horizontal-wrapper");
+        var projectsTop = projectsSection.offset().top;
+        var projectsBottom = projectsTop + projectsSection.outerHeight();
+        var timelineTop = timelineSection.offset().top - 100; // Activates earlier
+        var contactTop = contactSection.offset().top - 150; // Activates earlier
 
-    if (!horizontalContainer || !horizontalWrapper) return;
+        // Remove all active states before re-adding
+        navLinks.removeClass("active");
 
-    function updateHeights() {
-      const totalWidth = horizontalWrapper.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const scrollLength = totalWidth - viewportWidth;
-      const finalHeight = window.innerHeight + scrollLength;
+        // Regular Section Activation
+        sections.each(function () {
+            var section = $(this);
+            var sectionTop = section.offset().top - 100;
+            var sectionBottom = sectionTop + section.outerHeight();
+            var sectionId = section.attr("id");
 
-      horizontalContainer.style.height = `${finalHeight}px`;
-    }
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                $(".navbar-nav .nav-link[href='#" + sectionId + "']").addClass("active");
+            }
+        });
 
-    function onScroll() {
-      const containerTop = horizontalContainer.offsetTop;
-      const scrollY = window.scrollY;
-      const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
-      const maxScrollX = -3000;
+        // Fix Dead Zone: Ensure only Projects OR Timeline is active at a time
+        if (scrollPosition >= projectsTop && scrollPosition < timelineTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#projects']").addClass("active");
+        } else if (scrollPosition >= timelineTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#timeline']").addClass("active");
+        }
 
-      if (scrollY < containerTop) {
-        horizontalWrapper.style.transform = `translateX(0px)`;
-        return;
-      }
-
-      if (scrollY > containerTop + containerHeight) {
-        horizontalWrapper.style.transform = `translateX(${maxScrollX}px)`;
-        return;
-      }
-
-      const distance = scrollY - containerTop;
-      const totalWidth = horizontalWrapper.scrollWidth;
-      const viewportWidth = window.innerWidth;
-      const scrollLength = totalWidth - viewportWidth;
-      const clamped = Math.max(0, Math.min(distance, scrollLength));
-
-      horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
+        // Ensure Contact Activates Earlier
+        if (scrollPosition >= contactTop) {
+            $(".navbar-nav .nav-link").removeClass("active");
+            $(".navbar-nav .nav-link[href='#contact']").addClass("active");
+        }
     }
 
-    window.addEventListener("scroll", onScroll);
-    window.addEventListener("resize", () => {
-      updateHeights();
-      onScroll();
-    });
+    activateNavLink();
+    $(window).on("scroll", activateNavLink);
 
-    updateHeights();
-    onScroll();
-  })();
+    (function () {
+        const horizontalContainer = document.getElementById("projects");
+        const horizontalWrapper = horizontalContainer?.querySelector(".horizontal-wrapper");
+
+        if (!horizontalContainer || !horizontalWrapper) return;
+
+        function updateHeights() {
+            const totalWidth = horizontalWrapper.scrollWidth;
+            const viewportWidth = window.innerWidth;
+            const scrollLength = totalWidth - viewportWidth;
+            const finalHeight = window.innerHeight + scrollLength;
+
+            horizontalContainer.style.height = `${finalHeight}px`;
+        }
+
+        function onScroll() {
+            const containerTop = horizontalContainer.offsetTop;
+            const scrollY = window.scrollY;
+            const containerHeight = parseFloat(horizontalContainer.style.height) || window.innerHeight;
+            const maxScrollX = -3000;
+
+            if (scrollY < containerTop) {
+                horizontalWrapper.style.transform = `translateX(0px)`;
+                return;
+            }
+
+            if (scrollY > containerTop + containerHeight) {
+                horizontalWrapper.style.transform = `translateX(${maxScrollX}px)`;
+                return;
+            }
+
+            const distance = scrollY - containerTop;
+            const totalWidth = horizontalWrapper.scrollWidth;
+            const viewportWidth = window.innerWidth;
+            const scrollLength = totalWidth - viewportWidth;
+            const clamped = Math.max(0, Math.min(distance, scrollLength));
+
+            horizontalWrapper.style.transform = `translateX(-${clamped}px)`;
+        }
+
+        window.addEventListener("scroll", onScroll);
+        window.addEventListener("resize", () => {
+            updateHeights();
+            onScroll();
+        });
+
+        updateHeights();
+        onScroll();
+    })();
 });
