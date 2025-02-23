@@ -71,7 +71,7 @@ section {
   height: 100vh;
   position: relative; 
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), 
     url('../imgs/bg.jpg') center/cover fixed no-repeat;
   margin: 0;
   padding: 0; 
