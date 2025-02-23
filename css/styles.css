@@ -376,6 +376,7 @@ textarea.form-control {
     display: flex;
     align-items: center;
   }
+  
   html, body {
     touch-action: none;
     overscroll-behavior: contain;
