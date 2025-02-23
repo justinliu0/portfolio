@@ -362,10 +362,11 @@ textarea.form-control {
 
 .mobile-popup {
   display: none;
+  padding: 20px;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
+  background-color: #244466;
   z-index: 9999;
 }
 
