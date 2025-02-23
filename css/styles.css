@@ -6,6 +6,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+* {
+  transition: all 0.3s ease-in-out;
+}
+
 section {
   padding-top: 80px; 
 }
