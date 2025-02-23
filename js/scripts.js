@@ -21,7 +21,7 @@ $(document).ready(function () {
     var scrollPosition = $(window).scrollTop();
 
     sections.each(function () {
-      var sectionTop = $(this).offset().top - 100; 
+      var sectionTop = $(this).offset().top - 150; 
       var sectionBottom = sectionTop + $(this).outerHeight();
       var sectionId = $(this).attr("id");
 
