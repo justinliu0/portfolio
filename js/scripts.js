@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     function activateNavLink() {
         const scrollPosition = $(window).scrollTop();
-        const activeLink = null;
+        let activeLink = null;
         const projectsSection = $("#projects");
         const timelineSection = $("#timeline");
         const contactSection = $("#contact");
