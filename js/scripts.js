@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $("#copyright-year").text(new Date().getFullYear());
 
-    var navbar = $(".navbar");
-    var sections = $("section");
-    var navLinks = $(".navbar-nav .nav-link");
+    const navbar = $(".navbar");
+    const sections = $("section");
+    const navLinks = $(".navbar-nav .nav-link");
 
     function navbarCollapse() {
         navbar.toggleClass("navbar-shrink", $(window).scrollTop() > 50);
@@ -13,22 +13,22 @@ $(document).ready(function () {
     $(window).on("scroll", navbarCollapse);
 
     function activateNavLink() {
-        var scrollPosition = $(window).scrollTop();
-        var activeLink = null;
-        var projectsSection = $("#projects");
-        var timelineSection = $("#timeline");
-        var contactSection = $("#contact");
+        const scrollPosition = $(window).scrollTop();
+        const activeLink = null;
+        const projectsSection = $("#projects");
+        const timelineSection = $("#timeline");
+        const contactSection = $("#contact");
 
-        var projectsTop = projectsSection.offset().top;
-        var projectsBottom = projectsTop + projectsSection.outerHeight();
-        var timelineTop = timelineSection.offset().top - 120; 
-        var contactTop = contactSection.offset().top - 250; 
+        const projectsTop = projectsSection.offset().top;
+        const projectsBottom = projectsTop + projectsSection.outerHeight();
+        const timelineTop = timelineSection.offset().top - 120; 
+        const contactTop = contactSection.offset().top - 250; 
 
         sections.each(function () {
-            var section = $(this);
-            var sectionTop = section.offset().top - 120;
-            var sectionBottom = sectionTop + section.outerHeight();
-            var sectionId = section.attr("id");
+            const section = $(this);
+            const sectionTop = section.offset().top - 120;
+            const sectionBottom = sectionTop + section.outerHeight();
+            const sectionId = section.attr("id");
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 activeLink = $(".navbar-nav .nav-link[href='#" + sectionId + "']");
