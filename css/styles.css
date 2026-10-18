@@ -392,3 +392,27 @@ textarea.form-control {
     user-select: none;
   }
 }
+
+/* Resume content uses text cards where project images and organization logos are unavailable. */
+.resume-skill-card {
+  justify-content: center;
+  gap: 12px;
+}
+.resume-project-card {
+  background-color: #0F2947;
+  padding: 28px;
+  min-height: 340px;
+  height: auto;
+}
+.resume-project-card h3,
+.project-period {
+  color: #50B6FC;
+}
+.timeline-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F2947;
+  font-size: 36px;
+  font-weight: 700;
+}
