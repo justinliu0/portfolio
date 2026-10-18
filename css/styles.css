@@ -394,10 +394,6 @@ textarea.form-control {
 }
 
 /* Resume content uses text cards where project images and organization logos are unavailable. */
-.resume-skill-card {
-  justify-content: center;
-  gap: 12px;
-}
 .resume-project-card {
   background-color: #0F2947;
   padding: 28px;
@@ -415,4 +411,10 @@ textarea.form-control {
   color: #0F2947;
   font-size: 36px;
   font-weight: 700;
+}
+
+/* Existing projects without thumbnail assets retain a visible card background. */
+.project-placeholder {
+  min-height: 340px;
+  background: linear-gradient(135deg, #0F2947, #244466);
 }
